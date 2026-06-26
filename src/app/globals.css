@@ -1,0 +1,22 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-primary: #02090f;
+  --color-secondary: #ff5101;
+  --color-tarnary: #555555;
+  --color-bg-secondaryOne: #faf7ef;
+  --color-bg-secondaryTwo: #ffffff;
+  --color-bg-secondaryThree: #02090f;
+  --color-bg-secondaryFore: #f1f1f1;
+  --font-heading: var(--font-heading);
+  --font-paragraph: var(--font-paragraph);
+  --font-display: var(--font-display);
+
+  /* for custom responsive break point */
+  --breakpoint-laptop: 1180px;
+  --breakpoint-3xl: 120rem;
+}
+
