@@ -37,5 +37,7 @@ export default function Button({  label, href, bgColor, textColor, showIcon  }) 
       {showIcon && <ArrowIcon />}
     </>
   );
+  
+  if (href) return <Link href={href} style={style}>{content}</Link>;
   return <button style={style}>{content}</button>;
 }
