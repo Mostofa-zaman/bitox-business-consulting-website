@@ -31,5 +31,11 @@ export default function Button({  label, href, bgColor, textColor, showIcon  }) 
     textDecoration: "none",
   };
 
-  return <button style={style}>{label}</button>;
+   const content = (
+    <>
+      {label}
+      {showIcon && <ArrowIcon />}
+    </>
+  );
+  return <button style={style}>{content}</button>;
 }
