@@ -99,3 +99,17 @@ const ButtonTwo = ({
 };
 
 export default ButtonTwo;
+
+
+// ---------- USAGE ----------
+//
+// Same text front & back:
+// <ButtonTwo frontText="Learn about us" />
+//
+// Different text front & back:
+// <ButtonTwo frontText="Learn about us" backText="Let's Talk." />
+//
+// Custom paddingX:
+// <ButtonTwo frontText="Get Started" backText="Let's Go!" paddingX={40} />
+//
+// ---------------------------
