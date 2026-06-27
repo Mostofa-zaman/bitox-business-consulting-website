@@ -34,7 +34,7 @@ const ButtonThree = ({
       ? frontText
       : resolvedBackText;
 
-  const hasBorder = !!borderWidth;
+  const hasBorder = borderWidth !== undefined;
 
   const resolvedBg = hasBorder ? "transparent" : backgroundColor;
 
@@ -50,47 +50,40 @@ const ButtonThree = ({
       position: "relative",
       overflow: "hidden",
       backgroundColor: resolvedBg,
-      border: resolvedBorder,
-      borderRadius: `${borderRadius}px`,
       paddingTop: `${paddingTop}px`,
       paddingBottom: `${paddingBottom}px`,
       paddingLeft: `${paddingLeft}px`,
       paddingRight: `${paddingRight}px`,
       cursor: "pointer",
+      border: resolvedBorder,
       outline: "none",
+      borderRadius: `${borderRadius}px`,
     },
 
     textBase: {
       position: "absolute",
-      left: "50%",
-      top: "50%",
-      transform: "translate(-50%, -50%)",
       whiteSpace: "nowrap",
       color: textColor,
       fontSize: `${fontSize}px`,
       fontWeight,
       lineHeight: `${lineHeight}px`,
-      transition: "all 0.3s ease",
       userSelect: "none",
+      transition: "transform 0.2s ease, opacity 0.2s ease",
     },
 
     front: {
-      transform: hovered
-        ? "translate(-50%, -180%)"
-        : "translate(-50%, -50%)",
+      transform: hovered ? "translateY(-100%)" : "translateY(0)",
       opacity: hovered ? 0 : 1,
     },
 
     back: {
-      transform: hovered
-        ? "translate(-50%, -50%)"
-        : "translate(-50%, 80%)",
+      transform: hovered ? "translateY(0)" : "translateY(100%)",
       opacity: hovered ? 1 : 0,
     },
 
     sizer: {
-      whiteSpace: "nowrap",
       color: "transparent",
+      whiteSpace: "nowrap",
       fontSize: `${fontSize}px`,
       fontWeight,
       lineHeight: `${lineHeight}px`,
