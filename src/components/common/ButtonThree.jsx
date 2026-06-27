@@ -113,3 +113,15 @@ const ButtonThree = ({
 };
 
 export default ButtonThree;
+
+
+
+// ---------- USAGE ----------
+//
+// <ButtonThree frontText="Learn More" />
+//
+// <ButtonThree
+//   frontText="Learn More"
+//   backText="Let's Talk."
+// />
+//
