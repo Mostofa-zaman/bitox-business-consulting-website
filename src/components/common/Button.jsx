@@ -1,4 +1,3 @@
-
 // components/ui/Button.jsx
 
 import Link from "next/link";
@@ -13,8 +12,8 @@ const ArrowIcon = () => (
   </svg>
 );
 
-
-export default function Button({  label, href, bgColor, textColor, showIcon  }) {
+// ─── Button ───────────────────────────────────────────────────
+export default function Button({ label, href, bgColor, textColor, showIcon }) {
   const style = {
     backgroundColor: bgColor || "transparent",
     color: textColor || "#ffffff",
@@ -31,13 +30,14 @@ export default function Button({  label, href, bgColor, textColor, showIcon  }) 
     textDecoration: "none",
   };
 
-   const content = (
+  const content = (
     <>
       {label}
       {showIcon && <ArrowIcon />}
     </>
   );
-  
+
   if (href) return <Link href={href} style={style}>{content}</Link>;
+
   return <button style={style}>{content}</button>;
 }
