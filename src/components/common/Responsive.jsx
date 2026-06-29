@@ -173,4 +173,32 @@ function Grid({
   );
 }
 
-export default Grid;
+
+// ─── Flex
+function Flex({
+  as: Tag = "div",
+  children,
+  gap = "md",
+  padding = "none",
+  wrap = true,
+  align = "center",
+  justify = "flex-start",
+  className = "",
+  style = {},
+}) {
+  return (
+    <Tag
+      className={`flex w-full ${wrap ? "flex-wrap" : "flex-nowrap"} ${className}`}
+      style={{
+        gap: tokens.gap[gap] ?? gap,
+        padding: tokens.padding[padding] ?? padding,
+        alignItems: align,
+        justifyContent: justify,
+        boxSizing: "border-box",
+        ...style,
+      }}
+    >
+      {children}
+    </Tag>
+  );
+}
