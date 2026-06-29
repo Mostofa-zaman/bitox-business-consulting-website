@@ -22,3 +22,29 @@ const bp = {
   xl: 1280,
   "2xl": 1536,
 };
+function Grid({
+  as: Tag = "div",
+  children,
+  min = "260px",
+  gap = "md",
+  padding = "none",
+  align,
+  className = "",
+  style = {},
+}) {
+  return (
+    <Tag
+      className={`grid w-full ${className}`}
+      style={{
+        gridTemplateColumns: `repeat(auto-fit, minmax(min(${min}, 100%), 1fr))`,
+        gap: tokens.gap[gap] ?? gap,
+        padding: tokens.padding[padding] ?? padding,
+        alignItems: align,
+        boxSizing: "border-box",
+        ...style,
+      }}
+    >
+      {children}
+    </Tag>
+  );
+}
