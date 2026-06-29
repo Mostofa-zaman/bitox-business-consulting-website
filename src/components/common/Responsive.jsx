@@ -127,6 +127,34 @@ function Grid({
     );
   }
 
+  // ── MODE 3: custom string → "443px_1fr"
+  if (cols && typeof cols === "string") {
+    const templateColumns = cols.replaceAll("_", " ");
+    const id  = `rg-${uid}`;
+    const css = `
+      #${id} { grid-template-columns: 1fr; }
+      @media(min-width:${bp.md}px) { #${id} { grid-template-columns: ${templateColumns}; } }
+    `;
+
+    return (
+      <>
+        <style>{css}</style>
+        <Tag
+          id={id}
+          className={`grid w-full ${className}`}
+          style={{
+            gap: gapVal,
+            padding: paddingVal,
+            alignItems: align,
+            boxSizing: "border-box",
+            ...style,
+          }}
+        >
+          {children}
+        </Tag>
+      </>
+    );
+  }
   // Auto-fit Grid
   return (
     <Tag
