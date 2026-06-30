@@ -1,9 +1,9 @@
 import HeroImage from "../../../public/images/home01/hero/hero-card-icons.png";
+import FeatureRoundOne from "../../../public/images/home01/feature-round/feature-round1.png";
+import FeatureRoundTwo from "../../../public/images/home01/feature-round/feature-round2.png";
 import HeroBanner1 from "../../../public/images/home01/hero/home-section-banner.png";
 import HeroBanner2 from "../../../public/images/home01/hero/home-section-banner2.png";
 import HeroBanner3 from "../../../public/images/home01/hero/home-section-banner3.jpg";
-import FeatureRoundOne from "../../../public/images/home01/feature-round/feature-round1.png";
-import FeatureRoundTwo from "../../../public/images/home01/feature-round/feature-round2.png";
 import AboutSectionOne from "../../../public/images/home01/about-section/home-about1.png";
 import AboutSectionTwo from "../../../public/images/home01/about-section/home-about2.png";
 import HomeBrandOne from "../../../public/images/home01/brand/brand1.png";
@@ -25,6 +25,19 @@ import projectSeven from "../../../public/images/home01/portfolioSection/portfol
 import PlusWhite from "../../../public/images/home01/services/plusWhite.png";
 import ProcessOne from "../../../public/images/home01/processStep/process-step-1.png";
 import ContactImage from "../../../public/images/home01/contact/contact-img.png";
+import Hero2Banner from "../../../public/images/hero/hero2.png";
+import Home2Testimonials1 from "../../../public/images/home2_Testimonials/Sophia_Rahman.png";
+import Home2Testimonials2 from "../../../public/images/home2_Testimonials/videoimg.png";
+import Home2Testimonials3 from "../../../public/images/home2_Testimonials/Michael_Torres.png";
+import Home2Testimonials4 from "../../../public/images/home2_Testimonials/Michael_Hayes.png";
+import CommonHeroImages from "../../../public/images/common_images/common-hero-banner.png";
+import Home2OurExperts1 from "../../../public/images/home2_ourexperts/experts1.png";
+import Home2OurExperts2 from "../../../public/images/home2_ourexperts/experts2.png";
+import Home2OurExperts3 from "../../../public/images/home2_ourexperts/experts3.png";
+import Home2OurExperts4 from "../../../public/images/home2_ourexperts/experts4.png";
+import Home2OurExperts5 from "../../../public/images/home2_ourexperts/experts5.png";
+import Home2OurExperts6 from "../../../public/images/home2_ourexperts/experts6.png";
+import ourteam from "../../../public/images/home2_ourteam/our_team.png";
 import Home2Blog1 from "../../../public/images/home2_blog/blog1.png";
 import Home2Blog2 from "../../../public/images/home2_blog/blog2.png";
 import Home2Blog3 from "../../../public/images/home2_blog/blog3.png";
@@ -33,16 +46,33 @@ import Home2Section1 from "../../../public/images/home2_services/business_consul
 import Home2Section2 from "../../../public/images/home2_services/financial_planning.png";
 import Home2Section3 from "../../../public/images/home2_services/vat&tax.png";
 import Home2Section4 from "../../../public/images/home2_services/market-analysis.png";
+import FAQSection1 from "../../../public/images/faq/laptop.png";
+import FAQSection2 from "../../../public/images/faq/discuss.png";
+import FAQSection3 from "../../../public/images/faq/faq_bg.png";
+import FAQSection4 from "../../../public/images/faq/faq_full_bg.png";
+import FooterLogo from "../../../public/images/footer_one/footer_logo.png";
+
+import contact_logo from "../../../public/images/contact/contact_logo.png";
+
+// for about us pages images
+import AboutUsBanner from "../../../public/images/aboutUs/aboutVideo.png";
+// for aboutUsVideo pages images
+import AboutUsVideo from "../../../public/images/aboutVideo/aboutvideo-Image.png";
+// for aboutUsVideo pages images
+import AboutTeamBorder from "../../../public/images/aboutTeam/team-page-border.png";
+
+// service details pages imgage
+import ServivesDetailsIcon from "../../../public/images/service/service-details.png";
+import ServivesDetailsBannaer from "../../../public/images/service/services-detail-banner.png";
 
 const allImages = {
-  heroIcons: HeroImage,
-
+  heroIocns: HeroImage,
   heroBanner: [
-    { id: 1, img: HeroBanner1 },
-    { id: 2, img: HeroBanner2 },
-    { id: 3, img: HeroBanner3 },
+    { id: 0, img: HeroBanner1 },
+    { id: 1, img: HeroBanner2 },
+    { id: 2, img: HeroBanner3 },
   ],
-    footerLogo: FooterLogo,
+  footerLogo: FooterLogo,
   contact_logo: contact_logo,
 
   featureRound: [
@@ -65,7 +95,7 @@ const allImages = {
     { id: 9, img: HomeBrandThree },
     { id: 10, img: HomeBrandFour },
   ],
-   plus: Plus,
+  plus: Plus,
   videoShowcase: VideoShowcase,
   quote: Quote,
   projectImages: [
@@ -142,7 +172,7 @@ const allImages = {
   plusImages: PlusWhite,
   processImage: ProcessOne,
   contactImage: ContactImage,
-    home2heroBanner: Hero2Banner,
+  home2heroBanner: Hero2Banner,
   home2Testimonials: [
     { id: 1, img: Home2Testimonials1 },
     { id: 2, img: Home2Testimonials2 },
@@ -168,6 +198,24 @@ const allImages = {
     { id: 3, img: Home2Section3 },
     { id: 4, img: Home2Section4 },
   ],
+  // about us pages images
+  aboutUsBanner: AboutUsBanner,
+  // about us video pages images
+  aboutUsVideo: AboutUsVideo,
+  // about  team pages images
+  aboutTeamBorder: AboutTeamBorder,
+  // team pages images || array/obj
+  teamPageMemberArr: [
+    { id: 1, img: Home2OurExperts1 },
+    { id: 2, img: Home2OurExperts2 },
+    { id: 3, img: Home2OurExperts3 },
+    { id: 4, img: Home2OurExperts4 },
+    { id: 5, img: Home2OurExperts5 },
+    { id: 6, img: Home2OurExperts6 },
+  ],
+  // service details pages imgage
+  servivesDetailsIcon: ServivesDetailsIcon,
+  servivesDetailsBannaer: ServivesDetailsBannaer,
 };
 
 export default allImages;
