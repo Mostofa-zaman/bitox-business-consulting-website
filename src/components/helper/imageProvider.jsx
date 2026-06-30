@@ -5,14 +5,26 @@ import HeroBanner3 from "../../../public/images/home01/hero/home-section-banner3
 import FeatureRoundOne from "../../../public/images/home01/feature-round/feature-round1.png";
 import FeatureRoundTwo from "../../../public/images/home01/feature-round/feature-round2.png";
 import AboutSectionOne from "../../../public/images/home01/about-section/home-about1.png";
-import AboutSectionTwo from "../../../public/images/home01/fabout-section/home-about2.png";
+import AboutSectionTwo from "../../../public/images/home01/about-section/home-about2.png";
 import HomeBrandOne from "../../../public/images/home01/brand/brand1.png";
 import HomeBrandTwo from "../../../public/images/home01/brand/brand2.png";
 import HomeBrandThree from "../../../public/images/home01/brand/brand3.png";
 import HomeBrandFour from "../../../public/images/home01/brand/brand4.png";
 import HomeBrandFive from "../../../public/images/home01/brand/brand5.png";
 import HomeBrandSix from "../../../public/images/home01/brand/brand6.png";
-
+import Plus from "../../../public/images/home01/services/plus.png";
+import VideoShowcase from "../../../public/images/home01/videoshowcase/service-banner.png";
+import Quote from "../../../public/images/home01/testimonial/quote.png";
+import ProjetctOne from "../../../public/images/home01/portfolioSection/portfolio1.png";
+import projectTwo from "../../../public/images/home01/portfolioSection/portfolio2.png";
+import ProjetctThree from "../../../public/images/home01/portfolioSection/portfolio3.png";
+import projectFour from "../../../public/images/home01/portfolioSection/portfolio4.png";
+import projectFive from "../../../public/images/home01/portfolioSection/portfolio5.png";
+import projectSix from "../../../public/images/home01/portfolioSection/portfolio6.png";
+import projectSeven from "../../../public/images/home01/portfolioSection/portfolio7.png";
+import PlusWhite from "../../../public/images/home01/services/plusWhite.png";
+import ProcessOne from "../../../public/images/home01/processStep/process-step-1.png";
+import ContactImage from "../../../public/images/home01/contact/contact-img.png";
 
 const allImages = {
   heroIcons: HeroImage,
@@ -44,6 +56,109 @@ const allImages = {
     { id: 8, img: HomeBrandTwo },
     { id: 9, img: HomeBrandThree },
     { id: 10, img: HomeBrandFour },
+  ],
+   plus: Plus,
+  videoShowcase: VideoShowcase,
+  quote: Quote,
+  projectImages: [
+    [
+      {
+        id: 1,
+        img: ProjetctOne,
+        title: "Brand Identity",
+        subtitleOne: "Branding",
+        subtitleTwo: "(2024)",
+        slug: "brand-identity",
+      },
+      {
+        id: 2,
+        img: projectTwo,
+        title: "E-Commerce Platform",
+        subtitleOne: "Web Design",
+        subtitleTwo: "(2024)",
+        slug: "e-commerce-platform",
+      },
+    ],
+    [
+      {
+        id: 1,
+        img: ProjetctThree,
+        title: "Social Media Campaign",
+        subtitleOne: "Marketing",
+        subtitleTwo: "(2023)",
+        slug: "social-media-campaign",
+      },
+      {
+        id: 2,
+        img: projectFour,
+        title: "Mobile App UI",
+        subtitleOne: "UI/UX",
+        subtitleTwo: "(2025)",
+        slug: "mobile-app-ui",
+      },
+      {
+        id: 3,
+        img: projectFive,
+        title: "SEO Strategy",
+        subtitleOne: "Digital Marketing",
+        subtitleTwo: "(2025)",
+        slug: "seo-strategy",
+      },
+    ],
+    [
+      {
+        id: 1,
+        img: projectSix,
+        title: "Business Strategy",
+        subtitleOne: "Consulting",
+        subtitleTwo: "(2025)",
+        slug: "business-strategy",
+      },
+      {
+        id: 2,
+        img: projectSeven,
+        title: "Financial Planning",
+        subtitleOne: "Finance",
+        subtitleTwo: "(2025)",
+        slug: "financial-planning",
+      },
+    ],
+  ],
+  //FAQ Section Images
+  FaqSection: {
+    headerImg: FAQSection1,
+    bottomImg: FAQSection2,
+    faq_bg: FAQSection3,
+    faq_full_bg: FAQSection4,
+  },
+  plusImages: PlusWhite,
+  processImage: ProcessOne,
+  contactImage: ContactImage,
+   home2heroBanner: Hero2Banner,
+  home2Testimonials: [
+    { id: 1, img: Home2Testimonials1 },
+    { id: 2, img: Home2Testimonials2 },
+    { id: 3, img: Home2Testimonials3 },
+    { id: 4, img: Home2Testimonials4 },
+  ],
+  commonHeroImages: CommonHeroImages,
+  home2OurExperts: [
+    { id: 1, img: Home2OurExperts1 },
+    { id: 2, img: Home2OurExperts2 },
+    { id: 3, img: Home2OurExperts3 },
+  ],
+  home2ourteam: ourteam,
+  home2blog: [
+    { id: 1, img: Home2Blog1 },
+    { id: 2, img: Home2Blog2 },
+    { id: 3, img: Home2Blog3 },
+    { id: 4, img: Home2Blog4 },
+  ],
+  home2Section: [
+    { id: 1, img: Home2Section1 },
+    { id: 2, img: Home2Section2 },
+    { id: 3, img: Home2Section3 },
+    { id: 4, img: Home2Section4 },
   ],
 };
 
