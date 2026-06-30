@@ -25,6 +25,14 @@ import projectSeven from "../../../public/images/home01/portfolioSection/portfol
 import PlusWhite from "../../../public/images/home01/services/plusWhite.png";
 import ProcessOne from "../../../public/images/home01/processStep/process-step-1.png";
 import ContactImage from "../../../public/images/home01/contact/contact-img.png";
+import Home2Blog1 from "../../../public/images/home2_blog/blog1.png";
+import Home2Blog2 from "../../../public/images/home2_blog/blog2.png";
+import Home2Blog3 from "../../../public/images/home2_blog/blog3.png";
+import Home2Blog4 from "../../../public/images/home2_blog/blog4.png";
+import Home2Section1 from "../../../public/images/home2_services/business_consultancy.png";
+import Home2Section2 from "../../../public/images/home2_services/financial_planning.png";
+import Home2Section3 from "../../../public/images/home2_services/vat&tax.png";
+import Home2Section4 from "../../../public/images/home2_services/market-analysis.png";
 
 const allImages = {
   heroIcons: HeroImage,
@@ -134,7 +142,7 @@ const allImages = {
   plusImages: PlusWhite,
   processImage: ProcessOne,
   contactImage: ContactImage,
-   home2heroBanner: Hero2Banner,
+    home2heroBanner: Hero2Banner,
   home2Testimonials: [
     { id: 1, img: Home2Testimonials1 },
     { id: 2, img: Home2Testimonials2 },
