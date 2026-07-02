@@ -85,3 +85,62 @@ export function DropdownMenu({
     </div>
   );
 }
+
+export function DesktopNavItem({
+  link,
+  openDropdown,
+  onEnter,
+  onLeave,
+  pathname,
+  dropdownStyle = "rounded",
+  height = "auto",
+}) {
+  const isActive = link.children
+    ? false
+    : isActiveLink(link.href, pathname);
+// hasActiveChild(link.children, pathname)
+  const activeClass = isActive
+    ? "text-secondary"
+    : "text-primary hover:text-secondary";
+  const heightClass = height === "full" ? "h-[100px] flex items-center" : "";
+
+  if (link.children) {
+    return (
+      <div
+        className={`relative ${heightClass}`}
+        onMouseEnter={() => onEnter(link.label)}
+        onMouseLeave={onLeave}
+      >
+        <button
+          className={`flex items-center gap-1 text-[16px] font-bold transition-colors duration-200 cursor-pointer   ${activeClass}`}
+        >
+          {link.label}
+          <ChevronDown
+            size={13}
+            className={`transition-transform duration-200 ${
+              openDropdown === link.label ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+        <DropdownMenu
+          children={link.children}
+          isOpen={openDropdown === link.label}
+          onClose={onLeave}
+          pathname={pathname}
+          style={dropdownStyle}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className={heightClass}>
+      <Link
+        href={link.href}
+        className={`text-[16px] font-bold transition-colors duration-200 whitespace-nowrap ${activeClass}`}
+      >
+        {link.label}
+      </Link>
+    </div>
+  );
+}
