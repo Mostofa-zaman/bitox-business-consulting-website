@@ -144,3 +144,72 @@ export function DesktopNavItem({
     </div>
   );
 }
+
+
+export function MobileNavItem({
+  link,
+  openDropdown,
+  onToggle,
+  onClose,
+  pathname,
+}) {
+  const isActive = link.children
+    ? false
+    : isActiveLink(link.href, pathname);
+// 
+  const activeClass = isActive
+    ? "text-secondary"
+    : "text-primary hover:text-secondary";
+
+  if (link.children) {
+    const isOpen = openDropdown === link.label;
+    return (
+      <div>
+        <button
+          onClick={() => onToggle(link.label)}
+          className={`flex items-center justify-between w-full py-3.5 border-b border-primary/10 transition-colors duration-200 ${activeClass}`}
+        >
+          <span className="text-base font-medium font-heading">
+            {link.label}
+          </span>
+          <ChevronDown
+            size={16}
+            className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          />
+        </button>
+        <div
+          className={`overflow-hidden transition-all duration-300 ${
+            isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="flex flex-col gap-1 py-2 pl-4">
+            {link.children.map((child) => (
+              <Link
+                key={child.href}
+                href={child.href}
+                onClick={onClose}
+                className={`py-2 text-[16px] transition-colors duration-200 ${
+                  isActiveLink(child.href, pathname)
+                    ? "text-secondary font-medium"
+                    : "text-primary/70 hover:text-secondary"
+                }`}
+              >
+                {child.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <Link
+      href={link.href}
+      onClick={onClose}
+      className={`py-3.5 text-[16px] font-heading font-medium border-b border-primary/10 block transition-colors duration-200 ${activeClass}`}
+    >
+      {link.label}
+    </Link>
+  );
+}
