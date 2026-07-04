@@ -33,20 +33,24 @@ function useNavbar() {
 
 
     const closeMobileMenu = useCallback(() => setMobileOpen(false), []);
+    
   const openSearch = useCallback(() => setSearchOpen(true), []);
+  const closeSearch = useCallback(() => setSearchOpen(false), []);
 
   return {
-    pathname,
+ pathname,
     scrolled,
     mobileOpen,
     openDropdown,
     openMobileDropdown,
-    handleMouseEnter,
-    closeMobileMenu,
+ 
     toggleMobileDropdown,
     toggleMobileMenu,
-
-    openSearch, // ← NEW
+    closeMobileMenu,
+  
+    searchOpen,
+    openSearch,
+    closeSearch,
   };
 }
 
@@ -57,12 +61,14 @@ const NavbarOne = () => {
     mobileOpen,
     openDropdown,
     openMobileDropdown,
-    handleMouseEnter,
-closeMobileMenu,
+ 
     toggleMobileDropdown,
     toggleMobileMenu,
-
+    closeMobileMenu,
+  
+    searchOpen,
     openSearch,
+    closeSearch,
   } = useNavbar();
 
   return (
@@ -197,6 +203,20 @@ closeMobileMenu,
           </Link>
         </nav>
       </div>
+
+      {/* ── Search Overlay */}
+<div
+  className={`fixed inset-0 z-60 transition-opacity duration-300 ${
+    searchOpen
+      ? "opacity-100 pointer-events-auto"
+      : "opacity-0 pointer-events-none"
+  }`}
+>
+  <div
+    onClick={closeSearch}
+    className="absolute inset-0 bg-black/60"
+  />
+</div>
     </>
   );
 };
