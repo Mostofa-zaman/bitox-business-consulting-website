@@ -35,12 +35,16 @@ function useNavbar() {
 
 const NavbarOne = () => {
   const {
-    pathname,
+  pathname,
     scrolled,
     mobileOpen,
     openDropdown,
+  
     toggleMobileMenu,
+    closeMobileMenu,
+   
     openSearch,
+  
 
   } = useNavbar();
 
@@ -137,6 +141,17 @@ const NavbarOne = () => {
           </button>
         </div>
       </header>
+      
+      {/* ── Mobile Backdrop */}
+      <div
+        onClick={closeMobileMenu}
+        className={`fixed inset-0 z-40 bg-black/20 backdrop-blur-sm lg:hidden transition-opacity duration-300  ${
+          mobileOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      />
+
    </>
   );
 };
