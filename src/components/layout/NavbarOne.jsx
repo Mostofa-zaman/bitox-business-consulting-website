@@ -1,95 +1,92 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import { Search } from "lucide-react";
+import {
+  NAV_LINKS,
+  DesktopNavItem,
+} from "@/components/helper/helpers";
+import ButtonThree from "../common/ButtonThree";
 
-const NavbarOne = () => {
+function useNavbar() {
   const pathname = usePathname();
 
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [openDropdown] = useState(null);
+  const [scrolled] = useState(false);
 
-  const closeTimer = useRef(null);
+  return {
+    pathname,
+    scrolled,
+    openDropdown,
+  };
+}
 
-  // Reset navbar state on route change
-  useEffect(() => {
-    setMobileOpen(false);
-    setOpenDropdown(null);
-    setOpenMobileDropdown(null);
-  }, [pathname]);
-
-  // Detect scroll
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    onScroll();
-
-    window.addEventListener("scroll", onScroll, {
-      passive: true,
-    });
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileOpen]);
-
-  // Cleanup dropdown timer
-  useEffect(() => {
-    return () => {
-      if (closeTimer.current) {
-        clearTimeout(closeTimer.current);
-      }
-    };
-  }, []);
-
-  const handleMouseEnter = useCallback((label) => {
-    if (closeTimer.current) {
-      clearTimeout(closeTimer.current);
-      closeTimer.current = null;
-    }
-
-    setOpenDropdown(label);
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    closeTimer.current = setTimeout(() => {
-      setOpenDropdown(null);
-      closeTimer.current = null;
-    }, 120);
-  }, []);
-
-  const toggleMobileDropdown = useCallback((label) => {
-    setOpenMobileDropdown((prev) =>
-      prev === label ? null : label
-    );
-  }, []);
-
-  const toggleMobileMenu = useCallback(() => {
-    setMobileOpen((prev) => !prev);
-  }, []);
-
-  const closeMobileMenu = useCallback(() => {
-    setMobileOpen(false);
-  }, []);
+const NavbarOne = () => {
+  const {
+    pathname,
+    scrolled,
+    openDropdown,
+  } = useNavbar();
 
   return (
-    <nav>
-      <h2>Navbar</h2>
-    </nav>
+    <header
+      className={`fixed left-5 right-5 top-5 z-50 hidden lg:flex items-center justify-between px-8 h-[70px] rounded-md transition-all duration-300 ${
+        scrolled ? "bg-white shadow-lg" : "bg-white/90 backdrop-blur-md"
+      }`}
+    >
+      <Link href="/" aria-label="Go to homepage">
+        <Image
+          src="/images/logo/Nav_logo.png"
+          alt="Bitox"
+          width={106}
+          height={32}
+          priority
+        />
+      </Link>
+
+      <nav
+        className="flex items-center gap-[clamp(1rem,2vw,2rem)]"
+        aria-label="Main navigation"
+      >
+        {NAV_LINKS.map((link) => (
+          <DesktopNavItem
+            key={link.label}
+            link={link}
+            openDropdown={openDropdown}
+            pathname={pathname}
+            dropdownStyle="rounded"
+          />
+        ))}
+      </nav>
+
+      <div className="flex items-center gap-4">
+        <button
+          aria-label="Search"
+          className="text-primary hover:text-secondary border border-black/10 rounded-md py-[14px] px-[15px] transition-colors duration-200 cursor-pointer"
+        >
+          <Search size={20} />
+        </button>
+
+        <Link
+          href="/contact"
+          className="px-6.25 py-3.75 bg-primary text-white text-sm font-medium rounded-md transition-colors duration-300"
+        >
+          <ButtonThree
+            frontText="Let's Talk."
+            backText="Get started now"
+            backgroundColor="transparent"
+            fontSize={14}
+            paddingTop={0}
+            paddingBottom={0}
+            paddingLeft={0}
+            paddingRight={0}
+          />
+        </Link>
+      </div>
+    </header>
   );
 };
 
