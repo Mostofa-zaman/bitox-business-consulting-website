@@ -4,7 +4,7 @@ import { useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, Search } from "lucide-react";
+import {  Search, X, Menu  } from "lucide-react";
 import { NAV_LINKS, DesktopNavItem, MobileNavItem } from "@/components/helper/helpers";
 import ButtonThree from "../common/ButtonThree";
 
@@ -217,6 +217,14 @@ const NavbarOne = () => {
     className="absolute inset-0 bg-black/60"
   />
 </div>
+ {/* X button — top-right corner */}
+        <button
+          onClick={closeSearch}
+          aria-label="Close search"
+          className="absolute top-6 right-6 w-11 h-11 flex items-center justify-center bg-primary text-white rounded-full hover:opacity-90 transition-opacity cursor-pointer z-10"
+        >
+          <X size={20} />
+        </button>
     </>
   );
 };
