@@ -22,42 +22,42 @@ const NavbarTwo = () => {
   >
     <a
       href="/"
-      className="text-primary font-medium hover:text-secondary transition-colors"
+      className="text-2xl font-medium hover:text-secondary transition-colors"
     >
       Home
     </a>
 
     <a
       href="/about"
-      className="text-primary font-medium hover:text-secondary transition-colors"
+      className="text-2xl font-medium hover:text-secondary transition-colors"
     >
       About
     </a>
 
     <a
       href="/services"
-      className="text-primary font-medium hover:text-secondary transition-colors"
+      className="text-2xl font-medium hover:text-secondary transition-colors"
     >
       Services
     </a>
 
     <a
       href="/projects"
-      className="text-primary font-medium hover:text-secondary transition-colors"
+      className="text-2xl font-medium hover:text-secondary transition-colors"
     >
       Projects
     </a>
 
     <a
       href="/blog"
-      className="text-primary font-medium hover:text-secondary transition-colors"
+      className="text-2xl font-medium hover:text-secondary transition-colors"
     >
       Blog
     </a>
 
     <a
       href="/contact"
-      className="text-primary font-medium hover:text-secondary transition-colors"
+      className="text-2xl  font-medium hover:text-secondary transition-colors"
     >
       Contact
     </a>
