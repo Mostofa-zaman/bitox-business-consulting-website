@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -11,8 +11,16 @@ import { DesktopNavItem, NAV_LINKS } from "../helper/helpers";
 function useNavbar() {
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState(null);
+    const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const closeTimer = useRef(null);
+
+
+    useEffect(() => {
+    setMobileOpen(false);
+  
+  }, [pathname]);
+
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -30,12 +38,17 @@ function useNavbar() {
     closeTimer.current = setTimeout(() => setOpenDropdown(null), 120);
   }, []);
 
+
+   const toggleMobileMenu = useCallback(() => setMobileOpen((prev) => !prev), []);
+
   return {
     pathname,
     scrolled,
     handleMouseEnter,
     handleMouseLeave,
+     toggleMobileMenu,
     openDropdown,
+      mobileOpen,
   };
 }
 
@@ -46,6 +59,8 @@ const NavbarTwo = () => {
     handleMouseEnter,
     handleMouseLeave,
     openDropdown,
+     toggleMobileMenu,
+       mobileOpen,
   } = useNavbar();
 
   return (
@@ -90,6 +105,30 @@ const NavbarTwo = () => {
             9 500 212 09 88
           </span>
         </div>
+      </header>
+
+        {/* ── Mobile Navbar */}
+      <header
+        className={`fixed left-0 right-0 top-0 z-50 flex lg:hidden items-center justify-between px-5 h-[70px] bg-white transition-all duration-300 ${
+          scrolled ? "shadow-md" : ""
+        }`}
+      >
+        <Link href="/" aria-label="Go to homepage">
+          <Image
+            src="/images/logo/Nav_logo.png"
+            alt="Bitox"
+            width={90}
+            height={28}
+            priority
+          />
+        </Link>
+        <button
+          onClick={toggleMobileMenu}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          className="text-primary hover:text-secondary transition-colors duration-200 cursor-pointer"
+        >
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </header>
     </>
   );
