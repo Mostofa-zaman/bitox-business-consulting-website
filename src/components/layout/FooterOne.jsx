@@ -67,7 +67,24 @@ export default function FooterOne() {
 
    
         </div>
-
+  {/* ── Social Links */}
+        <div className="py-10 sm:py-14 md:py-16 lg:py-18 3xl:py-22.5 flex flex-wrap items-center justify-center gap-3 sm:gap-4 3xl:gap-5 border-b border-[rgba(255,255,255,0.1)]">
+          {FOOTER_ONE_DATA.socials.map((social) => (
+            
+             <a key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-white/20 rounded-full text-center
+                text-sm md:text-[15px] 3xl:text-[16px]
+                py-2 px-5 sm:py-2.5 sm:px-7 3xl:py-2.5
+                w-full sm:w-auto sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] 3xl:w-[278px]
+                text-white hover:text-white hover:border-white/50 hover:bg-secondary hover:border-none  transition-all duration-200 leading-7"
+            >
+              {social.label}
+            </a>
+          ))}
+        </div>
       
 
       
