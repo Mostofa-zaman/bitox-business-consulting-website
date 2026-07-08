@@ -51,6 +51,16 @@ export default function FooterOne() {
                 {FOOTER_ONE_DATA.phone}
               </a>
             </div>
+            
+            {/* Address */}
+            <div
+              className="border border-[rgba(255,255,255,0.1)] rounded-md
+                text-sm md:text-base lg:text-lg 3xl:text-xl
+                text-white text-center leading-7.5
+                py-5 px-6 sm:py-7 sm:px-8 md:py-8 md:px-10 3xl:py-[47px] 3xl:px-[120px]"
+            >
+              {FOOTER_ONE_DATA.address}
+            </div>
 
 
               </div>
