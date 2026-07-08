@@ -11,16 +11,13 @@ import { DesktopNavItem, NAV_LINKS } from "../helper/helpers";
 function useNavbar() {
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState(null);
-    const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const closeTimer = useRef(null);
 
-
-    useEffect(() => {
+  useEffect(() => {
     setMobileOpen(false);
-  
   }, [pathname]);
-
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -38,17 +35,20 @@ function useNavbar() {
     closeTimer.current = setTimeout(() => setOpenDropdown(null), 120);
   }, []);
 
-
-   const toggleMobileMenu = useCallback(() => setMobileOpen((prev) => !prev), []);
-
+  const toggleMobileMenu = useCallback(
+    () => setMobileOpen((prev) => !prev),
+    [],
+  );
+  const closeMobileMenu = useCallback(() => setMobileOpen(false), []);
   return {
     pathname,
     scrolled,
     handleMouseEnter,
     handleMouseLeave,
-     toggleMobileMenu,
+    toggleMobileMenu,
     openDropdown,
-      mobileOpen,
+    mobileOpen,
+    closeMobileMenu,
   };
 }
 
@@ -59,8 +59,9 @@ const NavbarTwo = () => {
     handleMouseEnter,
     handleMouseLeave,
     openDropdown,
-     toggleMobileMenu,
-       mobileOpen,
+    toggleMobileMenu,
+    mobileOpen,
+    closeMobileMenu,
   } = useNavbar();
 
   return (
@@ -107,7 +108,7 @@ const NavbarTwo = () => {
         </div>
       </header>
 
-        {/* ── Mobile Navbar */}
+      {/* ── Mobile Navbar */}
       <header
         className={`fixed left-0 right-0 top-0 z-50 flex lg:hidden items-center justify-between px-5 h-[70px] bg-white transition-all duration-300 ${
           scrolled ? "shadow-md" : ""
@@ -130,6 +131,15 @@ const NavbarTwo = () => {
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </header>
+      {/* ── Mobile Backdrop */}
+      <div
+        onClick={closeMobileMenu}
+        className={`fixed inset-0 z-40 bg-black/20 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
+          mobileOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      />
     </>
   );
 };
