@@ -27,6 +27,34 @@ export default function FooterOne() {
             />
           </div>
 
+            {/* Contact Info */}
+              <div className="flex flex-col gap-3 w-full lg:w-[420px] xl:w-[500px] 2xl:w-[580px] 3xl:w-[654px] lg:mt-10 xl:mt-12 3xl:mt-16">
+
+                   {/* Email + Phone */}
+            <div className="flex flex-col gap-3 sm:flex-row">
+              
+              <a  href={`mailto:${FOOTER_ONE_DATA.email}`}
+                className="flex-1 border border-[rgba(255,255,255,0.1)] rounded-md
+                  text-sm md:text-base lg:text-lg 3xl:text-xl
+                  text-white text-center transition-all duration-200 hover:bg-white/10 leading-7.5
+                  py-3 px-4 sm:py-4 sm:px-5 md:py-5 md:px-6 3xl:py-[25px] 3xl:px-[60px]"
+              >
+                {FOOTER_ONE_DATA.email}
+              </a>
+              
+              <a  href={`tel:${FOOTER_ONE_DATA.phone}`}
+                className="flex-1 border border-[rgba(255,255,255,0.1)] rounded-md
+                  text-sm md:text-base lg:text-lg 3xl:text-xl
+                  text-white text-center transition-all duration-200 hover:bg-white/10 leading-7.5
+                  py-3 px-4 sm:py-4 sm:px-5 md:py-5 md:px-6 3xl:py-[25px] 3xl:px-[60px]"
+              >
+                {FOOTER_ONE_DATA.phone}
+              </a>
+            </div>
+
+
+              </div>
+
    
         </div>
 
