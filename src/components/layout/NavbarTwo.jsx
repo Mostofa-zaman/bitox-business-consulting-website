@@ -81,7 +81,7 @@ export default function NavbarTwo() {
     <>
       {/* ── Desktop Navbar */}
       <header
-        className={`fixed left-0 right-0 top-0 z-50 hidden lg:flex items-center justify-between px-10 h-[100px] bg-white transition-all duration-300 ${
+        className={`  fixed left-0 right-0 top-0 z-50 hidden lg:flex items-center justify-between px-10 h-[100px] bg-white transition-all duration-300 ${
           scrolled ? "shadow-md" : ""
         }`}
       >

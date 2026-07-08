@@ -128,7 +128,7 @@ export default function NavbarOne() {
     <>
       {/* ── Desktop Navbar */}
       <header
-        className={`fixed left-5 right-5 top-5 z-50 hidden lg:flex items-center justify-between px-8 h-[70px] rounded-md transition-all duration-300 ${
+        className={` bg-amber-900 fixed left-5 right-5 top-5 z-50 hidden lg:flex items-center justify-between px-8 h-[70px] rounded-md transition-all duration-300 ${
           scrolled ? "bg-white shadow-lg" : "bg-white/90 backdrop-blur-md"
         }`}
       >
