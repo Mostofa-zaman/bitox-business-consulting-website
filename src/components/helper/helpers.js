@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
+import { FaDribbble, FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 
 export function isActiveLink(href, pathname) {

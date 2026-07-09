@@ -1,17 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import ButtonThree from "../common/ButtonThree";
-import { Flex,Stack } from "../common/Responsive";
 import {
   ArrowIcon,
   EmailIcon,
   BUSINESS_HOURS,
+  COPYRIGHT_TEXT,
   companyLinks,
-  serviceLinks,
   legalLinks,
+  serviceLinks,
+  socialLinks,
 } from "../helper/helpers";
+import ButtonThree from "../common/ButtonThree";
 import Container from "../common/Container";
+import { Flex, Stack } from "../common/Responsive";
+
 // ─── Shared CTA Button
 function CTAButton({ frontText, backText, textColor = "#02090F", onClick }) {
   return (
@@ -98,7 +101,6 @@ function FooterLinksColumn({ title, links }) {
   );
 }
 
-
 // ─── Newsletter Column
 function NewsletterColumn() {
   return (
@@ -121,7 +123,6 @@ function NewsletterColumn() {
   );
 }
 
-
 // ─── Main Export
 export default function FooterTwo() {
   return (
@@ -130,6 +131,7 @@ export default function FooterTwo() {
       <div className="lg:hidden flex justify-center  pb-0">
         <ContactCard />
       </div>
+
       <div className="bg-bg-secondaryThree text-white rounded-tl-[15px]">
         {/* Hours + Appointment Bar */}
         <div className="w-full border-b border-white/10">
@@ -149,36 +151,19 @@ export default function FooterTwo() {
             </div>
           </div>
         </div>
-          {/* Footer Links + Newsletter */}
+
+        {/* Footer Links + Newsletter */}
         <Container size="">
           <div className="py-8 lg:py-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:pl-[460px] xl:pl-[480px]">
               <FooterLinksColumn title="Company" links={companyLinks} />
               <FooterLinksColumn title="Service Link" links={serviceLinks} />
-            <NewsletterColumn/>
+              <NewsletterColumn />
             </div>
           </div>
         </Container>
 
-        <div className="border-t border-white/10">
-  <Container size="">
-    <div className="flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between">
-      {/* Legal Links */}
-      <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start">
-        {legalLinks.map((item) => (
-          <a
-            key={item}
-            href="#"
-            className="text-[16px] text-white hover:text-secondary transition-colors whitespace-nowrap"
-          >
-            {item}
-          </a>
-        ))}
-      </div>
-    </div>
-  </Container>
-</div>
-  {/* Bottom Bar */}
+        {/* Bottom Bar */}
         <div className="border-t border-white/10">
           <Container size="">
             <div className="flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between">
@@ -216,7 +201,12 @@ export default function FooterTwo() {
           </Container>
         </div>
 
-
+        {/* Desktop: card overlapping footer */}
+        <div className="hidden lg:block absolute top-[-75px] z-10 pointer-events-none right-[65%]">
+          <div className="pointer-events-auto inline-block ">
+            <ContactCard />
+          </div>
+        </div>
       </div>
     </div>
   );
