@@ -256,7 +256,13 @@ export const companyLinks = [
   { id: 4, label: "Contact Us", slug: "/contact" },
 ];
 
-
+export const serviceLinks = [
+  { id: 0, label: "Corporate Growth", slug: "/services" },
+  { id: 1, label: "Culture & Change", slug: "/services" },
+  { id: 2, label: "Finance Advisor", slug: "/services" },
+  { id: 3, label: "Digital Marketing", slug: "/services" },
+  { id: 4, label: "Consulting Network", slug: "/services" },
+];
 
 
 
