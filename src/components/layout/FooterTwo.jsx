@@ -1,9 +1,7 @@
 "use client";
 import ButtonThree from "../common/ButtonThree";
-  import { Stack } from "../common/Responsive";
-import { ArrowIcon,   BUSINESS_HOURS, } from "../helper/helpers";
-
-
+import { Stack } from "../common/Responsive";
+import { ArrowIcon, BUSINESS_HOURS } from "../helper/helpers";
 
 // ─── Shared CTA Button
 function CTAButton({ frontText, backText, textColor = "#02090F", onClick }) {
@@ -23,14 +21,12 @@ function CTAButton({ frontText, backText, textColor = "#02090F", onClick }) {
         paddingLeft={0}
         paddingRight={0}
       />
-       <span className="inline-block transition-transform group-hover:translate-x-1">
+      <span className="inline-block transition-transform group-hover:translate-x-1">
         <ArrowIcon color={textColor === "#ffffff" ? "#ffffff" : "#02090F"} />
       </span>
-   
     </div>
   );
 }
-
 
 // ─── Contact Form Card
 function ContactCard() {
@@ -73,8 +69,6 @@ function ContactCard() {
   );
 }
 
-
-
 // ─── Main Export
 export default function FooterTwo() {
   return (
@@ -83,21 +77,26 @@ export default function FooterTwo() {
       <div className="lg:hidden flex justify-center  pb-0">
         <ContactCard />
       </div>
-         <div className="bg-bg-secondaryThree text-white rounded-tl-[15px]">
-
-          <div className="w-full border-b border-white/10">
-  <div className="mx-auto max-w-[1265px] flex flex-col sm:flex-row">
-    <div className="bg-secondary flex items-center justify-center px-8 py-4 sm:flex-1 lg:ml-[340px] lg:pl-[140px] xl:ml-[300px] xl:pl-[300px]">
-      <p className="text-sm text-white font-medium text-center">
-        {BUSINESS_HOURS}
-      </p>
-    </div>
-  </div>
-</div>
-         </div>
-
-   
-    
+      <div className="bg-bg-secondaryThree text-white rounded-tl-[15px]">
+        {/* Hours + Appointment Bar */}
+        <div className="w-full border-b border-white/10">
+          <div className="mx-auto max-w-[1265px] flex flex-col sm:flex-row">
+            <div className="bg-secondary flex items-center justify-center px-8 py-4 sm:flex-1 lg:ml-[340px] lg:pl-[140px] xl:ml-[300px] xl:pl-[300px]">
+              <p className="text-sm text-white font-medium text-center">
+                {BUSINESS_HOURS}
+              </p>
+            </div>
+            <div className="flex items-center justify-between gap-2.5 px-7 py-4 hover:bg-white/5 transition-colors border-t border-white/10 sm:border-t-0 sm:border-l sm:border-white/10 sm:flex-1">
+              <CTAButton
+                frontText="Call for an appointment"
+                backText="Let's Talk."
+                textColor="#ffffff"
+                onClick={() => console.log("appointment")}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
