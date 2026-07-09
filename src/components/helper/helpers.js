@@ -240,3 +240,5 @@ export const FOOTER_ONE_DATA = {
     { label: "Support", href: "/support" },
   ],
 };
+
+

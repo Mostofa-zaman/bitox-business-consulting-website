@@ -1,6 +1,31 @@
 "use client";
+import ButtonThree from "../common/ButtonThree";
   import { Stack } from "../common/Responsive";
 
+  
+
+// ─── Shared CTA Button
+function CTAButton({ frontText, backText, textColor = "#02090F", onClick }) {
+  return (
+    <div
+      className="inline-flex items-center gap-2.5 cursor-pointer group"
+      onClick={onClick}
+    >
+      <ButtonThree
+        frontText={frontText}
+        backText={backText}
+        backgroundColor="transparent"
+        textColor={textColor}
+        fontSize={14}
+        paddingTop={0}
+        paddingBottom={0}
+        paddingLeft={0}
+        paddingRight={0}
+      />
+   
+    </div>
+  );
+}
 
 
 // ─── Contact Form Card
