@@ -11,6 +11,26 @@ function ContactCard() {
         <p className="headingFive font-bold text-primary leading-snug">
           Have questions? Get in touch now!
         </p>
+
+        <Stack gap="sm">
+          {[
+            { type: "text", placeholder: "Name" },
+            { type: "email", placeholder: "Email" },
+          ].map(({ type, placeholder }) => (
+            <input
+              key={placeholder}
+              type={type}
+              placeholder={placeholder}
+              className="border-b border-primary/10 outline-none py-2.5 text-sm text-primary placeholder:text-tarnary bg-transparent focus:border-secondary transition-colors"
+            />
+          ))}
+
+          <textarea
+            placeholder="Message"
+            rows={3}
+            className="border-b border-primary/10 outline-none py-2.5 text-sm text-primary placeholder:text-tarnary bg-transparent resize-none focus:border-secondary transition-colors"
+          />
+        </Stack>
       </Stack>
     </div>
   );
