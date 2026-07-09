@@ -1,8 +1,15 @@
 "use client";
-import ButtonThree from "../common/ButtonThree";
-import { Stack } from "../common/Responsive";
-import { ArrowIcon, BUSINESS_HOURS } from "../helper/helpers";
 
+import Link from "next/link";
+import ButtonThree from "../common/ButtonThree";
+import { Flex,Stack } from "../common/Responsive";
+import {
+  ArrowIcon,
+  BUSINESS_HOURS,
+  companyLinks,
+  serviceLinks,
+} from "../helper/helpers";
+import Container from "../common/Container";
 // ─── Shared CTA Button
 function CTAButton({ frontText, backText, textColor = "#02090F", onClick }) {
   return (
@@ -69,6 +76,50 @@ function ContactCard() {
   );
 }
 
+// ─── Footer Links Column
+function FooterLinksColumn({ title, links }) {
+  return (
+    <Stack gap="sm">
+      <p className="font-bold text-white headingSixAlter mb-2">{title}</p>
+      {links.map((link) => (
+        <Flex key={link.id} gap="xs" align="center">
+          <span className="w-2 h-2 rounded-full bg-[#999999] shrink-0" />
+          <Link
+            href={link.slug}
+            className="para-lg text-[#999999] hover:text-white transition-colors"
+          >
+            {link.label}
+          </Link>
+        </Flex>
+      ))}
+    </Stack>
+  );
+}
+
+
+// ─── Newsletter Column
+function NewsletterColumn() {
+  return (
+    <Stack gap="sm">
+      <p className="font-bold text-white headingSixAlter mb-2">Newsletter</p>
+      <p className="para-lg text-[#999999] max-w-[384px]">
+        Stay updated with design tips, creative strategy, and industry insights.
+      </p>
+      <div className="relative mt-2">
+        <input
+          type="email"
+          placeholder="Enter Your Email"
+          className="w-full bg-bg-secondaryTwo border border-white/20 pl-6 pr-12 py-[16px] rounded-[10px] text-sm text-primary placeholder:text-primary outline-none focus:border-secondary transition-colors"
+        />
+        <span className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+          <EmailIcon />
+        </span>
+      </div>
+    </Stack>
+  );
+}
+
+
 // ─── Main Export
 export default function FooterTwo() {
   return (
@@ -96,6 +147,17 @@ export default function FooterTwo() {
             </div>
           </div>
         </div>
+          {/* Footer Links + Newsletter */}
+        <Container size="">
+          <div className="py-8 lg:py-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:pl-[460px] xl:pl-[480px]">
+              <FooterLinksColumn title="Company" links={companyLinks} />
+              <FooterLinksColumn title="Service Link" links={serviceLinks} />
+            
+            </div>
+          </div>
+        </Container>
+
       </div>
     </div>
   );
