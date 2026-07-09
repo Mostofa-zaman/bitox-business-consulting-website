@@ -5,9 +5,11 @@ import ButtonThree from "../common/ButtonThree";
 import { Flex,Stack } from "../common/Responsive";
 import {
   ArrowIcon,
+  EmailIcon,
   BUSINESS_HOURS,
   companyLinks,
   serviceLinks,
+  legalLinks,
 } from "../helper/helpers";
 import Container from "../common/Container";
 // ─── Shared CTA Button
@@ -153,10 +155,29 @@ export default function FooterTwo() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:pl-[460px] xl:pl-[480px]">
               <FooterLinksColumn title="Company" links={companyLinks} />
               <FooterLinksColumn title="Service Link" links={serviceLinks} />
-            
+            <NewsletterColumn/>
             </div>
           </div>
         </Container>
+
+        <div className="border-t border-white/10">
+  <Container size="">
+    <div className="flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between">
+      {/* Legal Links */}
+      <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start">
+        {legalLinks.map((item) => (
+          <a
+            key={item}
+            href="#"
+            className="text-[16px] text-white hover:text-secondary transition-colors whitespace-nowrap"
+          >
+            {item}
+          </a>
+        ))}
+      </div>
+    </div>
+  </Container>
+</div>
 
       </div>
     </div>

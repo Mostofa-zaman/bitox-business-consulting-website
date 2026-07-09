@@ -264,6 +264,8 @@ export const serviceLinks = [
   { id: 4, label: "Consulting Network", slug: "/services" },
 ];
 
+export const legalLinks = ["Privacy Policy", "Terms and Conditions", "Support"];
+
 
 
 export const MARQUEE_TEXT = "BUSINESS · CONSULTING · ";
