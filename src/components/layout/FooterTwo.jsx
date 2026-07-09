@@ -1,6 +1,7 @@
 "use client";
 import ButtonThree from "../common/ButtonThree";
   import { Stack } from "../common/Responsive";
+import { ArrowIcon,   BUSINESS_HOURS, } from "../helper/helpers";
 
 
 
@@ -82,6 +83,18 @@ export default function FooterTwo() {
       <div className="lg:hidden flex justify-center  pb-0">
         <ContactCard />
       </div>
+         <div className="bg-bg-secondaryThree text-white rounded-tl-[15px]">
+
+          <div className="w-full border-b border-white/10">
+  <div className="mx-auto max-w-[1265px] flex flex-col sm:flex-row">
+    <div className="bg-secondary flex items-center justify-center px-8 py-4 sm:flex-1 lg:ml-[340px] lg:pl-[140px] xl:ml-[300px] xl:pl-[300px]">
+      <p className="text-sm text-white font-medium text-center">
+        {BUSINESS_HOURS}
+      </p>
+    </div>
+  </div>
+</div>
+         </div>
 
    
     

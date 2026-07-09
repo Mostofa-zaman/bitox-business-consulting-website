@@ -243,6 +243,11 @@ export const FOOTER_ONE_DATA = {
 
 
 
+export const MARQUEE_TEXT = "BUSINESS · CONSULTING · ";
+export const MARQUEE_REPEAT_COUNT = 6;
+export const BUSINESS_HOURS = "Saturday – Thursday : 8:30 am – 10:45 pm";
+export const COPYRIGHT_TEXT = "Copyright © 2026 Bitox. All Rights Reserved.";
+
 // ─── Reusable Arrow SVG
 export const ArrowIcon = ({ color = "#02090F" }) => (
   <svg width="9" height="12" viewBox="0 0 9 12" fill="none">
