@@ -111,9 +111,7 @@ function NewsletterColumn() {
           placeholder="Enter Your Email"
           className="w-full bg-bg-secondaryTwo border border-white/20 pl-6 pr-12 py-[16px] rounded-[10px] text-sm text-primary placeholder:text-primary outline-none focus:border-secondary transition-colors"
         />
-        <span className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-          <EmailIcon />
-        </span>
+      
       </div>
     </Stack>
   );
