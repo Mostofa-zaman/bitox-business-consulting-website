@@ -2,7 +2,7 @@
 import ButtonThree from "../common/ButtonThree";
   import { Stack } from "../common/Responsive";
 
-  
+
 
 // ─── Shared CTA Button
 function CTAButton({ frontText, backText, textColor = "#02090F", onClick }) {
@@ -22,6 +22,9 @@ function CTAButton({ frontText, backText, textColor = "#02090F", onClick }) {
         paddingLeft={0}
         paddingRight={0}
       />
+       <span className="inline-block transition-transform group-hover:translate-x-1">
+        <ArrowIcon color={textColor === "#ffffff" ? "#ffffff" : "#02090F"} />
+      </span>
    
     </div>
   );
