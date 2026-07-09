@@ -178,6 +178,44 @@ export default function FooterTwo() {
     </div>
   </Container>
 </div>
+  {/* Bottom Bar */}
+        <div className="border-t border-white/10">
+          <Container size="">
+            <div className="flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between">
+              {/* Legal Links */}
+              <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start">
+                {legalLinks.map((item) => (
+                  <a
+                    key={item}
+                    href="#"
+                    className="text-[16px] text-white hover:text-secondary transition-colors whitespace-nowrap"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
+
+              {/* Social Icons */}
+              <div className="flex gap-3 items-center justify-center">
+                {socialLinks.map(({ icon: Icon, href }, i) => (
+                  <a
+                    key={i}
+                    href={href}
+                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:bg-secondary hover:text-white hover:border-transparent transition-all duration-300"
+                  >
+                    <Icon size={18} />
+                  </a>
+                ))}
+              </div>
+
+              {/* Copyright */}
+              <p className="text-[16px] text-white text-center md:text-right ">
+                {COPYRIGHT_TEXT}
+              </p>
+            </div>
+          </Container>
+        </div>
+
 
       </div>
     </div>
