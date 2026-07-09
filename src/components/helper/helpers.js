@@ -266,6 +266,12 @@ export const serviceLinks = [
 
 export const legalLinks = ["Privacy Policy", "Terms and Conditions", "Support"];
 
+export const socialLinks = [
+  { icon: FaFacebook, href: "#" },
+  { icon: FaXTwitter, href: "#" },
+  { icon: FaInstagram, href: "#" },
+  { icon: FaDribbble, href: "#" },
+];
 
 
 export const MARQUEE_TEXT = "BUSINESS · CONSULTING · ";
