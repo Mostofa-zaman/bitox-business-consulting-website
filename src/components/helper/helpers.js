@@ -242,3 +242,13 @@ export const FOOTER_ONE_DATA = {
 };
 
 
+
+// ─── Reusable Arrow SVG
+export const ArrowIcon = ({ color = "#02090F" }) => (
+  <svg width="9" height="12" viewBox="0 0 9 12" fill="none">
+    <path
+      d="M0.77735 0.0848229C0.445073 -0.136695 0 0.1015 0 0.500848V10.6323C0 11.0317 0.445073 11.2699 0.77735 11.0484L8.37596 5.98261C8.67283 5.7847 8.67283 5.34848 8.37596 5.15056L0.77735 0.0848229Z"
+      fill={color}
+    />
+  </svg>
+);
