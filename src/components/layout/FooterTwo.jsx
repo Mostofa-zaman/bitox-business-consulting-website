@@ -52,13 +52,21 @@ function ContactCard() {
               className="border-b border-primary/10 outline-none py-2.5 text-sm text-primary placeholder:text-tarnary bg-transparent focus:border-secondary transition-colors"
             />
           ))}
-
           <textarea
             placeholder="Message"
             rows={3}
             className="border-b border-primary/10 outline-none py-2.5 text-sm text-primary placeholder:text-tarnary bg-transparent resize-none focus:border-secondary transition-colors"
           />
         </Stack>
+
+        <div className="self-start bg-secondary rounded-[90px] px-6 py-3 hover:bg-secondary/90 transition-colors mt-1">
+          <CTAButton
+            frontText="Send Message"
+            backText="Let's Talk."
+            textColor="#ffffff"
+            onClick={() => console.log("send message")}
+          />
+        </div>
       </Stack>
     </div>
   );
