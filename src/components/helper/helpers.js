@@ -242,6 +242,23 @@ export const FOOTER_ONE_DATA = {
 };
 
 
+//===============================
+// HomeTwo — Footer Data
+//===============================
+
+
+
+export const companyLinks = [
+  { id: 0, label: "Who We Are?", slug: "/about" },
+  { id: 1, label: "Our Services", slug: "/services" },
+  { id: 2, label: "Latest Blog", slug: "/blog" },
+  { id: 3, label: "Meet Our Team", slug: "/team" },
+  { id: 4, label: "Contact Us", slug: "/contact" },
+];
+
+
+
+
 
 export const MARQUEE_TEXT = "BUSINESS · CONSULTING · ";
 export const MARQUEE_REPEAT_COUNT = 6;
