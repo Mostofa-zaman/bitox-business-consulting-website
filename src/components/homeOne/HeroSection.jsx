@@ -21,6 +21,15 @@ const HeroSection = () => {
             </span>
           </h1>
         </div>
+
+        <div className="relative lg:hidden md:hidden block">
+          <h1 className="font-heading headingOne uppercase tracking-tight flex flex-col items-center gap-y-2">
+            <span className="block font-extrabold ">Business</span>
+            <RotatingBadge size="sm" />
+            <span className="block font-medium">Strategy</span>
+          </h1>
+          
+        </div>
   </Container>
 </section>
   )
