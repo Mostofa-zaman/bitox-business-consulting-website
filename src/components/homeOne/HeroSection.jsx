@@ -2,6 +2,7 @@ import React from 'react'
 
 import Container from "../common/Container";
 import RotatingBadge from '../common/RotatingBadge';
+import HeroCard from '../common/HeroCard';
 
 
 const HeroSection = () => {
@@ -28,7 +29,9 @@ const HeroSection = () => {
             <RotatingBadge size="sm" />
             <span className="block font-medium">Strategy</span>
           </h1>
-          
+           <div className=" mt-12 flex justify-center ">
+            <HeroCard />
+          </div>
         </div>
   </Container>
 </section>
