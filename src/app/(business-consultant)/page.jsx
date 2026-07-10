@@ -1,12 +1,14 @@
+import ThemeInitializer from "@/components/helper/ThemeInitializer";
 
 
 
-
-export default function Home() {
+const Home1 = () => {
   return (
+   <>
+    <ThemeInitializer pathName={"business-consultant"} />
    
-
-<h1>hello</h1>
-   
+   </>
   );
-}
+};
+
+export default Home1;
