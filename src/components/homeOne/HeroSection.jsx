@@ -81,6 +81,11 @@ const [currentID] = useState(0);
               />
             </div>
           )}
+            <div className="absolute inset-0 bg-[#02090f30] z-20" />
+        </div>
+             {/* for lg */}
+        <div className="absolute top-[-155px] xl:top-[-176px] left-[6%] translate-x-[-2.5%] hidden lg:block  z-10">
+          <HeroCard />
         </div>
       </div>
     </section>
