@@ -8,6 +8,7 @@ import HeroCard from "../common/HeroCard";
 import allImages from "../helper/imageProvider";
 import Image from "next/image";
 import { useState } from "react";
+import Responsive from "../common/Responsive";
 
 const HeroSection = () => {
   
@@ -108,24 +109,38 @@ const [currentID] = useState(0);
         </div>
       </div>
       {/* for lg */}
-<div className="px-3 hidden lg:block">
-  <Responsive.Flex
-    as="ul"
-    justify="flex-start"
-    gap="none"
-    wrap={false}
-    style={{ gap: "12px" }}
-  >
-
-    {heroSections.map((items, index) => (
-  <li
-    key={index}
-  >
-    {items.title}
-  </li>
-))}
-  </Responsive.Flex>
-  </div>
+   {/* for lg */}
+      <div className="px-3 hidden lg:block">
+        <Responsive.Flex
+          as="ul"
+          justify="flex-start"
+          gap="none"
+          wrap={false}
+          style={{ gap: "12px" }}
+        >
+          {heroSections.map((items, index) => (
+            <li
+              key={index}
+              className="
+          flex-1 min-w-0
+          flex items-center justify-center
+          py-[19px] px-[20px]
+          xl:py-[19px] xl:px-[20px]
+          lg:py-[16px] lg:px-[16px]
+          md:py-[13px] md:px-[12px]
+          sm:py-[10px] sm:px-[10px]
+          border border-[#0000001a]
+          text-primary font-medium
+          rounded-[6px]
+          text-center
+          whitespace-nowrap
+        "
+            >
+              {items.title}
+            </li>
+          ))}
+        </Responsive.Flex>
+      </div>
     </section>
   );
 };
