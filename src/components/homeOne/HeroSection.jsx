@@ -1,11 +1,11 @@
 "use client";
 
-import RotatingBadge from "../ui/RotatingBadge";
-import Container from "../ui/Container";
-import HeroCard from "../ui/HeroCard";
+import RotatingBadge from "../common/RotatingBadge";
+import Container from "../common/Container";
+import HeroCard from "../common/HeroCard";
 import Image from "next/image";
 import allImages from "../helper/imageProvider";
-import Responsive from "../ui/Responsive";
+import Responsive from "../common/Responsive";
 import { heroSections } from "../helper/homeOnehelper";
 import { useEffect, useRef, useState } from "react";
 
