@@ -9,6 +9,7 @@ import allImages from "../helper/imageProvider";
 import Image from "next/image";
 import { useState } from "react";
 import Responsive from "../common/Responsive";
+import { heroSections } from "../helper/homeOnehelper";
 
 const HeroSection = () => {
   
@@ -135,6 +136,30 @@ const [currentID] = useState(0);
           text-center
           whitespace-nowrap
         "
+            >
+              {items.title}
+            </li>
+          ))}
+        </Responsive.Flex>
+      </div>
+        {/* for md   */}
+      <div className="px-3 hidden md:block lg:hidden">
+        <Responsive.Flex
+          as="ul"
+          justify="flex-start"
+          gap="none"
+          style={{ gap: "16px" }}
+          className=""
+        >
+          {heroSections.map((items, index) => (
+            <li
+              key={index}
+              className="py-[19px] px-[77px] border border-[#0000001a] text-primary font-medium rounded-[6px]
+              lg:py-[16px] lg:px-[77px]
+              md:py-[13px] md:px-[30px]
+              sm:py-[10px] sm:px-[15px]
+             
+              "
             >
               {items.title}
             </li>
