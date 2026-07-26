@@ -13,6 +13,7 @@ const HeroSection = () => {
   
   const { heroBanner } = allImages;
 const [currentID] = useState(0);
+ const [nextID, setNextID] = useState(null);
   return (
     <section>
       <Container>
@@ -64,6 +65,22 @@ const [currentID] = useState(0);
             fill
             priority={currentID === 0}
           />
+            {/* Next image - cross fade */}
+          {nextID !== null && (
+            <div
+              className={`absolute inset-0 z-10 transition-opacity duration-700 ease-in-out ${
+                fading ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                src={heroBanner[nextID].img}
+                alt="herobanner-images"
+                className="rounded-[6px] object-cover"
+                fill
+                priority={false}
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>
