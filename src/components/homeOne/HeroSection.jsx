@@ -107,6 +107,16 @@ const [currentID] = useState(0);
           })}
         </div>
       </div>
+      {/* for lg */}
+<div className="px-3 hidden lg:block">
+  <Responsive.Flex
+    as="ul"
+    justify="flex-start"
+    gap="none"
+    wrap={false}
+    style={{ gap: "12px" }}
+  ></Responsive.Flex>
+  </div>
     </section>
   );
 };
