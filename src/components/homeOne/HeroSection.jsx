@@ -1,24 +1,76 @@
-
 "use client";
-import React from "react";
 
-import Container from "../common/Container";
-import RotatingBadge from "../common/RotatingBadge";
-import HeroCard from "../common/HeroCard";
-import allImages from "../helper/imageProvider";
+import RotatingBadge from "../ui/RotatingBadge";
+import Container from "../ui/Container";
+import HeroCard from "../ui/HeroCard";
 import Image from "next/image";
-import { useState } from "react";
-import Responsive from "../common/Responsive";
+import allImages from "../helper/imageProvider";
+import Responsive from "../ui/Responsive";
 import { heroSections } from "../helper/homeOnehelper";
+import { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
-  
   const { heroBanner } = allImages;
-const [currentID] = useState(0);
- const [nextID, setNextID] = useState(null);
+
+  const [currentID, setCurrentID] = useState(0);
+  const [nextID, setNextID] = useState(null);
+  const [fading, setFading] = useState(false);
+  const intervalRef = useRef(null);
+  const fadingRef = useRef(false);
+
+  // Preload all images on mount
+  useEffect(() => {
+    heroBanner.slice(1).forEach((banner) => {
+      const img = new window.Image();
+      img.src = banner.img;
+    });
+  }, []);
+
+  const changeBanner = (newID) => {
+    if (fadingRef.current || newID === currentID) return;
+
+    fadingRef.current = true;
+    setNextID(newID);
+    setFading(false);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setFading(true);
+      });
+    });
+
+    setTimeout(() => {
+      setCurrentID(newID);
+      setNextID(null);
+      setFading(false);
+      fadingRef.current = false;
+    }, 800);
+  };
+
+  const startAutoPlay = () => {
+    intervalRef.current = setInterval(() => {
+      setCurrentID((prev) => {
+        const next = (prev + 1) % heroBanner.length;
+        changeBanner(next);
+        return prev;
+      });
+    }, 5000);
+  };
+
+  useEffect(() => {
+    startAutoPlay();
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  const handleBannerClick = (id) => {
+    changeBanner(id);
+    clearInterval(intervalRef.current);
+    startAutoPlay();
+  };
+
   return (
-    <section>
-      <Container>
+    <section className=" pt-[140px] lg:pt-[180px] pb-[90px] ">
+      <Container size="2xl">
         {/* lg, xl, 2xl */}
         <div className="relative hidden lg:block">
           <h1 className="font-heading headingOne uppercase tracking-tight">
@@ -32,7 +84,6 @@ const [currentID] = useState(0);
             </span>
           </h1>
         </div>
-
         {/* sm devices */}
         <div className="relative lg:hidden md:hidden block">
           <h1 className="font-heading headingOne uppercase tracking-tight flex flex-col items-center gap-y-2">
@@ -58,16 +109,16 @@ const [currentID] = useState(0);
       </Container>
       <div className="mt-[50px] lg:mt-[90px] mb-[20px] px-3 max-w-[1880px] h-[320px] sm:h-[400px] md:h-[500px] lg:h-[580px] xl:h-[600px] 2xl:h-[650px] relative mx-2">
         <div className="absolute inset-0 z-0">
-
-
-           <Image
+          {/* Current image */}
+          <Image
             src={heroBanner[currentID].img}
             alt="herobanner-images"
             className="rounded-[6px] object-cover"
             fill
             priority={currentID === 0}
           />
-            {/* Next image - cross fade */}
+
+          {/* Next image - cross fade */}
           {nextID !== null && (
             <div
               className={`absolute inset-0 z-10 transition-opacity duration-700 ease-in-out ${
@@ -83,13 +134,16 @@ const [currentID] = useState(0);
               />
             </div>
           )}
-            <div className="absolute inset-0 bg-[#02090f30] z-20" />
+
+          <div className="absolute inset-0 bg-[#02090f30] z-20" />
         </div>
-             {/* for lg */}
+
+        {/* for lg */}
         <div className="absolute top-[-155px] xl:top-[-176px] left-[6%] translate-x-[-2.5%] hidden lg:block  z-10">
           <HeroCard />
         </div>
-          <div className="absolute bottom-[15px] right-[15px] sm:bottom-[20px] sm:right-[20px] md:bottom-[25px] md:right-[25px] lg:bottom-[30px] lg:right-[30px] xl:bottom-[35px] xl:right-[35px] z-[20] flex gap-x-2 sm:gap-x-3 md:gap-x-4 xl:gap-x-5">
+
+        <div className="absolute bottom-[15px] right-[15px] sm:bottom-[20px] sm:right-[20px] md:bottom-[25px] md:right-[25px] lg:bottom-[30px] lg:right-[30px] xl:bottom-[35px] xl:right-[35px] z-[20] flex gap-x-2 sm:gap-x-3 md:gap-x-4 xl:gap-x-5">
           {heroBanner.map((items) => {
             return (
               <li
@@ -110,7 +164,6 @@ const [currentID] = useState(0);
         </div>
       </div>
       {/* for lg */}
-   {/* for lg */}
       <div className="px-3 hidden lg:block">
         <Responsive.Flex
           as="ul"
@@ -142,7 +195,7 @@ const [currentID] = useState(0);
           ))}
         </Responsive.Flex>
       </div>
-        {/* for md   */}
+      {/* for md   */}
       <div className="px-3 hidden md:block lg:hidden">
         <Responsive.Flex
           as="ul"
@@ -165,6 +218,19 @@ const [currentID] = useState(0);
             </li>
           ))}
         </Responsive.Flex>
+      </div>
+      {/* for sm   */}
+      <div className="px-3 md:hidden block">
+        <ul className="flex flex-wrap gap-5 justify-center">
+          {heroSections.map((items, index) => (
+            <li
+              key={index}
+              className="py-[19px]  text-center w-[250px] border border-[#0000001a] text-primary font-medium rounded-[6px]"
+            >
+              {items.title}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
