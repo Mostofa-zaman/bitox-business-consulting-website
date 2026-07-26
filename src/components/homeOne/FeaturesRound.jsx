@@ -29,6 +29,13 @@ const FeaturesRound = () => {
             <ButtonTwo frontText={"Learn about us"} />
           </Link>
         </div>
+          <Image
+          src={featureRound[0].img}
+          height={230}
+          width={230}
+          alt="feature-cart"
+          className="  hidden laptop:block  rounded-[6px] absolute  laptop:top-[50%] laptop:translate-y-[-50%] laptop:right-[-110px]  xl:right-[-150px] 2xl:right-[-240px]  rotate-[20deg] !h-[130px] !w-[130px] xl:!h-[170px] xl:!w-[170px] 2xl:!h-[220px] 2xl:!w-[220px]"
+        />
       </div>
     </section>
   )
