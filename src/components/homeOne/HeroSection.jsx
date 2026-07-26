@@ -87,6 +87,25 @@ const [currentID] = useState(0);
         <div className="absolute top-[-155px] xl:top-[-176px] left-[6%] translate-x-[-2.5%] hidden lg:block  z-10">
           <HeroCard />
         </div>
+          <div className="absolute bottom-[15px] right-[15px] sm:bottom-[20px] sm:right-[20px] md:bottom-[25px] md:right-[25px] lg:bottom-[30px] lg:right-[30px] xl:bottom-[35px] xl:right-[35px] z-[20] flex gap-x-2 sm:gap-x-3 md:gap-x-4 xl:gap-x-5">
+          {heroBanner.map((items) => {
+            return (
+              <li
+                key={items.id}
+                className="rounded-[6px] inline-block overflow-hidden border border-bg-secondaryTwo cursor-pointer"
+                onClick={() => handleBannerClick(items.id)}
+              >
+                <Image
+                  height={153}
+                  width={153}
+                  className="object-cover hover:scale-[1.1] transition duration-400 ease-in-out  !h-[80px] !w-[80px] sm:!h-[100px] sm:!w-[100px] md:!h-[120px] md:!w-[120px] lg:!h-[135px] lg:!w-[135px] xl:!h-[150px] xl:!w-[153px]"
+                  src={items.img}
+                  alt={items.img}
+                />
+              </li>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
