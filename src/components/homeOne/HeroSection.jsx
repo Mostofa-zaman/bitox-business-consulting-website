@@ -115,7 +115,16 @@ const [currentID] = useState(0);
     gap="none"
     wrap={false}
     style={{ gap: "12px" }}
-  ></Responsive.Flex>
+  >
+
+    {heroSections.map((items, index) => (
+  <li
+    key={index}
+  >
+    {items.title}
+  </li>
+))}
+  </Responsive.Flex>
   </div>
     </section>
   );
