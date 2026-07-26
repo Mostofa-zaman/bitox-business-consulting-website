@@ -1,15 +1,22 @@
-import React from 'react'
+
+"use client";
+import React from "react";
 
 import Container from "../common/Container";
-import RotatingBadge from '../common/RotatingBadge';
-import HeroCard from '../common/HeroCard';
-
+import RotatingBadge from "../common/RotatingBadge";
+import HeroCard from "../common/HeroCard";
+import allImages from "../helper/imageProvider";
+import Image from "next/image";
+import { useState } from "react";
 
 const HeroSection = () => {
+  
+  const { heroBanner } = allImages;
+const [currentID] = useState(0);
   return (
     <section>
-  <Container>
-      {/* lg, xl, 2xl */}
+      <Container>
+        {/* lg, xl, 2xl */}
         <div className="relative hidden lg:block">
           <h1 className="font-heading headingOne uppercase tracking-tight">
             <span className="block font-extrabold">
@@ -45,9 +52,22 @@ const HeroSection = () => {
             <HeroCard />
           </div>
         </div>
-  </Container>
-</section>
-  )
-}
+      </Container>
+      <div className="mt-[50px] lg:mt-[90px] mb-[20px] px-3 max-w-[1880px] h-[320px] sm:h-[400px] md:h-[500px] lg:h-[580px] xl:h-[600px] 2xl:h-[650px] relative mx-2">
+        <div className="absolute inset-0 z-0">
 
-export default HeroSection
+
+           <Image
+            src={heroBanner[currentID].img}
+            alt="herobanner-images"
+            className="rounded-[6px] object-cover"
+            fill
+            priority={currentID === 0}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
