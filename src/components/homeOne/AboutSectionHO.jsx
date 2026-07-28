@@ -19,6 +19,36 @@ const AboutSectionHO = () => {
                 fill
               />
             </div>
+
+              {/* Right: heading + skills */}
+            <div className="lg:border-l border-[#0000001a] lg:pl-[60px]">
+              <h4 className="headingFour font-bold text-primary">
+                Achieve goals and coach fast with strategic clarity and focus.
+              </h4>
+              <p className="text-tarnary para-lg my-[30px]">
+                We help businesses move forward with confidence by turning
+                complex challenges into clear action plans through structured
+                guidance, analysis and targeted coaching,{" "}
+              </p>
+
+              <Link href={"/about"} className="inline-block">
+                {" "}
+                <ButtonTwo frontText={"Get in touch"} />
+              </Link>
+
+              {/* Animated Progress Bars */}
+              <div className="mt-[60px]">
+                {aboutSectionskills.map((skill, i) => (
+                  <AnimatedProgressBar
+                    key={i}
+                    label={skill.label}
+                    value={skill.value}
+                    duration={1200 + i * 150}
+                  />
+                ))}
+              </div>
+            </div>
+            
           </Responsive.Grid>
         </div>
       </Container>
