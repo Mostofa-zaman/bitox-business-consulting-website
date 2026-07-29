@@ -3,7 +3,7 @@ import FeaturesRound from "@/components/homeOne/FeaturesRound";
 import HeroSection from "@/components/homeOne/HeroSection";
 import AboutSectionHO from "@/components/homeOne/AboutSectionHO";
 import BrandLogos from "@/components/homeOne/BrandLogos";
-
+import ServicesSection from "@/components/homeOne/ServicesSection";
 
 
 const Home1 = () => {
@@ -14,6 +14,7 @@ const Home1 = () => {
     <FeaturesRound/>
     <AboutSectionHO/>
     <BrandLogos/>
+    <ServicesSection/>
    
    </>
   );

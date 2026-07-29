@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
-import Container from "../ui/Container";
+import Container from "../common/Container";
 import allImages from "../helper/imageProvider";
 import Image from "next/image";
 
