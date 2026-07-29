@@ -5,6 +5,7 @@ import Image from "next/image";
 import allImages from "../helper/imageProvider";
 import ButtonTwo from "../common/ButtonTwo";
 import Link from "next/link";
+import AnimatedProgressBar from "../common/AnimatedProgressBar";
 
 const AboutSectionHO = () => {
   const { aboutsection } = allImages;
