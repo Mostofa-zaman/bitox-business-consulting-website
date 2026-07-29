@@ -4,7 +4,7 @@ import Responsive from "../common/Responsive";
 import Image from "next/image";
 import allImages from "../helper/imageProvider";
 import ButtonTwo from "../common/ButtonTwo";
-import { aboutSectionskills } from "../helper/homeOnehelper";
+import { aboutSectionskills, aboutStats } from "../helper/homeOnehelper";
 import Link from "next/link";
 import AnimatedProgressBar from "../common/AnimatedProgressBar";
 
@@ -45,7 +45,12 @@ const AboutSectionHO = () => {
               <div className="my-[60px] h-[2px] w-full bg-[#0000001a]"></div>
 
           </div>
-
+  {/* Count-Up Stats */}
+              <div className="grid grid-cols-2 gap-[30px]">
+                {aboutStats.map((stat, i) => (
+                 <h1>sjuduwsd</h1>
+                ))}
+              </div>
            
           </Responsive.Grid>
         </div>
