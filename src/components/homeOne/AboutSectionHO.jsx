@@ -7,6 +7,7 @@ import ButtonTwo from "../common/ButtonTwo";
 import { aboutSectionskills, aboutStats } from "../helper/homeOnehelper";
 import Link from "next/link";
 import AnimatedProgressBar from "../common/AnimatedProgressBar";
+import CountUpStat from "../common/CountUpStat";
 
 const AboutSectionHO = () => {
   const { aboutsection } = allImages;
@@ -44,14 +45,20 @@ const AboutSectionHO = () => {
 
               <div className="my-[60px] h-[2px] w-full bg-[#0000001a]"></div>
 
-          </div>
+      
   {/* Count-Up Stats */}
               <div className="grid grid-cols-2 gap-[30px]">
                 {aboutStats.map((stat, i) => (
-                 <h1>sjuduwsd</h1>
+                  <CountUpStat
+                    key={i}
+                    value={stat.value}
+                    label={stat.label}
+                    description={stat.description}
+                    duration={1800}
+                  />
                 ))}
               </div>
-           
+               </div>
           </Responsive.Grid>
         </div>
       </Container>
