@@ -4,6 +4,7 @@ import Responsive from "../common/Responsive";
 import Image from "next/image";
 import allImages from "../helper/imageProvider";
 import ButtonTwo from "../common/ButtonTwo";
+import { aboutSectionskills } from "../helper/homeOnehelper";
 import Link from "next/link";
 import AnimatedProgressBar from "../common/AnimatedProgressBar";
 
@@ -25,7 +26,6 @@ const AboutSectionHO = () => {
               />
             </div>
           </Responsive.Grid>
-
         </div>
       </Container>
     </section>

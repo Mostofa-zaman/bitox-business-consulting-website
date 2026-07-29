@@ -28,3 +28,13 @@ export const heroSections = [
     slug: "risk-management",
   },
 ];
+
+// ===============================================
+// HomeOne - feature-round Section Array Object
+// ===============================================
+
+export const aboutSectionskills = [
+  { label: "Analysis", value: 52 },
+  { label: "User Experience", value: 82 },
+  { label: "Development", value: 92 },
+];
