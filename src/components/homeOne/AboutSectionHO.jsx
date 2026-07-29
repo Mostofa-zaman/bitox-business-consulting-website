@@ -26,6 +26,28 @@ const AboutSectionHO = () => {
               />
             </div>
           </Responsive.Grid>
+             <Responsive.Grid
+            gap="none"
+            cols={{ base: 1, lg: 2 }}
+            align={"flex-start"}
+          >
+            <div className="lg:border-r border-[#0000001a] lg:pr-[35px] h-full">
+              <h4 className="headingFour font-bold text-primary mt-[60px]">
+                Creating one of the fastest way to grow your business
+                successfully
+              </h4>
+              <p className="text-tarnary para-lg mt-[30px]">
+                We help businesses move forward with confidence by turning
+                complex challenges into clear action plans through structured
+                guidance, analysis and targeted coaching,
+              </p>
+
+              <div className="my-[60px] h-[2px] w-full bg-[#0000001a]"></div>
+
+          </div>
+
+           
+          </Responsive.Grid>
         </div>
       </Container>
     </section>
