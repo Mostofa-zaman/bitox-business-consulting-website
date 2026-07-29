@@ -38,3 +38,17 @@ export const aboutSectionskills = [
   { label: "User Experience", value: 82 },
   { label: "Development", value: 92 },
 ];
+
+export const aboutStats = [
+  {
+    value: "68+",
+    label: "Completed Projects",
+    description: "Include a simple sentence about completed work.",
+  },
+  {
+    value: "98+",
+    label: "Satisfied Clients",
+    description: "Include a simple sentence about satisfied clients.",
+  },
+];
+
