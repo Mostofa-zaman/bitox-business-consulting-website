@@ -5,9 +5,9 @@ import Image from "next/image";
 import allImages from "../helper/imageProvider";
 import ButtonTwo from "../common/ButtonTwo";
 import { aboutSectionskills, aboutStats } from "../helper/homeOnehelper";
-import Link from "next/link";
 import AnimatedProgressBar from "../common/AnimatedProgressBar";
 import CountUpStat from "../common/CountUpStat";
+import Link from "next/link";
 
 const AboutSectionHO = () => {
   const { aboutsection } = allImages;
@@ -26,8 +26,38 @@ const AboutSectionHO = () => {
                 fill
               />
             </div>
+
+            {/* Right: heading + skills */}
+            <div className="lg:border-l border-[#0000001a] lg:pl-[60px]">
+              <h4 className="headingFour font-bold text-primary">
+                Achieve goals and coach fast with strategic clarity and focus.
+              </h4>
+              <p className="text-tarnary para-lg my-[30px]">
+                We help businesses move forward with confidence by turning
+                complex challenges into clear action plans through structured
+                guidance, analysis and targeted coaching,{" "}
+              </p>
+
+              <Link href={"/about"} className="inline-block">
+                {" "}
+                <ButtonTwo frontText={"Get in touch"} />
+              </Link>
+
+              {/* Animated Progress Bars */}
+              <div className="mt-[60px]">
+                {aboutSectionskills.map((skill, i) => (
+                  <AnimatedProgressBar
+                    key={i}
+                    label={skill.label}
+                    value={skill.value}
+                    duration={1200 + i * 150}
+                  />
+                ))}
+              </div>
+            </div>
           </Responsive.Grid>
-             <Responsive.Grid
+
+          <Responsive.Grid
             gap="none"
             cols={{ base: 1, lg: 2 }}
             align={"flex-start"}
@@ -45,8 +75,7 @@ const AboutSectionHO = () => {
 
               <div className="my-[60px] h-[2px] w-full bg-[#0000001a]"></div>
 
-      
-  {/* Count-Up Stats */}
+              {/* Count-Up Stats */}
               <div className="grid grid-cols-2 gap-[30px]">
                 {aboutStats.map((stat, i) => (
                   <CountUpStat
@@ -58,7 +87,17 @@ const AboutSectionHO = () => {
                   />
                 ))}
               </div>
-               </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="relative rounded-[6px] mt-8 lg:mt-0 md:!h-[500px] !h-[200px] lg:!h-[675px] overflow-hidden lg:ml-[60px]">
+              <Image
+                src={aboutsection[1].img}
+                alt="about-section"
+                className="object-cover"
+                fill
+              />
+            </div>
           </Responsive.Grid>
         </div>
       </Container>
