@@ -1,7 +1,7 @@
-
+import { serviceCards } from "../helper/homeOnehelper";
 import Container from "../common/Container";
+import Responsive from "../common/Responsive";
 import ServiceCard from "../common/ServiceCard";
-
 
 export default function ServicesSection() {
   return (
@@ -11,12 +11,13 @@ export default function ServicesSection() {
           {" "}
           Get the most valuable expert service now
         </h2>
-        
         <div className="rounded-[6px] overflow-hidden">
-
-            <ServiceCard/>
+          <Responsive.Grid cols={{ base: 1, lg:2 }} gap="none">
+            {serviceCards.map((card) => (
+              <ServiceCard key={card.id} card={card} />
+            ))}
+          </Responsive.Grid>
         </div>
-   
       </Container>
     </section>
   );
