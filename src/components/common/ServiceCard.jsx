@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import allImages from "../helper/imageProvider";
 
 export default function ServiceCard({ card }) {
   const {
@@ -8,10 +9,13 @@ export default function ServiceCard({ card }) {
    highlighted,
    title,
    href,
+   description,
+   features,
+
 
 
   } = card;
-    //   const { plus } = allImages;
+      const { plus } = allImages;
   return (
     <div
      className={`
@@ -55,6 +59,34 @@ export default function ServiceCard({ card }) {
         >
           <ArrowUpRight size={18} strokeWidth={2} />
         </Link>
+      </div>
+            {/* Body */}
+      <div className="py-5 px-4 sm:px-6 lg:py-6 lg:px-[35px] flex flex-col lg:flex-row justify-between gap-5 lg:gap-8">
+
+
+
+            {/* Left: Description + Features */}
+        <div className="flex-1 flex flex-col gap-4 lg:gap-[25px]">
+          <p className="para-lg text-tarnary font-normal">{description}</p>
+
+          <ul className="flex flex-col gap-2 lg:gap-[10px]">
+            {features.map((feature, i) => (
+              <li
+                key={i}
+                className="flex items-center whitespace-nowrap gap-2 lg:gap-[10px] para-lg font-normal"
+              >
+                <Image
+                  src={plus}
+                  width={16}
+                  height={16}
+                  alt="services-plus"
+                  className="shrink-0 "
+                />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
