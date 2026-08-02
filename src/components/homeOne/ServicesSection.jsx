@@ -1,5 +1,6 @@
 
-import Container from "../ui/Container";
+import Container from "../common/Container";
+import ServiceCard from "../common/ServiceCard";
 
 
 export default function ServicesSection() {
@@ -10,7 +11,12 @@ export default function ServicesSection() {
           {" "}
           Get the most valuable expert service now
         </h2>
-     
+        
+        <div className="rounded-[6px] overflow-hidden">
+
+            <ServiceCard/>
+        </div>
+   
       </Container>
     </section>
   );
