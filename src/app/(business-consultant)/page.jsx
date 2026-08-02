@@ -4,6 +4,7 @@ import HeroSection from "@/components/homeOne/HeroSection";
 import AboutSectionHO from "@/components/homeOne/AboutSectionHO";
 import BrandLogos from "@/components/homeOne/BrandLogos";
 import ServicesSection from "@/components/homeOne/ServicesSection";
+import VideoShowcase from "@/components/homeOne/VideoShowcase";
 
 
 const Home1 = () => {
@@ -15,6 +16,7 @@ const Home1 = () => {
     <AboutSectionHO/>
     <BrandLogos/>
     <ServicesSection/>
+    <VideoShowcase/>
    
    </>
   );
