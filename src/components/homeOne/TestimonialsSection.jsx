@@ -1,20 +1,19 @@
-
 import React from "react";
-import Container from "../common/Container";
-import CountUpStat from "../common/CountUpStat";
+import Container from "../ui/Container";
 import { allIcons } from "../helper/iconProvider";
-
+import TestimonialsSlider from "../ui/TestimonialsSlider";
+import CountUpStat from "../ui/CountUpStat";
 
 const TestimonialsSection = () => {
-     const { star } = allIcons;
+  const { star } = allIcons;
+
   return (
     <section>
       <Container size="full">
         <div className="grid grid-cols-1 lg:grid-cols-4">
           {/* Left Info Panel */}
           <div className="bg-secondary flex flex-col justify-between">
-
-              <div className="p-[20px] sm:p-[25px] lg:p-[30px]">
+            <div className="p-[20px] sm:p-[25px] lg:p-[30px]">
               {/* ✅ CountUpStat for 4.9 rating */}
               <CountUpStat
                 value="4.9"
@@ -34,7 +33,8 @@ const TestimonialsSection = () => {
                 Real stories. Real impact.
               </h3>
             </div>
-               {/* ✅ CountUpStat for bottom stats */}
+
+            {/* ✅ CountUpStat for bottom stats */}
             <div className="border-t border-b border-[#ffffff1b]">
               <div className="flex items-center justify-between p-[20px] sm:p-[25px] lg:p-[30px]">
                 <CountUpStat
@@ -56,10 +56,14 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
+          {/* Right Slider */}
+          <div className="lg:col-span-3">
+            <TestimonialsSlider />
+          </div>
         </div>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default TestimonialsSection
+export default TestimonialsSection;
