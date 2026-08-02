@@ -1,30 +1,31 @@
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import allImages from "../helper/imageProvider";
 
 export default function ServiceCard({ card }) {
   const {
     icon,
-   highlighted,
-   title,
-   href,
-   description,
-   features,
-
-
-
+    title,
+    description,
+    features,
+    image,
+    imageAlt,
+    href,
+    highlighted,
   } = card;
-      const { plus } = allImages;
+
+  const { plus } = allImages;
+
   return (
     <div
-     className={`
+      className={`
         w-full border border-[#0000001a] 
         ${highlighted ? "bg-color-bg-secondaryTwo" : "bg-color-bg-secondaryTwo"}
         group
       `}
     >
-       {/* Top Header Row */}
+      {/* Top Header Row */}
       <div className="flex items-center justify-between px-4 py-4 sm:px-6 sm:py-5 lg:px-[35px] lg:py-[25px] border-b border-black/10 relative">
         {/* Hover Arrow (top-right absolute) */}
         <span className="absolute top-0 right-0 p-3 lg:p-[22px] group-hover:bg-secondary group-hover:text-bg-secondaryTwo transition duration-500 ease-in-out hidden lg:block">
@@ -60,12 +61,11 @@ export default function ServiceCard({ card }) {
           <ArrowUpRight size={18} strokeWidth={2} />
         </Link>
       </div>
-            {/* Body */}
+
+      {/* Body */}
       <div className="py-5 px-4 sm:px-6 lg:py-6 lg:px-[35px] flex flex-col lg:flex-row justify-between gap-5 lg:gap-8">
-
-
-
-            {/* Left: Description + Features */}
+        
+        {/* Left: Description + Features */}
         <div className="flex-1 flex flex-col gap-4 lg:gap-[25px]">
           <p className="para-lg text-tarnary font-normal">{description}</p>
 
@@ -86,6 +86,22 @@ export default function ServiceCard({ card }) {
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Right: Image */}
+        <div className="w-full lg:w-auto">
+          <Image
+            src={image}
+            alt={imageAlt}
+            width={290}
+            height={260}
+            className="
+              w-full h-[200px]
+              sm:h-[240px]
+              lg:w-[290px] lg:h-[260px]
+              object-cover rounded-[6px]
+            "
+          />
         </div>
       </div>
     </div>
