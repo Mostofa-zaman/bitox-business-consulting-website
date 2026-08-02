@@ -34,7 +34,28 @@ const TestimonialsSection = () => {
                 Real stories. Real impact.
               </h3>
             </div>
+               {/* ✅ CountUpStat for bottom stats */}
+            <div className="border-t border-b border-[#ffffff1b]">
+              <div className="flex items-center justify-between p-[20px] sm:p-[25px] lg:p-[30px]">
+                <CountUpStat
+                  value="99%"
+                  label="Satisfaction Rate"
+                  duration={1800}
+                  statTextClass="headingSix font-bold text-bg-secondaryTwo"
+                  labelClass="text-sm sm:text-base pt-1 font-medium text-bg-secondaryTwo"
+                />
+                <CountUpStat
+                  value="70+"
+                  label="Companies Automated"
+                  duration={1800}
+                  statTextClass="headingSix font-bold text-bg-secondaryTwo"
+                  labelClass="text-sm sm:text-base pt-1 font-medium text-bg-secondaryTwo"
+                  className="text-end sm:text-start"
+                />
+              </div>
+            </div>
           </div>
+
         </div>
       </Container>
     </section>
