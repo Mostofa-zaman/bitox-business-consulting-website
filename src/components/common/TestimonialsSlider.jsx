@@ -47,7 +47,16 @@ const TestimonialsSlider = () => {
     >
       {testimonialsData.map((item, index) => (
         <SwiperSlide key={index}>
-       <TestimonialCard/>
+          <TestimonialCard
+            quotes={item.quote}
+            name={item.name}
+            role={item.role}
+            image={item.image}
+            tashNumOne={item.stats[0].percentage}
+            tashLabelOne={item.stats[0].label}
+            tashLabelTwo={item.stats[1].label}
+            tashNumTwo={item.stats[1].percentage}
+          />
         </SwiperSlide>
       ))}
     </Swiper>
