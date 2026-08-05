@@ -1,4 +1,6 @@
-import React from 'react'
+"use client";
+
+import React, { useState } from 'react'
 import Container from "../common/Container";
 import Responsive from "../common/Responsive";
 import { prcessStepsArr } from "../helper/processStepsArrObj";
@@ -6,6 +8,8 @@ import { prcessStepsArr } from "../helper/processStepsArrObj";
 
 
 const ProcessSteps = () => {
+    
+  const [showStep, setShowStep] = useState('Step 1');
   return (
     <section className="py-[60px] md:py-[80px] lg:py-[120px] bg-primary">
       <Container size={"lg"}>
