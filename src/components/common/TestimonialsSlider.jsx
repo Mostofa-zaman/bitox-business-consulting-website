@@ -9,7 +9,6 @@ import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { testimonialsData } from "../helper/homeOnehelper";
 import TestimonialCard from "./TestimonialCard";
 
-
 const TestimonialsSlider = () => {
   return (
     <Swiper
