@@ -1,9 +1,56 @@
-import React from 'react'
+// TestimonialsSlider.jsx
+"use client";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import { testimonialsData } from "../helper/homeOnehelper";
+
 
 const TestimonialsSlider = () => {
   return (
-    <div>TestimonialsSlider</div>
-  )
-}
+    <Swiper
+      slidesPerView={3}
+      spaceBetween={0}
+      freeMode={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
+      }}
+      modules={[FreeMode, Pagination, Autoplay]}
+      className="mySwiper"
+    >
+      {testimonialsData.map((item, index) => (
+        <SwiperSlide key={index}>
+       <h1>ehfei</h1>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+};
 
-export default TestimonialsSlider
+export default TestimonialsSlider;
