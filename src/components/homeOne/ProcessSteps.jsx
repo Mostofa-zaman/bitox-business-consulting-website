@@ -147,7 +147,29 @@ const ProcessSteps = () => {
                   </div>
                 </div>
 
-              
+                {/* Right Image + Line */}
+                <div className="flex  lg:justify-end w-full lg:w-auto">
+                  <div className="flex items-center gap-[15px]">
+                    {/* Gradient Line — hidden on mobile */}
+                    <div className="hidden lg:block">
+                      <div className="relative flex items-center">
+                        <div className="  lg:w-[clamp(100px,17vw,400px)] xl:w-[clamp(200px,25vw,533px)] 2xl:w-[553px] h-[2px] bg-gradient-to-l from-white/90 via-white/20 to-transparent" />
+                        <div className="absolute right-0 w-[10px] h-[10px] rounded-full bg-white" />
+                      </div>
+                    </div>
+
+                    {/* Image */}
+                    <div>
+                      <Image
+                        width={493}
+                        height={372}
+                        src={processImage}
+                        alt="prcess-step"
+                        className="w-full h-auto lg:!h-[372px] lg:!w-[493px] object-cover rounded-[6px]"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             )}
           </div>
