@@ -1,19 +1,23 @@
-import React from 'react'
+import React from "react";
 import allImages from "../helper/imageProvider";
-import Image from 'next/image';
-       
+import Image from "next/image";
+import CountUpStat from "./CountUpStat";
 
-const TestimonialCard = ({ 
-  quotes,
+const TestimonialCard = ({
   image,
-  role
- 
+  quotes,
+  role,
+  name,
+  tashNumOne,
+  tashNumTwo,
+  tashLabelOne,
+  tashLabelTwo,
 }) => {
   const { quote } = allImages;
-    
+
   return (
- <div className="border border-[#0000001a] bg-bg-secondaryTwo">
-   <div className="p-[30px]">
+    <div className="border border-[#0000001a] bg-bg-secondaryTwo">
+      <div className="p-[30px]">
         <Image src={quote} width={52} height={42} alt="quote" />
         <p className="pt-[30px] pb-[40px] text-primary font-bold para-xl underline underline-offset-2">
           {quotes}
@@ -32,8 +36,27 @@ const TestimonialCard = ({
           </div>
         </div>
       </div>
-    </div>
-  )
-}
 
-export default TestimonialCard
+      {/* ✅ Bottom stats using CountUpStat */}
+      <div className="border-y border-[#0000001a]">
+        <div className="p-[30px] flex gap-x-[20px] sm:gap-x-0 sm:justify-between">
+          <CountUpStat
+            value={tashNumOne}
+            label={tashLabelOne}
+            statTextClass="headingSix font-bold text-primary"
+            labelClass="text-base pt-1 font-medium text-primary"
+          />
+          <CountUpStat
+            value={tashNumTwo}
+            label={tashLabelTwo}
+            statTextClass="headingSix font-bold text-primary"
+            labelClass="text-base pt-1 font-medium text-primary"
+            className="text-end sm:text-start"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TestimonialCard;
