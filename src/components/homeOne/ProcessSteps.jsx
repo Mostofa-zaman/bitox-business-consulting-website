@@ -3,9 +3,13 @@
 import React, { useState } from "react";
 import Container from "../common/Container";
 import Responsive from "../common/Responsive";
+import allImages from "../helper/imageProvider";
+import Image from "next/image";
 import { prcessStepsArr } from "../helper/processStepsArrObj";
 
 const ProcessSteps = () => {
+  // for images and manage state
+  const { plusImages} = allImages;
   const [showStep, setShowStep] = useState('Step 1');
 
   const stepValue = prcessStepsArr.find((sValue) => sValue.stepLabel === showStep);
@@ -42,6 +46,25 @@ const ProcessSteps = () => {
                 <h4 className="headingFour text-bg-secondaryTwo font-bold py-[15px] lg:py-[25px] w-auto sm:w-[480px] ">
                   {stepValue.titleTwo}
                 </h4>
+                  <div className="space-y-[15px]">
+                    {stepValue.bullets.map((b) => (
+                      <div
+                        className="flex items-center gap-3 lg:gap-5  "
+                        key={b.id}
+                      >
+                        <Image
+                          src={plusImages}
+                          alt="services-icon"
+                          width={20}
+                          height={20}
+                          className="!w-5 !h-5 lg:w-10 lg:h-10 shrink-0"
+                        />
+                        <h3 className="para-lg font-semibold text-[#999999] lg:whitespace-nowrap">
+                          {b.text}
+                        </h3>
+                      </div>
+                    ))}
+                  </div>
                 
               </div>
             </div>
