@@ -4,6 +4,7 @@ import Container from "../common/Container";
 import Responsive from "../common/Responsive";
 import allImages from "../helper/imageProvider";
 import Link from "next/link";
+import ProjectCard from "../common/ProjectCard";
 
 const PortfolioSection = () => {
     
@@ -19,7 +20,13 @@ const PortfolioSection = () => {
             {projectImages[0].map((items, index) => {
               return (
                 <Link key={index} href={`/projects/${items.slug}`}>
-                 <h1>ndfkn</h1>
+                   <ProjectCard
+                    image={items.img}
+                    mainClass={"w-full !h-[400px] md:!h-[510px]"}
+                    title={items.title}
+                    subtitleOne={items.subtitleOne}
+                    subtitleTwo={items.subtitleTwo}
+                  />
                 </Link>
               );
             })}
