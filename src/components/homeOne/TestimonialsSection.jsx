@@ -1,8 +1,8 @@
 import React from "react";
-import Container from "../ui/Container";
+import Container from "../common/Container";
 import { allIcons } from "../helper/iconProvider";
-import TestimonialsSlider from "../ui/TestimonialsSlider";
-import CountUpStat from "../ui/CountUpStat";
+import TestimonialsSlider from "../common/TestimonialsSlider";
+import CountUpStat from "../common/CountUpStat";
 
 const TestimonialsSection = () => {
   const { star } = allIcons;

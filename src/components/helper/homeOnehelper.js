@@ -1,3 +1,5 @@
+import { Lightbulb, Users, Search, ShieldCheck } from "lucide-react";
+
 // =================================
 // HomeOne - Hero Section Array Object
 // =================================
@@ -66,7 +68,6 @@ const SHARED_FEATURES = [
   "Competitive positioning",
 ];
 
-
 export const serviceCards = [
   {
     id: 1,
@@ -111,6 +112,86 @@ export const serviceCards = [
     imageAlt: "Professional standing in a well-lit corridor",
     href: "/services/risk-management",
     highlighted: false,
+  },
+];
+
+// ===============================================
+// HomeOne - TestimonialsSection Section Array Object
+// ===============================================
+
+export const testimonialsData = [
+  {
+    id: 1,
+    quote:
+      "From discovery to execution, every step was handled professionally. Their insights growth opportunities we hadn't considered before & either strategic guidance",
+    name: "Cameron Diaz",
+    role: "Co-Founder",
+    image: "/images/home01/testimonial/tesmonial1.png",
+    stats: [
+      { id: 1, percentage: "85%", label: "Process Improvement" },
+      { id: 2, percentage: "70%", label: "Revenue Growth in 6 Months" },
+    ],
+  },
+  {
+    id: 2,
+    quote:
+      "From discovery to execution, every step was handled professionally. Their insights growth opportunities we hadn't considered before & either strategic guidance",
+    name: "Taylor Brooks",
+    role: "Web Designer",
+    image: "/images/home01/testimonial/tesmonial2.png",
+    stats: [
+      { id: 1, percentage: "85%", label: "Process Improvement" },
+      { id: 2, percentage: "70%", label: "Revenue Growth in 6 Months" },
+    ],
+  },
+  {
+    id: 3,
+    quote:
+      "From discovery to execution, every step was handled professionally. Their insights growth opportunities we hadn't considered before & either strategic guidance",
+    name: "Alex Morgan",
+    role: "Co-Founder",
+    image: "/images/home01/testimonial/tesmonial3.png",
+    stats: [
+      { id: 1, percentage: "85%", label: "Process Improvement" },
+      { id: 2, percentage: "70%", label: "Revenue Growth in 6 Months" },
+    ],
+  },
+
+  {
+    id: 4,
+    quote:
+      "From discovery to execution, every step was handled professionally. Their insights growth opportunities we hadn't considered before & either strategic guidance",
+    name: "Cameron Diaz",
+    role: "Co-Founder",
+    image: "/images/home01/testimonial/tesmonial1.png",
+    stats: [
+      { id: 1, percentage: "85%", label: "Process Improvement" },
+      { id: 2, percentage: "70%", label: "Revenue Growth in 6 Months" },
+    ],
+  },
+  {
+    id: 5,
+    quote:
+      "From discovery to execution, every step was handled professionally. Their insights growth opportunities we hadn't considered before & either strategic guidance",
+    name: "Taylor Brooks",
+    role: "Web Designer",
+    image: "/images/home01/testimonial/tesmonial2.png",
+    stats: [
+      { id: 1, percentage: "85%", label: "Process Improvement" },
+      { id: 2, percentage: "70%", label: "Revenue Growth in 6 Months" },
+    ],
+  },
+  {
+    id: 6,
+    quote:
+      "From discovery to execution, every step was handled professionally. Their insights growth opportunities we hadn't considered before & either strategic guidance",
+    name: "Alex Morgan",
+    role: "Co-Founder",
+    image: "/images/home01/testimonial/tesmonial3.png",
+    stats: [
+      { id: 1, percentage: "85%", label: "Process Improvement" },
+      { id: 2, percentage: "70%", label: "Revenue Growth in 6 Months" },
+    ],
   },
 ];
 
