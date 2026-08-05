@@ -7,6 +7,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { testimonialsData } from "../helper/homeOnehelper";
+import TestimonialCard from "./TestimonialCard";
 
 
 const TestimonialsSlider = () => {
@@ -46,7 +47,7 @@ const TestimonialsSlider = () => {
     >
       {testimonialsData.map((item, index) => (
         <SwiperSlide key={index}>
-       <h1>ehfei</h1>
+       <TestimonialCard/>
         </SwiperSlide>
       ))}
     </Swiper>
