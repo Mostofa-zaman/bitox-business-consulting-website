@@ -31,7 +31,21 @@ const PortfolioSection = () => {
               );
             })}
           </Responsive.Grid>
-
+             <Responsive.Grid cols={{ base: 1, lg: 3 }} gap="lg">
+            {projectImages[1].map((items, index) => {
+              return (
+                <Link key={index} href={`/projects/${items.slug}`}>
+                  <ProjectCard
+                    image={items.img}
+                    mainClass={"w-full !h-[400px] md:!h-[510px] "}
+                    title={items.title}
+                    subtitleOne={items.subtitleOne}
+                    subtitleTwo={items.subtitleTwo}
+                  />
+                </Link>
+              );
+            })}
+          </Responsive.Grid>
 
          </div>
       </Container>
