@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../common/Container";
+import FaqBody from "../common/FaqBody";
 
 const HomeFaqSection = () => {
   return (
@@ -9,7 +10,7 @@ const HomeFaqSection = () => {
           <h2 className="max-w-[981px] headingTwo text-primary font-bold text-center mx-auto mb-[80px]">
             Frequently Asked Questions: Clear, Concise Answers
           </h2>
-         
+          <FaqBody />
         </div>
       </Container>
     </section>
