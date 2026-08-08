@@ -31,7 +31,14 @@ const FaqBody = () => {
           <div className="flex flex-col gap-[10px] md:pl-2">
 
           {faqItems.map((item, index) => (
-             <AccordionItem/>
+             <AccordionItem
+                key={index}
+                index={index}
+                question={item.q}
+                answer={item.a}
+                openIndex={openIndex}
+                setOpenIndex={setOpenIndex}
+              />
             ))}
 
           </div>
