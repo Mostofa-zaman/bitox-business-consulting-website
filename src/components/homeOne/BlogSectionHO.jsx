@@ -2,6 +2,7 @@ import React from 'react'
 import Container from "../common/Container"
 import Responsive from "../common/Responsive"
 import { allBlogData } from '../helper/blogpagehelper'
+import BlogCard from '../common/BlogCard'
 
 
 
@@ -16,7 +17,15 @@ const BlogSectionHO = () => {
           <Responsive.Grid cols={{ base: 1, lg: 3 }} gap="lg">
             {allBlogData.slice(0, 3).map((item) => {
               return (
-            <h1>jij</h1>
+              <BlogCard
+                  batchName={item.batchName}
+                  description={item.description}
+                  dateText={item.dateText}
+                  image={item.image}
+                  itmeText={item.itmeText}
+                  slug={item.slug}
+                  key={item.id}
+                />
               );
             })}
           </Responsive.Grid>
