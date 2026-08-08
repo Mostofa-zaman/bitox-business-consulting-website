@@ -8,6 +8,7 @@ import VideoShowcase from "@/components/homeOne/VideoShowcase";
 import TestimonialsSection from "@/components/homeOne/TestimonialsSection";
 import PortfolioSection from "@/components/homeOne/PortfolioSection";
 import ProcessSteps from "@/components/homeOne/ProcessSteps";
+import BlogSectionHO from "@/components/homeOne/BlogSectionHO";
 
 
 const Home1 = () => {
@@ -23,6 +24,7 @@ const Home1 = () => {
     <TestimonialsSection/>
     <PortfolioSection/>
     <ProcessSteps/>
+    <BlogSectionHO/>
    
    </>
   );
