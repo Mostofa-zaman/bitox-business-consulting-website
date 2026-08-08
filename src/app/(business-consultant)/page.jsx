@@ -10,6 +10,7 @@ import PortfolioSection from "@/components/homeOne/PortfolioSection";
 import ProcessSteps from "@/components/homeOne/ProcessSteps";
 import BlogSectionHO from "@/components/homeOne/BlogSectionHO";
 import ContactSectionHO from "@/components/homeOne/ContactSectionHO";
+import HomeFaqSection from "@/components/homeOne/HomeFaqSection";
 
 
 const Home1 = () => {
@@ -27,6 +28,7 @@ const Home1 = () => {
     <ProcessSteps/>
     <BlogSectionHO/>
     <ContactSectionHO/>
+    <HomeFaqSection/>
    
    </>
   );
