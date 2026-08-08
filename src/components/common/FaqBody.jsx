@@ -2,6 +2,7 @@
 
 import { categories } from '../helper/faqhelper'
 import { useState } from "react";
+import AccordionItem from "../common/AccordionItem";
 
 
 const FaqBody = () => {
@@ -30,7 +31,7 @@ const FaqBody = () => {
           <div className="flex flex-col gap-[10px] md:pl-2">
 
           {faqItems.map((item, index) => (
-             <h1>suhsi</h1>
+             <AccordionItem/>
             ))}
 
           </div>
