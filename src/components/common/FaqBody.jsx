@@ -26,6 +26,15 @@ const FaqBody = () => {
           ))}
           <div className=" hidden md:block absolute w-[100%] h-[1000px] bg-bg-secondaryOne z-10 md:rounded-tr-[20px] top-[99%] left-[5.5px] "></div>
         </div>
+         <div className="lg:col-span-2 space-y-[10px] md:bg-[#E0DED7] md:rounded-tr-[20px]  md:rounded-br-[20px] md:rounded-bl-[20px]  p-5 ">
+          <div className="flex flex-col gap-[10px] md:pl-2">
+
+          {faqItems.map((item, index) => (
+             <h1>suhsi</h1>
+            ))}
+
+          </div>
+          </div>
       </div>
     </div>
   )
