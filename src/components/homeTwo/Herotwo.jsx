@@ -1,6 +1,9 @@
-import React from "react";
-import allImages from "../helper/imageProvider";
+"use client";
+
 import Image from "next/image";
+import { Plus } from "lucide-react";
+import ButtonThree from "../common/ButtonThree";
+import allImages from "../helper/imageProvider";
 
 const PLUS_POSITIONS = [
   // Top row
@@ -71,6 +74,7 @@ const Herotwo = () => {
         >
           (Est. 2010)
         </span>
+
         {/* Services list — only md and above */}
         <div className="absolute top-[32%] xl:top-[38%] right-[90px] lg:right-[100px] xl:right-[150px] text-left space-y-[6px]">
           {SERVICES.map((service, i) => (
@@ -82,7 +86,8 @@ const Herotwo = () => {
             </p>
           ))}
         </div>
-          {/* CONSULTANT — top left */}
+
+        {/* CONSULTANT — top left */}
         <h1
           className="
             absolute
@@ -96,7 +101,7 @@ const Herotwo = () => {
         >
           CONSULTANT
         </h1>
-        
+
         {/* AGENCY_ — bottom right */}
         <div
           className="
@@ -121,6 +126,42 @@ const Herotwo = () => {
           />
         </div>
 
+        {/* Tagline + CTA — bottom left */}
+        <div
+          className="absolute left-4 sm:left-[75px] flex flex-col gap-2 sm:gap-4"
+          style={{ bottom: "clamp(16px, 5vw, 100px)" }}
+        >
+          <p
+            className="text-white font-bold leading-snug max-w-[220px] xs:max-w-[280px] sm:max-w-[360px] md:max-w-[500px] lg:max-w-[685px]"
+            style={{ fontSize: "clamp(12px, 2.2vw, 60px)" }}
+          >
+            Transforming your vision
+            <br />
+            into measurable success
+          </p>
+
+          <div className="self-start flex items-center gap-2 bg-bg-secondaryOne text-primary font-medium rounded-[90px] px-4 py-2 sm:px-7 sm:py-4 cursor-pointer hover:bg-white/90 transition-colors group">
+            <ButtonThree
+              frontText="Get started now"
+              backText="Let's Talk."
+              backgroundColor="transparent"
+              textColor="#02090F"
+              fontSize={14}
+              paddingTop={0}
+              paddingBottom={0}
+              paddingLeft={0}
+              paddingRight={0}
+            />
+            <span className="inline-block transition-transform group-hover:translate-x-1">
+              <svg width="9" height="12" viewBox="0 0 9 12" fill="none">
+                <path
+                  d="M0.77735 0.0848229C0.445073 -0.136695 0 0.1015 0 0.500848V10.6323C0 11.0317 0.445073 11.2699 0.77735 11.0484L8.37596 5.98261C8.67283 5.7847 8.67283 5.34848 8.37596 5.15056L0.77735 0.0848229Z"
+                  fill="#02090F"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
