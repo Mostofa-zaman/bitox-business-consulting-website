@@ -300,3 +300,52 @@ export const ArrowIcon = ({ color = "#02090F" }) => (
     />
   </svg>
 );
+
+//==============================================
+// HomeTwo — Clients
+//==============================================
+
+export const CLIENTS = [
+  {
+    id: "01",
+    name: "Loreipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur.",
+    logo: "/images/home2_Client/client1.png",
+  },
+  {
+    id: "02",
+    name: "Loreipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur.",
+    logo: "/images/home2_Client/client2.png",
+  },
+  {
+    id: "03",
+    name: "Loreipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur.",
+    logo: "/images/home2_Client/client3.png",
+  },
+  {
+    id: "04",
+    name: "Loreipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur.",
+    logo: "/images/home2_Client/client4.png",
+  },
+  {
+    id: "05",
+    name: "Loreipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur.",
+    logo: "/images/home2_Client/client5.png",
+  },
+  {
+    id: "06",
+    name: "Loreipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur.",
+    logo: "/images/home2_Client/client6.png",
+  },
+  {
+    id: "07",
+    name: "Loreipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur.",
+    logo: "/images/home2_Client/client7.png",
+  },
+];
