@@ -82,6 +82,21 @@ const Herotwo = () => {
             </p>
           ))}
         </div>
+          {/* CONSULTANT — top left */}
+        <h1
+          className="
+            absolute
+            left-4 sm:left-[75px]
+            font-bold text-white uppercase leading-none tracking-tighter
+          "
+          style={{
+            fontSize: "clamp(36px, 8.5vw, 200px)",
+            top: "clamp(40px, 8vw, 160px)",
+          }}
+        >
+          CONSULTANT
+        </h1>
+
       </div>
     </section>
   );
