@@ -2,6 +2,19 @@ import React from 'react'
 import allImages from '../helper/imageProvider'
 import Image from 'next/image'
 
+
+const PLUS_POSITIONS = [
+  // Top row
+  "top-[30px] left-[75px]",
+  "top-[30px] left-1/2 -translate-x-1/2",
+  "top-[30px] right-[75px]",
+  // Bottom row
+  "bottom-[30px] left-[75px]",
+  "bottom-[30px] left-1/2 -translate-x-1/2",
+  "bottom-[30px] right-[75px]",
+];
+
+
 const Herotwo = () => {
   return (
      <section className="relative h-[420px] sm:h-[600px] md:h-[750px] xl:h-[950px] w-full overflow-hidden">
@@ -27,6 +40,20 @@ const Herotwo = () => {
           {/* Right line */}
           <div className="absolute right-4 sm:right-[75px] top-0 bottom-0 w-px bg-white/15" />
         </div>
+      </div>
+      
+      {/* Max width container */}
+      <div className="relative z-10 max-w-[1770px] mx-auto h-full px-4 sm:px-[75px]">
+
+           {/* Plus icons — hide on mobile */}
+        {PLUS_POSITIONS.map((position, index) => (
+          <Plus
+            key={index}
+            size={13}
+            strokeWidth={2}
+            className={`absolute text-white/80 hidden sm:block ${position}`}
+          />
+        ))}
       </div>
     </section>
   )
