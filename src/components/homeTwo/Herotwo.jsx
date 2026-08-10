@@ -54,6 +54,19 @@ const Herotwo = () => {
             className={`absolute text-white/80 hidden sm:block ${position}`}
           />
         ))}
+        
+        {/* Est. year — top right */}
+        <span
+          className="
+            absolute top-[16px] sm:top-[30px]
+            right-[16px] sm:right-[82px]
+            text-white leading-none tracking-tight
+            text-[18px] sm:text-[22px] md:text-[38px] lg:text-[60px] xl:text-[90px]
+          "
+        >
+          (Est. 2010)
+        </span>
+
       </div>
     </section>
   )
