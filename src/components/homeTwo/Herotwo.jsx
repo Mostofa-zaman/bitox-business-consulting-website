@@ -96,6 +96,30 @@ const Herotwo = () => {
         >
           CONSULTANT
         </h1>
+        
+        {/* AGENCY_ — bottom right */}
+        <div
+          className="
+            absolute
+            right-4 sm:right-[75px]
+            font-bold text-white uppercase leading-none tracking-tighter
+            flex items-baseline gap-2 lg:gap-3
+          "
+          style={{
+            fontSize: "clamp(36px, 8.5vw, 200px)",
+            bottom: "clamp(100px, 18vw, 200px)",
+          }}
+        >
+          <span>AGENCY</span>
+          <span
+            className="block bg-white"
+            style={{
+              width: "clamp(20px, 6vw, 152px)",
+              height: "clamp(3px, 0.8vw, 28px)",
+              marginBottom: "0.08em",
+            }}
+          />
+        </div>
 
       </div>
     </section>
