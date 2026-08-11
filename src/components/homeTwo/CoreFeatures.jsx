@@ -6,6 +6,22 @@ import ButtonThree from "../common/ButtonThree";
 import { features } from "../helper/helpers";
 import Link from "next/link";
 
+const ArrowIcon = () => (
+  <span className="inline-flex items-center shrink-0">
+    {/* horizontal line */}
+    <span className="block w-20 h-[1.5px] bg-primary" />
+    {/* arrowhead */}
+    <span
+      className="block w-0 h-0"
+      style={{
+        borderTop: "4px solid transparent",
+        borderBottom: "4px solid transparent",
+        borderLeft: "7px solid #02090F",
+      }}
+    />
+  </span>
+);
+
 const CoreFeatures = () => {
   return (
     <section className="py-[80px] bg-bg-secondaryOne">
@@ -61,7 +77,18 @@ const CoreFeatures = () => {
                 <p className="text-[18px] font-bold text-primary mb-2.5">
                   {feature.number}
                 </p>
-              
+                {/* Arrow + Title */}
+                <Flex gap="xs" align="center" className="mb-3.5">
+                  <ArrowIcon />
+                  <span className="text-[18px] font-bold text-primary">
+                    {feature.title}
+                  </span>
+                </Flex>
+
+                {/* Description */}
+                <p className="text-[13px] pr-5 leading-[1.6] text-primary/75">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
