@@ -24,10 +24,51 @@ export const ServiceCardImage = ({ service, index }) => {
   );
 };
 
+
+// Content alda export
+export const ServiceCardContent = ({ service }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className="w-full md:w-1/2 flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-10 md:py-15 transition-colors duration-300 cursor-pointer"
+      style={{ backgroundColor: isHovered ? "#FF5101" : "#ffffff" }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Category label */}
+      <p
+        className="text-xs sm:text-sm mb-3 tracking-wide transition-colors duration-300"
+        style={{ color: isHovered ? "rgba(255,255,255,0.8)" : "#6b7280" }}
+      >
+        {service.number} — {service.category}
+      </p>
+
+      {/* Title */}
+      <h2
+        className="text-2xl sm:text-3xl font-bold underline mb-4 transition-colors duration-300"
+        style={{ color: isHovered ? "#ffffff" : "#111827" }}
+      >
+        {service.title}
+      </h2>
+
+      {/* Description */}
+      <p
+        className="text-sm leading-relaxed mb-6 max-w-sm transition-colors duration-300"
+        style={{ color: isHovered ? "rgba(255,255,255,0.9)" : "#4b5563" }}
+      >
+        {service.description}
+      </p>
+
+    
+    </div>
+  );
+};
 // Combined ServiceCard
 export const ServiceCard = ({ service, index }) => (
   <div className="flex flex-col md:flex-row w-full">
     <ServiceCardImage service={service} index={index} />
+    <ServiceCardContent service={service}/>
   </div>
 );
 
