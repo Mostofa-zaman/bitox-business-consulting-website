@@ -29,6 +29,27 @@ const WhyChooseUs = () => {
           </div>
         </div>
       </div>
+        {/* Image section container er bahire — full width pabe */}
+      <div className="relative mx-auto w-full h-155">
+        <Image
+          src="/images/home2_whychoose/whychoose2.png"
+          alt="Team Meeting"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        {/* Floating Card */}
+        <div
+          className="absolute top-[68%] -translate-y-1/2 right-20 xl:right-37.5 
+                w-full max-w-95 
+                sm:right-20 sm:max-w-95
+                max-[640px]:right-auto max-[640px]:left-4 max-[640px]:max-w-[260px]
+                bg-white flex flex-col shadow-2xl z-10"
+          >
+        
+        
+        </div>
+      </div>
     </section>
   )
 }
