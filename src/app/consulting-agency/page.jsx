@@ -3,6 +3,7 @@ import AboutUs from '@/components/homeTwo/AboutUs'
 import CoreFeatures from '@/components/homeTwo/CoreFeatures'
 import Herotwo from '@/components/homeTwo/Herotwo'
 import OurClients from '@/components/homeTwo/OurClients'
+import Services from '@/components/homeTwo/Services'
 import React from 'react'
 
 const page = () => {
@@ -13,6 +14,7 @@ const page = () => {
       <OurClients/>
       <AboutUs/>
       <CoreFeatures/>
+      <Services/>
     
     </>
   )
