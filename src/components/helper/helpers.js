@@ -355,3 +355,35 @@ export const CLIENTS = [
     logo: "/images/home2_Client/client7.png",
   },
 ];
+
+//===================================
+// HomeTwo — Core Features
+//===================================
+
+export const features = [
+  {
+    number: "01.",
+    title: "Information",
+    description:
+      "Enterprise partnerships, built on clarity and craft, are the foundation of sustainable and long-term success.",
+  },
+  {
+    number: "02.",
+    title: "Planning",
+    description:
+      "Enterprise partnerships, built on clarity and craft, are the foundation of sustainable and long-term success.",
+  },
+  {
+    number: "03.",
+    title: "Strategy",
+    description:
+      "Enterprise partnerships, built on clarity and craft, are the foundation of sustainable and long-term success.",
+  },
+  {
+    number: "04.",
+    title: "Analysis",
+    description:
+      "Enterprise partnerships, built on clarity and craft, are the foundation of sustainable and long-term success.",
+  },
+];
+
