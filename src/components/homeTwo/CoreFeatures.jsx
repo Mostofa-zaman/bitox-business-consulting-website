@@ -3,6 +3,8 @@
 import React from 'react'
 import Container from "../common/Container";
 import { Stack } from "../common/Responsive";
+import ButtonThree from '../common/ButtonThree';
+import Link from "next/link";
 
 const CoreFeatures = () => {
   return (
@@ -25,6 +27,30 @@ const CoreFeatures = () => {
               The core features we make it simple, powerful, and reliable.
             </h2>
           </Stack>
+           {/* Right: Discover more button */}
+          <div className="self-center sm:self-end mb-1.5 sm:mb-1.5 inline-flex items-center gap-2.5 border border-primary text-primary text-sm font-medium rounded-[90px] px-7 py-3.5 cursor-pointer hover:bg-black/5 transition-colors shrink-0 group">
+            <Link href={"/services"}>
+              <ButtonThree
+                frontText="Get started now"
+                backText="Let's Talk."
+                backgroundColor="transparent"
+                textColor="#02090F"
+                fontSize={14}
+                paddingTop={0}
+                paddingBottom={0}
+                paddingLeft={0}
+                paddingRight={0}
+              />
+            </Link>
+            <span className="inline-block transition-transform group-hover:translate-x-1">
+              <svg width="9" height="12" viewBox="0 0 9 12" fill="none">
+                <path
+                  d="M0.77735 0.0848229C0.445073 -0.136695 0 0.1015 0 0.500848V10.6323C0 11.0317 0.445073 11.2699 0.77735 11.0484L8.37596 5.98261C8.67283 5.7847 8.67283 5.34848 8.37596 5.15056L0.77735 0.0848229Z"
+                  fill="#02090F"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
       </Container>
     </section>
