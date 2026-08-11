@@ -1,9 +1,9 @@
-"use client"
-
-import React from 'react'
+"use client";
+import React from "react";
 import Container from "../common/Container";
-import { Stack } from "../common/Responsive";
-import ButtonThree from '../common/ButtonThree';
+import { Stack, Flex } from "../common/Responsive";
+import ButtonThree from "../common/ButtonThree";
+import { features } from "../helper/helpers";
 import Link from "next/link";
 
 const CoreFeatures = () => {
@@ -27,7 +27,8 @@ const CoreFeatures = () => {
               The core features we make it simple, powerful, and reliable.
             </h2>
           </Stack>
-           {/* Right: Discover more button */}
+
+          {/* Right: Discover more button */}
           <div className="self-center sm:self-end mb-1.5 sm:mb-1.5 inline-flex items-center gap-2.5 border border-primary text-primary text-sm font-medium rounded-[90px] px-7 py-3.5 cursor-pointer hover:bg-black/5 transition-colors shrink-0 group">
             <Link href={"/services"}>
               <ButtonThree
@@ -52,9 +53,22 @@ const CoreFeatures = () => {
             </span>
           </div>
         </div>
+        <div className="border-y border-black/10 py-10">
+          {/* ── Feature columns ── */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] lg:gap-0">
+            {features.map((feature, i) => (
+              <div key={feature.number}>
+                <p className="text-[18px] font-bold text-primary mb-2.5">
+                  {feature.number}
+                </p>
+              
+              </div>
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default CoreFeatures
+export default CoreFeatures;
