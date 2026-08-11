@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react";
-import Container from "@/components/common/Container";
 import Image from "next/image";
-
-const AboutUs = () => {
+import Container from "@/components/common/Container";
+import ButtonThree from "../common/ButtonThree";
+import Link from "next/link";
+export default function AboutSection() {
   return (
     <section className="w-full overflow-hidden bg-white">
       <Container size="2xl" className="px-0!">
@@ -30,6 +30,7 @@ const AboutUs = () => {
               </span>
             </div>
 
+            {/* Heading, Body, CTA */}
             <div className="flex flex-col gap-4 lg:gap-5">
               <h2
                 className="text-2xl sm:text-3xl md:text-[34px] xl:text-[42px] font-bold underline underline-offset-4 max-w-[770px] text-primary leading-tight"
@@ -48,12 +49,62 @@ const AboutUs = () => {
                 leverage shared expertise expand market opportunities, and
                 respond effectively.
               </p>
+
+              <div className="self-start flex items-center gap-2 border border-primary text-primary text-sm sm:text-base font-medium rounded-[90px] px-4 py-2 sm:px-7.5 sm:py-4 cursor-pointer hover:bg-white/90 transition-colors group">
+                <Link href={"/about"} className="inline-block">
+                  <ButtonThree
+                    frontText="Get started now"
+                    backText="Let's Talk."
+                    backgroundColor="transparent"
+                    textColor="#02090F"
+                    fontSize={14}
+                    paddingTop={0}
+                    paddingBottom={0}
+                    paddingLeft={0}
+                    paddingRight={0}
+                  />
+                </Link>
+                <span className="inline-block transition-transform group-hover:translate-x-1">
+                  <svg
+                    width="9"
+                    height="12"
+                    viewBox="0 0 9 12"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M0.77735 0.0848229C0.445073 -0.136695 0 0.1015 0 0.500848V10.6323C0 11.0317 0.445073 11.2699 0.77735 11.0484L8.37596 5.98261C8.67283 5.7847 8.67283 5.34848 8.37596 5.15056L0.77735 0.0848229Z"
+                      fill="#02090F"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            {/* Bottom Thumbnail */}
+            {/* Bottom Thumbnail */}
+            <div className="mt-6 lg:mt-10 flex">
+              <div
+                className="ml-auto relative 
+                w-full h-[180px] 
+                sm:w-[420px] sm:h-[220px] 
+                md:w-[520px] md:h-[280px] 
+                lg:w-[340px] lg:h-[200px] 
+                xl:w-[425px] xl:h-[227px] 
+                shrink-0 overflow-hidden rounded-sm shadow-md"
+              >
+                <Image
+                  src="/images/home2_aboutus/about2.png"
+                  alt="Team at work"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, 425px"
+                />
+              </div>
             </div>
           </div>
         </div>
       </Container>
     </section>
   );
-};
-
-export default AboutUs;
+}
