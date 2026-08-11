@@ -1,18 +1,19 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { services } from '../helper/helpers';
+import { useState } from "react";
 import Container from "../common/Container";
 import { Stack } from "../common/Responsive";
 import allImages from "../helper/imageProvider";
 import Image from "next/image";
-
+import { services } from "../helper/helpers";
+import Link from "next/link";
 
 // Image alda export
 export const ServiceCardImage = ({ service, index }) => {
-
+   
   console.log(index);
   
+
   return (
     <div className="w-full md:w-1/2 shrink-0">
       <Image
@@ -23,7 +24,6 @@ export const ServiceCardImage = ({ service, index }) => {
     </div>
   );
 };
-
 
 // Content alda export
 export const ServiceCardContent = ({ service }) => {
@@ -60,24 +60,41 @@ export const ServiceCardContent = ({ service }) => {
         {service.description}
       </p>
 
-    
+      {/* Feature List */}
+      <ul className="space-y-2 flex flex-col items-start">
+        {service.features.map((feature, i) => (
+          <li
+            key={i}
+            className="flex items-center gap-2 text-sm transition-colors duration-300 border border-black/10 rounded-[90px] py-1 px-5"
+            style={{ color: isHovered ? "#ffffff" : "#374151" }}
+          >
+            <span
+              className="w-2 h-2 rounded-full shrink-0 transition-colors duration-300"
+              style={{ backgroundColor: isHovered ? "#ffffff" : "#374151" }}
+            />
+            {feature}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
+
 // Combined ServiceCard
 export const ServiceCard = ({ service, index }) => (
   <div className="flex flex-col md:flex-row w-full">
     <ServiceCardImage service={service} index={index} />
-    <ServiceCardContent service={service}/>
+    <ServiceCardContent service={service} />
   </div>
 );
 
-const Services = () => {
+// Default export — gap nei
+const Services = ({ targetValue = 0, lastValue = 3 }) => {
   return (
-   <section className="w-full">
+    <section className="w-full">
       <Container size="lg">
         <Stack gap="none">
-           {services.slice(targetValue, lastValue).map((service, index) => (
+          {services.slice(targetValue, lastValue).map((service, index) => (
             <Link key={index} href={`/services/${service?.slug}`}>
               {" "}
               <ServiceCard  service={service} index={service.imgId} />
@@ -88,4 +105,5 @@ const Services = () => {
     </section>
   );
 };
-export default Services
+
+export default Services;
