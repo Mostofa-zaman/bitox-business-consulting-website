@@ -387,3 +387,59 @@ export const features = [
   },
 ];
 
+
+//=================================
+// HomeTwo — Services
+//=================================
+export const services = [
+  {
+    id: 1,
+    slug: "business-consultancy",
+    number: "01",
+    imgId: 0,
+    category: "Consultancy",
+    title: "Business Consultancy",
+    description:
+      "Developing smarts, data-driven strategies & practical business plans that turn ideas into profitable scalable outcomes worldwide.",
+    features: ["Integrity & Support", "Data Entry", "Growth forecasting"],
+  },
+  {
+    id: 2,
+    slug: "financial-planning",
+    number: "02",
+    imgId: 1,
+    category: "Planning",
+    title: "Financial Planning",
+    description:
+      "Developing smarts, data-driven strategies & practical business plans that turn ideas into profitable scalable outcomes worldwide.",
+    features: [
+      "Investment planning",
+      "Education planning",
+      "Growth forecasting",
+    ],
+  },
+  {
+    id: 3,
+    slug: "vat-tax-consultancy",
+    number: "03",
+    imgId: 2,
+    category: "Tax & Vat",
+    title: "Vat & Tax Consultancy",
+    description:
+      "Developing smarts, data-driven strategies & practical business plans that turn ideas into profitable scalable outcomes worldwide.",
+    features: ["Integrity & Support", "Data Entry", "Growth forecasting"],
+  },
+  {
+    id: 4,
+    slug: "competitive-analysis",
+    number: "04",
+    imgId: 3,
+    category: "Market Analysis",
+    title: "Competitive Analysis",
+    description:
+      "Developing smarts, data-driven strategies & practical business plans that turn ideas into profitable scalable outcomes worldwide.",
+    features: ["Integrity & Support", "Data Entry", "Growth forecasting"],
+  },
+];
+
+
