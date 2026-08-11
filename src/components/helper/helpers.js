@@ -11,6 +11,9 @@ export function isActiveLink(href, pathname) {
 export function hasActiveChild(children, pathname) {
   return children?.some((child) => isActiveLink(child.href, pathname));
 }
+//==============================
+// Nav Data
+//==============================
 
 export const NAV_LINKS = [
   {
@@ -49,6 +52,9 @@ export const NAV_LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
+// =================================
+// Nav Components
+// =================================
 
 export function DropdownMenu({
   children,
