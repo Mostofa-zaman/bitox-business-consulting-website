@@ -10,7 +10,7 @@ import Image from "next/image";
 
 // Image alda export
 export const ServiceCardImage = ({ service, index }) => {
-   
+
   console.log(index);
   
   return (
@@ -24,28 +24,23 @@ export const ServiceCardImage = ({ service, index }) => {
   );
 };
 
-
-const ServiceCard = ({ service }) => {
-  return (
-    <div>
-      <h2>{service.title}</h2>
-
-      <p>{service.category}</p>
-
-      <p>{service.description}</p>
-    </div>
-  );
-};
+// Combined ServiceCard
+export const ServiceCard = ({ service, index }) => (
+  <div className="flex flex-col md:flex-row w-full">
+    <ServiceCardImage service={service} index={index} />
+  </div>
+);
 
 const Services = () => {
   return (
    <section className="w-full">
       <Container size="lg">
         <Stack gap="none">
-          {services.map((service, index) => (
-          
+           {services.slice(targetValue, lastValue).map((service, index) => (
+            <Link key={index} href={`/services/${service?.slug}`}>
+              {" "}
               <ServiceCard  service={service} index={service.imgId} />
-        
+            </Link>
           ))}
         </Stack>
       </Container>
