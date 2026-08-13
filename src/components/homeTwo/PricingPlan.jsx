@@ -1,5 +1,31 @@
 
+function PricingCard({ plan }) {
+  const isLight = plan.variant === "light";
 
+  return (
+    <div
+      className={`flex flex-col rounded-md p-5 lg:p-10 ${
+        isLight ? "bg-[#f4f0ec] text-black" : "bg-[#e84b1a] text-white"
+      }`}
+    >
+      {/* Plan Label */}
+      <p className="mb-3 text-[20px] font-medium leading-[30px]">
+        {plan.label}
+      </p>
+
+      {/* Price */}
+      <div className="mb-1 flex items-baseline gap-1">
+        <span className="text-[40px] font-extrabold leading-none md:text-[60px] lg:text-[90px]">
+          {plan.price}
+        </span>
+
+        {plan.perMonth && (
+          <span className="text-sm font-medium opacity-70">/month</span>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export default function PricingSection() {
   return (
@@ -18,7 +44,7 @@ export default function PricingSection() {
         {/* Cards Grid */}
         <Grid cols={{ base: 1, md: 2 }} gap="lg">
           {PLANS.map((plan) => (
-           <h1>dugfeuue</h1>
+           <PricingCard/>
           ))}
         </Grid>
       </Container>
