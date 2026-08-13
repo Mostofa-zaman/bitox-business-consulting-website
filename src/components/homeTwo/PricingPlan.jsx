@@ -23,6 +23,37 @@ function PricingCard({ plan }) {
           <span className="text-sm font-medium opacity-70">/month</span>
         )}
       </div>
+       {/* Divider */}
+      <svg
+        className="mb-5 lg:mb-[50px] mt-5 lg:mt-[20px]"
+        width="100%"
+        height="6"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="0" y1="1" x2="100%" y2="1"
+          stroke={isLight ? "#02090F" : "#ffffff"}
+          strokeOpacity={isLight ? "0.2" : "0.3"}
+          strokeDasharray="2 2"
+        />
+        <line
+          x1="0" y1="5" x2="100%" y2="5"
+          stroke={isLight ? "#02090F" : "#ffffff"}
+          strokeOpacity={isLight ? "0.2" : "0.3"}
+          strokeDasharray="2 2"
+        />
+      </svg>
+
+      {/* Features */}
+      <ul className="flex flex-col gap-3 mb-7">
+        {plan.features.map(({ icon: Icon, text }) => (
+          <li key={text} className="flex items-center gap-3 text-sm font-medium">
+            <Icon size={16} className="shrink-0" />
+            {text}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
