@@ -1,7 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { FaDribbble, FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
-
+import imageProvider from "@/components/helper/imageProvider";
 
 export function isActiveLink(href, pathname) {
   if (href === "/") return pathname === "/";
@@ -442,4 +442,39 @@ export const services = [
   },
 ];
 
+//=================================
+// HomeTwo — Testimonials
+//=================================
+export const testimonials = [
+  {
+    id: 1,
+    type: "text",
+    rating: 5,
+    title: "Remarkable Growth and Results",
+    description:
+      "We are dedicated to guiding you on your financial journey with expertise integrity, & a personalized business non-stop solution with true professional from Consult agency.",
+    authorImg: imageProvider.home2Testimonials[0].img,
+    authorName: "Sophia Rahman,",
+    authorRole: "BrightEdge",
+  },
+  {
+    id: 2,
+    type: "video",
+    authorImg: imageProvider.home2Testimonials[2].img,
+    authorName: "Michael Torres,",
+    authorRole: "CEO, TechNova",
+    videoThumbnail: imageProvider.home2Testimonials[1].img,
+  },
+  {
+    id: 3,
+    type: "text",
+    rating: 5,
+    title: "Creative Strategies That Stand Out",
+    description:
+      "We are dedicated to guiding you on your financial journey with expertise integrity, & a personalized business non-stop solution with true professional from Consult agency.",
+    authorImg: imageProvider.home2Testimonials[3].img,
+    authorName: "Michael Hayes,",
+    authorRole: "CEO, TechNova",
+  },
+];
 
