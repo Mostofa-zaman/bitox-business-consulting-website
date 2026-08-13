@@ -5,6 +5,7 @@ import Herotwo from '@/components/homeTwo/Herotwo'
 import OurClients from '@/components/homeTwo/OurClients'
 import Services from '@/components/homeTwo/Services'
 import WhyChooseUs from '@/components/homeTwo/WhyChooseUs'
+import PricingPlan from "@/components/homeTwo/PricingPlan";
 import React from 'react'
 
 const page = () => {
@@ -17,6 +18,7 @@ const page = () => {
       <CoreFeatures/>
       <Services/>
       <WhyChooseUs/>
+      <PricingPlan/>
     
     </>
   )

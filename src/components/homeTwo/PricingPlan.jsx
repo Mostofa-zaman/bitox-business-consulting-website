@@ -3,7 +3,7 @@
 
 export default function PricingSection() {
   return (
-     <section className="py-12 md:py-20">
+       <section className="py-12 md:py-20">
       <Container size="lg">
         {/* Header */}
         <div className="flex justify-center mb-4">
@@ -15,6 +15,12 @@ export default function PricingSection() {
           Our transparent offer ensures clear, fair, and trusted solutions for
           clients
         </h2>
+        {/* Cards Grid */}
+        <Grid cols={{ base: 1, md: 2 }} gap="lg">
+          {PLANS.map((plan) => (
+           <h1>dugfeuue</h1>
+          ))}
+        </Grid>
       </Container>
     </section>
   );
