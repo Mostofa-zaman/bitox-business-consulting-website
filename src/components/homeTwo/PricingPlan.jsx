@@ -1,7 +1,11 @@
+"use client";
+import Container from "../common/Container";
+import { Grid } from "../common/Responsive";
+import ButtonThree from "../common/ButtonThree";
+import { PLANS } from "../helper/helpers";
 
 function PricingCard({ plan }) {
   const isLight = plan.variant === "light";
-
   return (
     <div
       className={`flex flex-col rounded-md p-5 lg:p-10 ${
@@ -9,21 +13,19 @@ function PricingCard({ plan }) {
       }`}
     >
       {/* Plan Label */}
-      <p className="mb-3 text-[20px] font-medium leading-[30px]">
-        {plan.label}
-      </p>
+      <p className="text-[20px] font-medium leading-[30px] mb-3">{plan.label}</p>
 
       {/* Price */}
-      <div className="mb-1 flex items-baseline gap-1">
-        <span className="text-[40px] font-extrabold leading-none md:text-[60px] lg:text-[90px]">
+      <div className="flex items-baseline gap-1 mb-1">
+        <span className="text-[40px] md:text-[60px] lg:text-[90px] font-extrabold leading-none">
           {plan.price}
         </span>
-
         {plan.perMonth && (
           <span className="text-sm font-medium opacity-70">/month</span>
         )}
       </div>
-       {/* Divider */}
+
+      {/* Divider */}
       <svg
         className="mb-5 lg:mb-[50px] mt-5 lg:mt-[20px]"
         width="100%"
@@ -54,13 +56,32 @@ function PricingCard({ plan }) {
           </li>
         ))}
       </ul>
+
+      {/* Tagline */}
+      <p className="text-sm font-medium opacity-70 mt-auto mb-4">
+        {plan.tagline}
+      </p>
+
+      {/* CTA Button */}
+      <ButtonThree
+        frontText="Choose your plan"
+        backgroundColor={isLight ? "#000000" : "#ffffff"}
+        textColor={isLight ? "#ffffff" : "#000000"}
+        paddingTop={16}
+        paddingBottom={16}
+        paddingLeft={24}
+        paddingRight={24}
+        fontSize={14}
+        fontWeight="600"
+        borderRadius={8}
+      />
     </div>
   );
 }
 
 export default function PricingSection() {
   return (
-       <section className="py-12 md:py-20">
+    <section className="py-12 md:py-20">
       <Container size="lg">
         {/* Header */}
         <div className="flex justify-center mb-4">
@@ -75,7 +96,7 @@ export default function PricingSection() {
         {/* Cards Grid */}
         <Grid cols={{ base: 1, md: 2 }} gap="lg">
           {PLANS.map((plan) => (
-           <PricingCard/>
+            <PricingCard key={plan.id} plan={plan} />
           ))}
         </Grid>
       </Container>
