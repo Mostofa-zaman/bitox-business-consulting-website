@@ -49,6 +49,35 @@ function TestimonialCard({ item }) {
       </div>
     );
   }
+
+    return (
+    <div className="bg-white rounded-md py-11.25 px-7.5 shadow-sm border border-gray-100 flex flex-col gap-4">
+      <StarRating count={item.rating} />
+      <h3 className="font-bold text-primary text-[24px] leading-8.5 underline underline-offset-2 pr-7">
+        {item.title}
+      </h3>
+      <p className="text-tarnary text-[15px] leading-5">
+        {item.description}
+      </p>
+      {/* Author */}
+      <div className="flex items-center gap-3 pt-2">
+        <div className="relative w-12 h-12 rounded-md overflow-hidden shrink-0">
+          <Image
+            src={item.authorImg}
+            alt={item.authorName}
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div>
+          <p className="font-bold text-primary text-sm leading-tight">
+            {item.authorName}
+          </p>
+          <p className="text-tarnary text-xs">{item.authorRole}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 const Testimonials = () => {
