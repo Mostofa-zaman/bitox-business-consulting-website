@@ -1,6 +1,9 @@
-import React from 'react'
+import React from "react";
 import { FaStar } from "react-icons/fa";
-
+import { BsPlayCircleFill } from "react-icons/bs";
+import Image from "next/image";
+import Container from "../common/Container";
+import { testimonials } from "../helper/helpers";
 
 function StarRating({ count = 5 }) {
   return (
@@ -50,7 +53,7 @@ function TestimonialCard({ item }) {
     );
   }
 
-    return (
+  return (
     <div className="bg-white rounded-md py-11.25 px-7.5 shadow-sm border border-gray-100 flex flex-col gap-4">
       <StarRating count={item.rating} />
       <h3 className="font-bold text-primary text-[24px] leading-8.5 underline underline-offset-2 pr-7">
@@ -80,10 +83,29 @@ function TestimonialCard({ item }) {
   );
 }
 
-const Testimonials = () => {
+function Testimonials() {
   return (
-    <div>Testimonials</div>
-  )
+    <section className="py-10 lg:py-30 bg-bg-secondaryOne">
+      <Container size="lg">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <span className="inline-flex items-center border border-black/10 rounded-sm py-1 px-3.75 text-xs font-bold uppercase tracking-widest mb-5">
+            Testimonials
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary underline underline-offset-4">
+            Clients Feedback & Testimonials
+          </h2>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((item) => (
+            <TestimonialCard key={item.id} item={item} />
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
 }
 
-export default Testimonials
+export default Testimonials;
