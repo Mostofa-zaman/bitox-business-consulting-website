@@ -1,6 +1,15 @@
 import React from 'react'
 import Container from "@/components/common/Container" 
+import { Grid } from "../common/Responsive";
+import Image from 'next/image';
+import allImages from '../helper/imageProvider';
 
+
+const experts = [
+  { id: 1, name: "Julian Hayes" },
+  { id: 2, name: "Jamie Rivers" },
+  { id: 3, name: "Avery Blake" },
+];
 
 export default function OurExperts() {
   return (
@@ -79,7 +88,31 @@ export default function OurExperts() {
                 strokeDasharray="2 2"
               />
             </svg>
+            <div className="pl-3">
+              <p className="text-[20px] md:text-[38px] lg:text-[70px] font-bold leading-none mb-2 text-primary">
+                99%
+              </p>
+              <p className="text-[18px] lg:text-[20px] text-primary lg:leading-7">
+                Worldwide client satisfaction through lasting partnerships
+              </p>
+            </div>
           </div>
+
+            {/* ── Expert Cards Grid */}
+        <Grid cols={{ base: 1, sm:2, md: 3 }} gap={30}>
+          {allImages.home2OurExperts.map((expert, index) => (
+            <div key={expert.id} className="bg-white">
+              <div className="relative w-full aspect-[3/4]">
+                <Image
+                  src={expert.img}
+                  alt={experts[index]?.name ?? "Expert"}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          ))}
+        </Grid>
       </Container>
     </section>
   )
