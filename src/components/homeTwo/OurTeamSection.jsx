@@ -1,9 +1,23 @@
 import React from 'react'
 
-const OurTeamSection = () => {
+
+export default function OurTeamSection() {
   return (
-    <div>OurTeamSection</div>
+    <section className="w-full overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-150">
+         {/* Left: Image - full bleed */}
+        <div className="relative w-full h-full min-h-105 lg:min-h-150">
+          <Image
+            src={allImages.home2ourteam}
+            alt="Our team collaboration"
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        
+
+      </div>
+    </section>
   )
 }
-
-export default OurTeamSection
