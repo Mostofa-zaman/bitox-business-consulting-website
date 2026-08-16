@@ -1,3 +1,4 @@
+import React from 'react'
 import ThemeInitializer from '@/components/helper/ThemeInitializer'
 import AboutUs from '@/components/homeTwo/AboutUs'
 import CoreFeatures from '@/components/homeTwo/CoreFeatures'
@@ -6,8 +7,8 @@ import OurClients from '@/components/homeTwo/OurClients'
 import Services from '@/components/homeTwo/Services'
 import WhyChooseUs from '@/components/homeTwo/WhyChooseUs'
 import PricingPlan from "@/components/homeTwo/PricingPlan";
-import React from 'react'
 import OurExperts from '@/components/homeTwo/OurExperts'
+import OurTeamSection from '@/components/homeTwo/OurTeamSection'
 
 const page = () => {
   return (
@@ -21,6 +22,7 @@ const page = () => {
       <WhyChooseUs/>
       <PricingPlan/>
       <OurExperts/>
+      <OurTeamSection/>
       
     
     </>
