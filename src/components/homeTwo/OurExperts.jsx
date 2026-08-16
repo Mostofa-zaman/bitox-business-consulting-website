@@ -1,9 +1,8 @@
-import React from 'react'
-import Container from "@/components/common/Container" 
-import { Grid } from "../common/Responsive";
-import Image from 'next/image';
-import allImages from '../helper/imageProvider';
 
+import Image from "next/image";
+import Container from "../common/Container";
+import { Grid } from "../common/Responsive";
+import allImages from "../helper/imageProvider";
 
 const experts = [
   { id: 1, name: "Julian Hayes" },
@@ -11,11 +10,13 @@ const experts = [
   { id: 3, name: "Avery Blake" },
 ];
 
+const socialLinks = ["Facebook", "Twitter", "LinkedIn"];
+
 export default function OurExperts() {
   return (
     <section className="bg-bg-secondaryOne py-10 lg:py-30">
       <Container size="lg">
-         {/* ── Header Row */}
+        {/* ── Header Row */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 mb-10">
           {/* Left: eyebrow + heading */}
           <div className="max-w-[771px]">
@@ -26,7 +27,10 @@ export default function OurExperts() {
               Global business experts on stage worldwide today live
             </h2>
           </div>
-           {/* Left double dashed border */}
+
+          {/* Right: stat box */}
+          <div className="max-w-98 p-4 shrink-0 relative">
+            {/* Left double dashed border */}
             <svg
               style={{
                 position: "absolute",
@@ -57,7 +61,8 @@ export default function OurExperts() {
                 strokeDasharray="2 2"
               />
             </svg>
-               {/* Bottom double dashed border */}
+
+            {/* Bottom double dashed border */}
             <svg
               style={{
                 position: "absolute",
@@ -88,6 +93,7 @@ export default function OurExperts() {
                 strokeDasharray="2 2"
               />
             </svg>
+
             <div className="pl-3">
               <p className="text-[20px] md:text-[38px] lg:text-[70px] font-bold leading-none mb-2 text-primary">
                 99%
@@ -97,8 +103,9 @@ export default function OurExperts() {
               </p>
             </div>
           </div>
+        </div>
 
-            {/* ── Expert Cards Grid */}
+        {/* ── Expert Cards Grid */}
         <Grid cols={{ base: 1, sm:2, md: 3 }} gap={30}>
           {allImages.home2OurExperts.map((expert, index) => (
             <div key={expert.id} className="bg-white">
@@ -110,10 +117,26 @@ export default function OurExperts() {
                   className="object-cover"
                 />
               </div>
+              <div className="px-4 md:px-6 xl:px-20 py-7.5 border-t border-neutral-200">
+                <p className="text-[26px] font-bold text-center text-primary mb-4.5">
+                  {experts[index]?.name}
+                </p>
+                <div className="flex items-center justify-center gap-1.5 flex-wrap">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link}
+                      href="#"
+                      className="text-[13px] uppercase tracking-[0.06em] text-neutral-400 hover:text-neutral-700 transition-colors border border-black/10 rounded-[90px] py-1 px-2.5 whitespace-nowrap"
+                    >
+                      {link}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </Grid>
       </Container>
     </section>
-  )
+  );
 }
