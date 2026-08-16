@@ -1,11 +1,15 @@
-import React from 'react'
+"use client";
 
+import Image from "next/image";
+import allImages from "../helper/imageProvider";
+import { featuresteam } from "../helper/helpers";
 
 export default function OurTeamSection() {
   return (
     <section className="w-full overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-150">
-         {/* Left: Image - full bleed */}
+        
+        {/* Left: Image - full bleed */}
         <div className="relative w-full h-full min-h-105 lg:min-h-150">
           <Image
             src={allImages.home2ourteam}
@@ -14,7 +18,7 @@ export default function OurTeamSection() {
             className="object-cover"
           />
         </div>
-        
+
         {/* Right: Content */}
         <div className="bg-black flex flex-col justify-center px-10 py-10 lg:py-30 lg:px-16 xl:px-20">
           {/* Tag */}
@@ -30,10 +34,34 @@ export default function OurTeamSection() {
             in digital design
           </h2>
 
-        
-
-      </div>
+          {/* Features List */}
+          <ul className="flex flex-col gap-8">
+            {featuresteam.map((feature, i) => (
+              <li key={i} className="flex gap-5 items-start group">
+                <span
+                  className="mt-1.5 shrink-0 w-5 h-0.5 bg-white/30 group-hover:bg-white transition-colors duration-300"
+                  aria-hidden="true"
+                />
+                <div>
+                  <h3
+                    className="text-white font-bold mb-1"
+                    style={{
+                      fontSize: "clamp(18px, 1.2vw, 26px)",
+                    }}
+                  >
+                    {feature.title}
+                  </h3>
+                  <p
+                    className="text-[#999999] text-[18px] leading-relaxed"
+                  >
+                    {feature.description}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
-  )
+  );
 }
