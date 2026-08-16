@@ -48,6 +48,37 @@ export default function OurExperts() {
                 strokeDasharray="2 2"
               />
             </svg>
+               {/* Bottom double dashed border */}
+            <svg
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                width: "100%",
+                height: "6px",
+                pointerEvents: "none",
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="0"
+                y1="1"
+                x2="100%"
+                y2="1"
+                stroke="#02090F"
+                strokeOpacity="0.2"
+                strokeDasharray="2 2"
+              />
+              <line
+                x1="0"
+                y1="5"
+                x2="100%"
+                y2="5"
+                stroke="#02090F"
+                strokeOpacity="0.2"
+                strokeDasharray="2 2"
+              />
+            </svg>
           </div>
       </Container>
     </section>
