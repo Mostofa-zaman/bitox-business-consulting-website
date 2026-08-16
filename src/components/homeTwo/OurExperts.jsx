@@ -17,6 +17,37 @@ export default function OurExperts() {
               Global business experts on stage worldwide today live
             </h2>
           </div>
+           {/* Left double dashed border */}
+            <svg
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "6px",
+                height: "100%",
+                pointerEvents: "none",
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="1"
+                y1="0"
+                x2="1"
+                y2="100%"
+                stroke="#02090F"
+                strokeOpacity="0.2"
+                strokeDasharray="2 2"
+              />
+              <line
+                x1="5"
+                y1="0"
+                x2="5"
+                y2="100%"
+                stroke="#02090F"
+                strokeOpacity="0.2"
+                strokeDasharray="2 2"
+              />
+            </svg>
           </div>
       </Container>
     </section>
