@@ -3,7 +3,10 @@
 import React from "react";
 import Container from "../common/Container";
 import Link from "next/link";
-
+import allImages from "../helper/imageProvider";
+import { Grid } from "../common/Responsive";
+import { blogPosts, clipStyles } from "../helper/helpers";
+import Image from "next/image";
 
 const BlogInsight = () => {
   return (
@@ -39,7 +42,46 @@ const BlogInsight = () => {
           </Link>
         </div>
 
-    
+        {/* Blog Cards Grid */}
+        <Grid cols={{ base: 1, sm: 2, lg: 4 }} gap="md">
+          {blogPosts.map((post, index) => {
+            const imgSrc = allImages.home2blog[index]?.img;
+            const isRectangle = post.clipShape === "rectangle";
+
+            return (
+              <div
+                key={post.id}
+                className={`bg-white rounded-md flex flex-col items-center text-center gap-3 ${
+                  isRectangle ? "overflow-hidden" : "px-9 py-7.5"
+                }`}
+              >
+                {/* Image with clip shape */}
+                <div
+                  className="flex items-center justify-center w-full overflow-hidden"
+                  style={isRectangle ? {} : { minHeight: "180px" }}
+                >
+                  {imgSrc && (
+                    <Image
+                      src={imgSrc}
+                      alt={post.title}
+                      width={isRectangle ? 377 : 160}
+                      height={isRectangle ? 250 : 160}
+                      style={
+                        isRectangle
+                          ? {
+                              width: "377px",
+                              height: "200px",
+                              objectFit: "cover",
+                            }
+                          : clipStyles[post.clipShape]
+                      }
+                    />
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </Grid>
       </Container>
     </section>
   );
