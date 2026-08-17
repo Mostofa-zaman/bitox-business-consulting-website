@@ -9,6 +9,7 @@ import WhyChooseUs from '@/components/homeTwo/WhyChooseUs'
 import PricingPlan from "@/components/homeTwo/PricingPlan";
 import OurExperts from '@/components/homeTwo/OurExperts'
 import OurTeamSection from '@/components/homeTwo/OurTeamSection'
+import BlogInsight from '@/components/homeTwo/BlogInsight'
 
 const page = () => {
   return (
@@ -23,6 +24,7 @@ const page = () => {
       <PricingPlan/>
       <OurExperts/>
       <OurTeamSection/>
+      <BlogInsight/>
       
     
     </>
