@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Container from "../common/Container";
 import Link from "next/link";
+
 
 const BlogInsight = () => {
   return (
@@ -35,6 +38,8 @@ const BlogInsight = () => {
             </svg>
           </Link>
         </div>
+
+    
       </Container>
     </section>
   );

@@ -580,3 +580,28 @@ export const blogPosts = [
       "Enterprise partnerships, built on clarity craft, are the foundation of sustainable and long-term success.",
   },
 ];
+
+export const clipStyles = {
+  circle: {
+    width: "160px",
+    height: "160px",
+    objectFit: "cover",
+  },
+  triangle: {
+    clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
+    width: "160px",
+    height: "160px",
+    objectFit: "cover",
+  },
+  rectangle: {
+    borderRadius: "6px",
+    width: "100%",
+    height: "180px",
+    objectFit: "cover",
+  },
+  star: {
+    width: "160px",
+    height: "160px",
+    objectFit: "cover",
+  },
+};
