@@ -1,13 +1,10 @@
 "use client";
-
-import React from "react";
-import Container from "../common/Container";
+import Image from "next/image";
 import Link from "next/link";
 import allImages from "../helper/imageProvider";
+import Container from "../common/Container";
 import { Grid } from "../common/Responsive";
 import { blogPosts, clipStyles } from "../helper/helpers";
-import Image from "next/image";
-
 const BlogInsight = () => {
   return (
     <section className="py-10 lg:py-30 bg-bg-secondaryOne">
@@ -77,6 +74,21 @@ const BlogInsight = () => {
                       }
                     />
                   )}
+                </div>
+
+                {/* nicer content e rectangle hole alda padding */}
+                <div
+                  className={`flex flex-col items-center gap-3 ${isRectangle ? "px-9 pb-7.5" : "w-full"}`}
+                >
+                  <p className="text-sm text-primary font-medium">
+                    {post.readTime} &bull; {post.date}
+                  </p>
+                  <h3 className="text-[19px] font-bold underline underline-offset-2 md:no-underline md:hover:underline">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-tarnary font-normal">
+                    {post.excerpt}
+                  </p>
                 </div>
               </div>
             );
