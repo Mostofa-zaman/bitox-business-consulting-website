@@ -10,6 +10,7 @@ import PricingPlan from "@/components/homeTwo/PricingPlan";
 import OurExperts from '@/components/homeTwo/OurExperts'
 import OurTeamSection from '@/components/homeTwo/OurTeamSection'
 import BlogInsight from '@/components/homeTwo/BlogInsight'
+import MarqueeHeroCTA from '@/components/homeTwo/MarqueeHeroCTA'
 
 const page = () => {
   return (
@@ -25,6 +26,7 @@ const page = () => {
       <OurExperts/>
       <OurTeamSection/>
       <BlogInsight/>
+      <MarqueeHeroCTA/>
       
     
     </>

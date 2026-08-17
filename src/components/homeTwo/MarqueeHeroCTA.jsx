@@ -1,9 +1,11 @@
 import React from 'react'
-
-const MarqueeHeroCTA = () => {
+// ─── Main Export
+export default function MarqueeHeroCTA() {
   return (
-    <div>MarqueeHeroCTA</div>
-  )
+    <>
+      <div>
+        ftfsydf
+      </div>
+    </>
+  );
 }
-
-export default MarqueeHeroCTA
