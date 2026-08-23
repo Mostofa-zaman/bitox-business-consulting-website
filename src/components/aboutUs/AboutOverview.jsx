@@ -20,6 +20,9 @@ const AboutOverview = () => {
             ))}
           </Responsive.Flex>
         </div>
+         <h1 className="font-bold text-[clamp(2.5rem,10vw,140px)] leading-[120%]  text-primary text-center lg:text-start py-10 md:py-[50px] lg:py-[60px]">
+          Established in 2013
+        </h1>
       </Container>
     </section>
   );
