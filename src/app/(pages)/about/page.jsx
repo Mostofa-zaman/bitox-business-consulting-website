@@ -1,8 +1,13 @@
+import InnerPageHero from '@/components/common/InnerPageHero'
 import React from 'react'
 
 const About = () => {
+    
   return (
-    <div>Page</div>
+    <>
+    <InnerPageHero/>
+    
+    </>
   )
 }
 
