@@ -1,3 +1,4 @@
+import AboutContact from '@/components/aboutUs/AboutContact'
 import AboutOverview from '@/components/aboutUs/AboutOverview'
 import AboutTeam from '@/components/aboutUs/AboutTeam'
 import AboutVideo from '@/components/aboutUs/AboutVideo'
@@ -12,6 +13,7 @@ const About = () => {
     <AboutOverview/>
     <AboutVideo/>
     <AboutTeam/>
+    <AboutContact/>
     
     </>
   )
