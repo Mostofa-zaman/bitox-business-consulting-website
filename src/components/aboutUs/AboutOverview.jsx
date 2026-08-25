@@ -4,8 +4,14 @@ import CountUpStat from "../common/CountUpStat";
 import { aboutStatsThree, aboutStatsTwo } from "../helper/aboutHelper";
 import Responsive from "../common/Responsive";
 import AboutStatCard from "../common/AboutStatCard";
+import allImages from "../helper/imageProvider";
+import Image from "next/image";
+import { allIcons } from "../helper/iconProvider";
 
 const AboutOverview = () => {
+    // for images and icons
+  const { triangleLeft, triangleRight, square } = allIcons;
+  const { aboutUsBanner } = allImages;
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-[120px]   ">
       <Container size={"lg"}>
@@ -93,6 +99,15 @@ const AboutOverview = () => {
                 expertise expand market opportunities, and respond effectively
               </p>
             </div>
+          </div>
+           <div>
+            <Image
+              src={aboutUsBanner}
+              width={1600}
+              height={750}
+              className="rounded-[10px] object-cover"
+              alt="aboutUsBanner"
+            />
           </div>
           
         </div>
