@@ -1,14 +1,15 @@
-import React from 'react'
-import allImages from '../helper/imageProvider';
-import Image from 'next/image';
-import { allIcons } from '../helper/iconProvider';
+import React from "react";
+import allImages from "../helper/imageProvider";
+import Image from "next/image";
+import { allIcons } from "../helper/iconProvider";
+
 
 const AboutVideo = () => {
-    
   const { aboutUsVideo } = allImages;
-    const { play } = allIcons;
+  const { play } = allIcons;
+
   return (
-     <section className="relative flex flex-col lg:block overflow-hidden">
+    <section className="relative flex flex-col lg:block overflow-hidden">
       {/* Image — mobile: full width stack, lg+: absolute overlap */}
       <div
         className="
@@ -26,7 +27,7 @@ const AboutVideo = () => {
           alt="aboutUsVideo"
           className="object-cover"
         />
-         <div className="absolute w-full top-0 z-10 left-0 h-full flex items-center justify-center">
+        <div className="absolute w-full top-0 z-10 left-0 h-full flex items-center justify-center">
           <div className="relative flex items-center justify-center w-[52px] h-[52px]">
             {/* for  under sm */}
             <span
@@ -62,10 +63,41 @@ const AboutVideo = () => {
             </div>
           </div>
         </div>
-       
       </div>
-      </section>
-  )
-}
 
-export default AboutVideo
+      {/* Content box */}
+      <div
+        className="
+          w-full bg-bg-secondaryTwo
+          flex items-center justify-center
+          px-6 py-12
+          sm:px-10 sm:py-16
+          lg:ml-[240px] lg:min-h-[700px] lg:px-16 lg:py-20
+          xl:ml-[320px] xl:min-h-[780px] xl:px-20 xl:py-24
+          2xl:ml-[460px] 2xl:min-h-[896px] 2xl:px-24 2xl:py-0
+          lg:justify-center
+          
+        "
+      >
+        <div className="w-full max-w-[538px]">
+          <p className="rounded-[4px] w-fit border border-[#0000001b] text-sm font-bold uppercase text-primary py-[5px] px-[15px]">
+            about company
+          </p>
+          <h3 className="pt-6 lg:pt-[30px] headingThree font-bold text-primary underline">
+            Creating trust through creativity and powerful business analytics
+          </h3>
+          <p className="text-tarnary para-lg font-normal py-6 lg:py-[35px]">
+            Enterprise partnerships, built on clarity & craft, are the
+            foundation of sustainable growth and long term success. By aligning
+            strategic goals & thoughtful execution can create meaningful
+            collaborations that drives innovation
+          </p>
+
+       
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutVideo;
