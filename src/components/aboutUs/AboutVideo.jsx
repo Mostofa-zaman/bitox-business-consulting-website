@@ -1,8 +1,9 @@
 import React from "react";
 import allImages from "../helper/imageProvider";
 import Image from "next/image";
+import Button from "../common/Button";
 import { allIcons } from "../helper/iconProvider";
-
+import Link from "next/link";
 
 const AboutVideo = () => {
   const { aboutUsVideo } = allImages;
@@ -93,7 +94,13 @@ const AboutVideo = () => {
             collaborations that drives innovation
           </p>
 
-       
+          <Link href={"/team"}>
+            <Button
+              label={"Get started now"}
+              textColor={"primary"}
+              showIcon={true}
+            />
+          </Link>
         </div>
       </div>
     </section>
