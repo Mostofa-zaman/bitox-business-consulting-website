@@ -27,3 +27,30 @@ export const aboutStatsThree = [
     description: "Increase in registrations from organic/paid.",
   },
 ];
+
+export const aboutFeatures = [
+  {
+    id: 1,
+    title: "Industry Expertise",
+    description:
+      "Enterprise partnerships, built on clarity and craft, are the foundation of sustainable and long-term success.",
+  },
+  {
+    id: 2,
+    title: "Trusted Solutions",
+    description:
+      "Enterprise partnerships, built on clarity and craft, are the foundation of sustainable and long-term success.",
+  },
+  {
+    id: 3,
+    title: "Business Growth",
+    description:
+      "Enterprise partnerships, built on clarity and craft, are the foundation of sustainable and long-term success.",
+  },
+  {
+    id: 4,
+    title: "Quality Service",
+    description:
+      "Enterprise partnerships, built on clarity and craft, are the foundation of sustainable and long-term success.",
+  },
+];
