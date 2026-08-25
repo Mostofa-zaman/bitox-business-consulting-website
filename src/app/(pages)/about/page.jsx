@@ -14,7 +14,6 @@ const About = () => {
     <AboutVideo/>
     <AboutTeam/>
     <AboutContact/>
-    
     </>
   )
 }
