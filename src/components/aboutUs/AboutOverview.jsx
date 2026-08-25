@@ -112,8 +112,28 @@ const AboutOverview = () => {
           
         </div>
             
+                <div className="mt-10 lg:mt-0   ">
+          <h3 className="  headingThree text-primary font-bold max-w-[655px] text-center mx-auto underline">
+            Why Businesses Choose Us With Confidence
+          </h3>
 
+          <div className="my-[60px] ">
+            <div className="h-[120px] hidden lg:block  relative border-b border-primary ">
+              <span className="absolute bottom-[-10px] left-[-12px]  text-[20px] hidden lg:block">
+                {triangleRight}
+              </span>
+              <span className="absolute bottom-[-10px]  right-[-12px] text-[20px]  hidden lg:block">
+                {triangleLeft}
+              </span>
+              <div className="absolute h-full w-[1px] bg-primary left-1/2 -translate-x-1/2">
+                <span className="absolute top-[0px] rotate-[45deg]  left-1/2 -translate-x-1/2 !text-[5px]   hidden lg:block">
+                  {square}
+                </span>
+              </div>
+            </div>
+          </div>
 
+        </div>
       </Container>
     </section>
   );
