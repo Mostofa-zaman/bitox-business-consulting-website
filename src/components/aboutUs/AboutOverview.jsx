@@ -3,6 +3,7 @@ import Container from "../common/Container";
 import CountUpStat from "../common/CountUpStat";
 import { aboutStatsThree, aboutStatsTwo } from "../helper/aboutHelper";
 import Responsive from "../common/Responsive";
+import AboutStatCard from "../common/AboutStatCard";
 
 const AboutOverview = () => {
   return (
@@ -42,7 +43,7 @@ const AboutOverview = () => {
               <Responsive.Flex wrap={true}>
                 {aboutStatsThree.map((items, index) => {
                   return (
-                   <h1>hello</h1>
+                   <AboutStatCard/>
                   );
                 })}
               </Responsive.Flex>
