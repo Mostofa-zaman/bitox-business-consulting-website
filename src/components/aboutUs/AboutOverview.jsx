@@ -56,6 +56,46 @@ const AboutOverview = () => {
                 })}
               </Responsive.Flex>
             </div>
+
+            
+        <div className="mt-12 sm:mt-16 lg:mt-[120px] mb-8 sm:mb-10 lg:mb-[60px] ">
+          <div className="  mb-8 md:mb-12 lg:mb-0 lg:flex   justify-between space-y-[30px] md:space-y-[50px] lg:space-y-0 lg:border-t-2 lg:border-primary relative ">
+            <span className=" absolute top-[-11.7px] left-[-12px]  text-[20px] hidden lg:block">
+              {triangleRight}
+            </span>
+            <span className="absolute top-[-11.7px]  right-[-12px] text-[20px]  hidden lg:block">
+              {triangleLeft}
+            </span>
+            <div className="] bg-primary h-full w-[2px] bg-primary absolute top-0 left-1/2 -translate-x-1/2 hidden lg:block"></div>
+            <div className="lg:py-[60px] space-y-[25px]">
+              <h5 className="headingFive text-primary font-bold">
+                Our Mission
+              </h5>
+              <p className="font-normal text-tarnary para-lg max-w-[643px] ">
+                Enterprise partnerships, built on clarity and craft, are the
+                foundation of sustainable growth and long term success. By
+                aligning strategic goals & thoughtful executions can create
+                meaningful collaborations that drives innovation & measurable
+                value of strong partnerships enable business to leverage shared
+                expertise expand market opportunities, and respond effectively
+              </p>
+            </div>
+            <div className="lg:py-[60px] space-y-[25px]">
+              <h5 className="headingFive text-primary font-bold lg:text-end">
+                Our Vision
+              </h5>
+              <p className="font-normal text-tarnary para-lg lg:text-end  max-w-[643px] ">
+                Enterprise partnerships, built on clarity and craft, are the
+                foundation of sustainable growth and long term success. By
+                aligning strategic goals & thoughtful executions can create
+                meaningful collaborations that drives innovation & measurable
+                value of strong partnerships enable business to leverage shared
+                expertise expand market opportunities, and respond effectively
+              </p>
+            </div>
+          </div>
+          
+        </div>
             
 
 
