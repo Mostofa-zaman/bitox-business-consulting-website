@@ -42,22 +42,14 @@ const AboutOverview = () => {
               <Responsive.Flex wrap={true}>
                 {aboutStatsThree.map((items, index) => {
                   return (
-                    <AboutStatCard
-                      key={index}
-                      description={items.description}
-                      value={items.value}
-                      title={items.title}
-                      className={" flex flex-col md:items-end w-full md:w-fit"}
-                      childClassOne={"md:text-end"}
-                      childClassTwo={"md:text-end"}
-                    />
+                   <h1>hello</h1>
                   );
                 })}
               </Responsive.Flex>
             </div>
             
 
-            
+
       </Container>
     </section>
   );
