@@ -447,4 +447,99 @@ export const allBlogDetailsData = [
     },
   ],
 },
+{
+  id: 5,
+  slug: "scaling-your-startup-with-limited-resources",
+  batchName: "Startup",
+  heroImage: "/images/home01/blog/blog5.png",
+  author: "Mark Twain",
+  authorRole: "Startup Advisor",
+  authorImage: "/images/home01/blog/Ellipse 20.png",
+  dateText: "January 10, 2025",
+  itmeText: "Mark Twain",
+  title: "Scaling your startup with limited resources",
+  intro:
+    "Most startups don't fail because of bad ideas — they fail because they run out of resources before finding traction. Scaling efficiently with limited capital, a small team, and tight timelines is one of the greatest challenges in entrepreneurship. Here's how to do it strategically.",
+
+  sections: [
+    {
+      heading: "Do More with Less: The Lean Approach",
+      content:
+        "The lean startup methodology is built for resource-constrained environments. It focuses on building minimal viable products, testing assumptions quickly, and iterating based on real feedback rather than spending heavily upfront on unproven ideas.",
+      bullets: [
+        {
+          title: "Build MVP First",
+          text: "Launch with the minimum feature set that solves your core customer problem. Validate before you over-invest.",
+        },
+        {
+          title: "Automate Early",
+          text: "Identify repetitive tasks and automate them. Tools like Zapier, Make, or custom scripts can replace hours of manual work.",
+        },
+        {
+          title: "Outsource Strategically",
+          text: "Hire full-time only for core competencies. Use freelancers and agencies for everything else to stay lean.",
+        },
+      ],
+    },
+  ],
+
+  quote:
+    "Constraints are not obstacles to innovation — they are the mother of it. The best startups learn to build empires with bricks others overlooked.",
+
+  middleImages: [
+    "/images/home01/blog/blogdetails2.png",
+    "/images/home01/blog/blogdetails3.png",
+  ],
+
+  sections2: [
+    {
+      heading: "Prioritize Revenue-Generating Activities",
+      content:
+        "When resources are limited, every hour and every dollar must be tied to revenue generation or retention. Cut anything that doesn't directly contribute to growth or customer satisfaction.",
+      bullets: [
+        {
+          text: "Focus sales efforts on highest-value customer segments first.",
+        },
+        {
+          text: "Use content marketing for low-cost organic customer acquisition.",
+        },
+        {
+          text: "Build strategic partnerships to expand reach without added cost.",
+        },
+        {
+          text: "Reinvest early revenue immediately into your highest-ROI channels.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["Startup", "Growth", "Lean", "Entrepreneurship"],
+
+  relatedPosts: [
+    {
+      slug: "building-a-profitable-and-sustainable-business-model",
+      image: "/images/home01/blog/blog1.png",
+      batchName: "Business",
+      itmeText: "Harry Jilson",
+      dateText: "March 14, 2025",
+      description: "Building a profitable and sustainable business model",
+    },
+    {
+      slug: "understanding-brand-identity-and-voice",
+      image: "/images/home01/blog/blog4.png",
+      batchName: "Branding",
+      itmeText: "Emily Rose",
+      dateText: "February 28, 2025",
+      description: "Understanding brand identity and voice",
+    },
+    {
+      slug: "the-power-of-content-marketing-for-b2b",
+      image: "/images/home01/blog/blog6.png",
+      batchName: "Content",
+      itmeText: "Lisa Brown",
+      dateText: "March 30, 2025",
+      description: "The power of content marketing for B2B businesses",
+    },
+  ],
+},
 ];
