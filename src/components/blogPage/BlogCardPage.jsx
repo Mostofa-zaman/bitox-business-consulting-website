@@ -1,5 +1,8 @@
 import React from "react";
 import Container from "../common/Container";
+import BlogCard from "../common/BlogCard";
+import Responsive from "../common/Responsive";
+import { allBlogData } from "../helper/blogpagehelper";
 
 const BlogCardPage = () => {
   return (
@@ -14,6 +17,23 @@ const BlogCardPage = () => {
         <h2 className="max-w-200 text-center mx-auto font-bold text-primary headingTwo underline underline-offset-4">
           Insights & Updates: Driving Your Success
         </h2>
+
+          {/* ── 6ta Card Grid ── */}
+        <div className="py-15">
+          <Responsive.Grid cols={{ base: 1, lg: 3 }} gap="lg">
+            {allBlogData.map((item) => (
+              <BlogCard
+                batchName={item.batchName}
+                description={item.description}
+                dateText={item.dateText}
+                image={item.image}
+                itmeText={item.itmeText}
+                slug={item.slug}
+                key={item.id}
+              />
+            ))}
+          </Responsive.Grid>
+        </div>
       </Container>
     </section>
   );
