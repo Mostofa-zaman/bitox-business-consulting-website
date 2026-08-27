@@ -542,4 +542,98 @@ export const allBlogDetailsData = [
     },
   ],
 },
+{
+  id: 6,
+  slug: "the-power-of-content-marketing-for-b2b",
+  batchName: "Content",
+  heroImage: "/images/home01/blog/blog6.png",
+  author: "Lisa Brown",
+  authorRole: "Content Marketing Lead",
+  authorImage: "/images/home01/blog/Ellipse 20.png",
+  dateText: "March 30, 2025",
+  itmeText: "Lisa Brown",
+  title: "The power of content marketing for B2B businesses",
+  intro:
+    "In the B2B world, buying decisions are complex, involve multiple stakeholders, and take time. Content marketing is uniquely suited to this environment — it builds trust, educates prospects, and keeps your brand top-of-mind throughout long sales cycles. When done right, it becomes your most powerful and scalable sales tool.",
+
+  sections: [
+    {
+      heading: "Why Content Marketing Works for B2B",
+      content:
+        "B2B buyers conduct extensive research before making purchase decisions. They consume whitepapers, case studies, blog posts, and webinars to evaluate solutions. Content marketing positions your brand as the trusted expert they turn to — making the eventual sale a natural conclusion.",
+      bullets: [
+        {
+          title: "Thought Leadership",
+          text: "Publishing authoritative content on industry topics establishes your brand as a go-to expert, building credibility with decision-makers.",
+        },
+        {
+          title: "Lead Nurturing",
+          text: "Content guides prospects through each stage of the funnel — from awareness to consideration to decision — without requiring a sales rep at every step.",
+        },
+        {
+          title: "SEO & Organic Traffic",
+          text: "Well-optimized B2B content attracts qualified organic traffic from buyers actively searching for solutions you provide.",
+        },
+      ],
+    },
+  ],
+
+  quote:
+    "In B2B, you don't sell to companies — you sell to people within companies. Content marketing helps you earn their trust long before you ever get on a sales call.",
+
+  middleImages: [
+    "/images/home01/blog/blogdetails2.png",
+    "/images/home01/blog/blogdetails3.png",
+  ],
+
+  sections2: [
+    {
+      heading: "Building a B2B Content Strategy",
+      content:
+        "Effective B2B content isn't created randomly — it's strategically planned around buyer personas, funnel stages, and business goals. Start with a clear content plan and distribution strategy.",
+      bullets: [
+        { text: "Map content types to each stage of your buyer's journey." },
+        {
+          text: "Repurpose long-form content into multiple formats (videos, infographics, social posts).",
+        },
+        {
+          text: "Use gated content like whitepapers to capture qualified leads.",
+        },
+        {
+          text: "Measure content ROI through pipeline influence and conversion metrics.",
+        },
+      ],
+    },
+  ],
+
+  tags: ["Content", "B2B", "Marketing", "Strategy", "SEO"],
+
+  relatedPosts: [
+    {
+      slug: "how-to-identify-your-target-audience-effectively",
+      image: "/images/home01/blog/blog2.png",
+      batchName: "Marketing",
+      itmeText: "Sara Miller",
+      dateText: "April 02, 2025",
+      description: "How to identify your target audience effectively",
+    },
+    {
+      slug: "top-strategies-for-digital-growth-in-2025",
+      image: "/images/home01/blog/blog3.png",
+      batchName: "Strategy",
+      itmeText: "John Carter",
+      dateText: "April 18, 2025",
+      description: "Top strategies for digital growth in 2025",
+    },
+    {
+      slug: "scaling-your-startup-with-limited-resources",
+      image: "/images/home01/blog/blog5.png",
+      batchName: "Startup",
+      itmeText: "Mark Twain",
+      dateText: "January 10, 2025",
+      description: "Scaling your startup with limited resources",
+    },
+  ],
+},
+
 ];
