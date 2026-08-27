@@ -267,4 +267,93 @@ export const allBlogDetailsData = [
       },
     ],
   },
+  {
+  id: 3,
+  slug: "top-strategies-for-digital-growth-in-2025",
+  batchName: "Strategy",
+  heroImage: "/images/home01/blog/blog3.png",
+  author: "John Carter",
+  authorRole: "Digital Strategist",
+  authorImage: "/images/home01/blog/Ellipse 20.png",
+  dateText: "April 18, 2025",
+  itmeText: "John Carter",
+  title: "Top strategies for digital growth in 2025",
+  intro:
+    "The digital landscape is evolving faster than ever. Businesses that thrive in 2025 will be those that embrace new technologies, prioritize user experience, and build data-driven strategies. Here are the top approaches to accelerate your digital growth this year.",
+
+  sections: [
+    {
+      heading: "Leverage AI-Powered Marketing",
+      content:
+        "Artificial intelligence is no longer optional — it's a competitive necessity. From personalized content recommendations to predictive analytics and automated ad targeting, AI helps businesses reach the right people with the right message at the right time.",
+      bullets: [
+        {
+          title: "AI Content Generation",
+          text: "Use AI tools to scale content production while maintaining quality and brand consistency across channels.",
+        },
+        {
+          title: "Predictive Analytics",
+          text: "Forecast customer behavior and market trends to make proactive, data-backed decisions.",
+        },
+        {
+          title: "Automated Personalization",
+          text: "Deliver hyper-personalized experiences at scale — from email campaigns to website content.",
+        },
+      ],
+    },
+  ],
+
+  quote:
+    "Digital growth in 2025 isn't about doing more — it's about doing the right things smarter, faster, and with greater precision than your competition.",
+
+  middleImages: [
+    "/images/home01/blog/blogdetails2.png",
+    "/images/home01/blog/blogdetails3.png",
+  ],
+
+  sections2: [
+    {
+      heading: "Invest in SEO and Organic Reach",
+      content:
+        "Paid ads have their place, but sustainable digital growth depends on strong organic foundations. SEO, content marketing, and community building create compounding returns over time.",
+      bullets: [
+        { text: "Optimize for search intent, not just keywords." },
+        {
+          text: "Build topical authority through consistent, in-depth content.",
+        },
+        { text: "Focus on Core Web Vitals for better rankings and UX." },
+        { text: "Leverage video and short-form content for broader reach." },
+      ],
+    },
+  ],
+
+  tags: ["Strategy", "Digital", "Growth", "AI", "SEO"],
+
+  relatedPosts: [
+    {
+      slug: "building-a-profitable-and-sustainable-business-model",
+      image: "/images/home01/blog/blog1.png",
+      batchName: "Business",
+      itmeText: "Harry Jilson",
+      dateText: "March 14, 2025",
+      description: "Building a profitable and sustainable business model",
+    },
+    {
+      slug: "how-to-identify-your-target-audience-effectively",
+      image: "/images/home01/blog/blog2.png",
+      batchName: "Marketing",
+      itmeText: "Sara Miller",
+      dateText: "April 02, 2025",
+      description: "How to identify your target audience effectively",
+    },
+    {
+      slug: "understanding-brand-identity-and-voice",
+      image: "/images/home01/blog/blog4.png",
+      batchName: "Branding",
+      itmeText: "Emily Rose",
+      dateText: "February 28, 2025",
+      description: "Understanding brand identity and voice",
+    },
+  ],
+},
 ];
