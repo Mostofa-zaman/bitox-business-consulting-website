@@ -1,4 +1,8 @@
 
+//Blog Page Pagination :
+export const btnBase =
+  "w-15 h-15 flex items-center justify-center rounded-full border border-[#0000001a] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] transition-colors";
+export const pageBtn = `${btnBase} text-primary para-TwoXl font-bold bg-bg-secondaryOne hover:bg-primary hover:text-white cursor-pointer`;
 // Page numbers array
 export const pages = [1, 2];
 export const allBlogData = [

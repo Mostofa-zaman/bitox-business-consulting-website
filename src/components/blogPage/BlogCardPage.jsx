@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../common/Container";
 import BlogCard from "../common/BlogCard";
 import Responsive from "../common/Responsive";
-import { allBlogData } from "../helper/blogpagehelper";
+import { allBlogData, pageBtn, pages } from "../helper/blogpagehelper";
 
 const BlogCardPage = () => {
   return (
@@ -36,7 +36,11 @@ const BlogCardPage = () => {
         </div>
           {/* ── Pagination ── */}
         <div className="flex items-center justify-center gap-x-2.5 bg-white py-5">
-        <h1>eifhei</h1>
+         {pages.map((page) => (
+            <button key={page} className={pageBtn}>
+              {page}
+            </button>
+          ))}
         
         </div>
       </Container>
