@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../common/Container";
 import BlogCard from "../common/BlogCard";
 import Responsive from "../common/Responsive";
-import { allBlogData, pageBtn, pages } from "../helper/blogpagehelper";
+import { allBlogData, arrowBtn, pageBtn, pages } from "../helper/blogpagehelper";
 
 const BlogCardPage = () => {
   return (
@@ -41,6 +41,10 @@ const BlogCardPage = () => {
               {page}
             </button>
           ))}
+
+            <button className={arrowBtn}>
+              <MdArrowForwardIos />
+            </button>
         
         </div>
       </Container>
