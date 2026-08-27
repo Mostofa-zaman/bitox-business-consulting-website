@@ -1,8 +1,11 @@
+import InnerPageHero from '@/components/common/InnerPageHero'
 import React from 'react'
 
 const Blog = () => {
   return (
-    <div>page</div>
+    <>
+     <InnerPageHero/>
+    </>
   )
 }
 
