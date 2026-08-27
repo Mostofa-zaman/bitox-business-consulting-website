@@ -356,4 +356,95 @@ export const allBlogDetailsData = [
     },
   ],
 },
+{
+  id: 4,
+  slug: "understanding-brand-identity-and-voice",
+  batchName: "Branding",
+  heroImage: "/images/home01/blog/blog4.png",
+  author: "Emily Rose",
+  authorRole: "Brand Consultant",
+  authorImage: "/images/home01/blog/Ellipse 20.png",
+  dateText: "February 28, 2025",
+  itmeText: "Emily Rose",
+  title: "Understanding brand identity and voice",
+  intro:
+    "Your brand is far more than a logo or color palette. It's the complete experience customers have with your business — the emotions it evokes, the values it represents, and the promise it delivers. Building a strong brand identity and consistent voice is what separates memorable brands from forgettable ones.",
+
+  sections: [
+    {
+      heading: "What Makes Up Brand Identity?",
+      content:
+        "Brand identity encompasses every visual and verbal element that represents your company — from typography and imagery to tone of voice and messaging. It's the cohesive system that makes your brand instantly recognizable across all touchpoints.",
+      bullets: [
+        {
+          title: "Visual Identity",
+          text: "Logo, color palette, typography, and design system that create visual consistency across all platforms.",
+        },
+        {
+          title: "Brand Voice",
+          text: "The personality and tone your brand uses in all communications — professional, playful, authoritative, or empathetic.",
+        },
+        {
+          title: "Brand Values",
+          text: "The core principles that guide your business decisions and resonate with your target audience.",
+        },
+      ],
+    },
+  ],
+
+  quote:
+    "A strong brand identity doesn't just attract customers — it builds trust, loyalty, and a community of advocates who tell your story for you.",
+
+  middleImages: [
+    "/images/home01/blog/blogdetails2.png",
+    "/images/home01/blog/blogdetails3.png",
+  ],
+
+  sections2: [
+    {
+      heading: "Developing a Consistent Brand Voice",
+      content:
+        "Your brand voice should remain consistent whether you're writing a tweet, a product description, or a formal proposal. Start by defining 3–5 voice attributes that reflect your brand personality.",
+      bullets: [
+        { text: "Document your voice guidelines in a brand style guide." },
+        {
+          text: "Train all team members who create content on voice standards.",
+        },
+        {
+          text: "Audit existing content to ensure consistency across channels.",
+        },
+        { text: "Adapt tone contextually while keeping core voice intact." },
+      ],
+    },
+  ],
+
+  tags: ["Branding", "Identity", "Marketing", "Design"],
+
+  relatedPosts: [
+    {
+      slug: "building-a-profitable-and-sustainable-business-model",
+      image: "/images/home01/blog/blog1.png",
+      batchName: "Business",
+      itmeText: "Harry Jilson",
+      dateText: "March 14, 2025",
+      description: "Building a profitable and sustainable business model",
+    },
+    {
+      slug: "scaling-your-startup-with-limited-resources",
+      image: "/images/home01/blog/blog5.png",
+      batchName: "Startup",
+      itmeText: "Mark Twain",
+      dateText: "January 10, 2025",
+      description: "Scaling your startup with limited resources",
+    },
+    {
+      slug: "the-power-of-content-marketing-for-b2b",
+      image: "/images/home01/blog/blog6.png",
+      batchName: "Content",
+      itmeText: "Lisa Brown",
+      dateText: "March 30, 2025",
+      description: "The power of content marketing for B2B businesses",
+    },
+  ],
+},
 ];
