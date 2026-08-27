@@ -1,8 +1,12 @@
-import BlogDetailsPage from '@/components/blogPage/BlogDetailsPage';
-import React from 'react'
+import { allBlogDetailsData } from "@/components/helper/blogpagehelper";
+import BlogDetailsPage from "@/components/blogpage/blogDetailsPage";
 
-const BlogDetails = () => {
-  return  <BlogDetailsPage  />;
-}
+const BlogDetails = async ({ params }) => {
+  const { slug } = await params;
 
-export default BlogDetails
+  const blog = allBlogDetailsData.find((b) => b.slug === slug);
+
+  return <BlogDetailsPage blog={blog} />;
+};
+
+export default BlogDetails;
