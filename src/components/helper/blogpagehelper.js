@@ -1,5 +1,6 @@
 
-
+// Page numbers array
+export const pages = [1, 2];
 export const allBlogData = [
   {
     id: 1,
