@@ -3,6 +3,7 @@ import Container from "../common/Container";
 import BlogCard from "../common/BlogCard";
 import Responsive from "../common/Responsive";
 import { allBlogData, arrowBtn, pageBtn, pages } from "../helper/blogpagehelper";
+import { MdArrowForwardIos } from "react-icons/md";
 
 const BlogCardPage = () => {
   return (
