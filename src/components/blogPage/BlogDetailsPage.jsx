@@ -2,8 +2,8 @@ import React from "react";
 import Container from "../common/Container";
 import Link from "next/link";
 
-const BlogDetailsPage = ({blog}) => {
-     if (!blog) return null;
+const BlogDetailsPage = ({ blog }) => {
+  if (!blog) return null;
   return (
     <div className="bg-bg-secondaryOne">
       {/* ── Breadcrumb ── */}
@@ -24,6 +24,28 @@ const BlogDetailsPage = ({blog}) => {
           </div>
         </Container>
       </div>
+
+      <section className="py-17.5 lg:py-25">
+        {/* ── Title & Author (inside Container) ── */}
+        <Container size={"lg"}>
+          <div className="max-w-215 mx-auto">
+            {/* ── Meta Row (static, always same) ── */}
+            <div className="flex items-center justify-center gap-2 flex-wrap mb-7.5">
+              {["4 min read", "Creative Agency", "20 September 2025"].map(
+                (item) => (
+                  <span
+                    key={item}
+                    className="flex items-center gap-2.5 border border-black/10 rounded-full px-4 py-1 text-sm text-primary"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
+                    {item}
+                  </span>
+                ),
+              )}
+            </div>
+          </div>
+        </Container>
+      </section>
     </div>
   );
 };
