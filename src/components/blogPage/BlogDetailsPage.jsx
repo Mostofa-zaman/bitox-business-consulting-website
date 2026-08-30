@@ -43,11 +43,42 @@ const BlogDetailsPage = ({ blog }) => {
                 ),
               )}
             </div>
-                {/* ── Title ── */}
+
+            {/* ── Title ── */}
             <h1 className="text-center font-bold text-primary headingTwo mb-7.5">
               {blog.title}
             </h1>
 
+            {/* ── Author Card ── */}
+            <div className="flex justify-center mb-10">
+              <div className="flex items-center gap-x-3 border border-black/10 bg-white rounded-[90px] pr-5 lg:pr-9.5 pl-1.5 py-1.5">
+                {/* Avatar — image thakle image, na thakle letter */}
+                <div className="w-15 h-15 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center shrink-0">
+                  {blog.authorImage ? (
+                    <Image
+                      src={blog.authorImage}
+                      alt={blog.author}
+                      width={36}
+                      height={36}
+                      className="object-cover w-full h-full"
+                    />
+                  ) : (
+                    <span className="text-xs font-bold text-primary">
+                      {blog.author?.charAt(0)}
+                    </span>
+                  )}
+                </div>
+
+                <div>
+                  <p className="text-xs text-primary/50 leading-tight">
+                    Author
+                  </p>
+                  <p className="text-sm font-semibold text-primary leading-tight">
+                    {blog.author}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
