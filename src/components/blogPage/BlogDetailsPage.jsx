@@ -216,6 +216,44 @@ const BlogDetailsPage = ({ blog }) => {
               </div>
             )}
 
+                 {/* ── Sections 2 ── */}
+            {blog.sections2?.map((section, i) => (
+              <div key={i} className="mb-10">
+                <h2 className="text-[22px] sm:text-[26px] font-bold text-primary underline underline-offset-5 mb-4">
+                  {section.heading}
+                </h2>
+                <p className="text-[18px] leading-6.5 text-tarnary mb-5">
+                  {section.content}
+                </p>
+                {section.bullets?.length > 0 && (
+                  <ul className="space-y-3">
+                    {section.bullets.map((b, j) => (
+                      <li
+                        key={j}
+                        className="flex items-start gap-x-3 text-[18px] text-tarnary leading-6.5"
+                      >
+                        <span className="mt-0.75 shrink-0 bg-[#FFD8C5] w-8 h-8 flex items-center justify-center rounded-[90px] p-2">
+                          <svg
+                            width="16"
+                            height="15"
+                            viewBox="0 0 16 15"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 7.34068C2.40119 9.86113 4.72936 12.1302 6.96734 15C9.4005 10.3052 11.8909 5.59398 16 0.492012L14.8928 0C11.4231 3.56978 8.72743 6.94889 6.38513 10.9647C4.75628 9.54118 2.12389 7.52677 0.516585 6.49182L0 7.34068Z"
+                              fill="#FF5101"
+                            />
+                          </svg>
+                        </span>
+                        {b.text}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+
 
 
 
