@@ -196,6 +196,27 @@ const BlogDetailsPage = ({ blog }) => {
               </blockquote>
             )}
 
+            
+            {/* ── Middle Images (2-column grid) ── */}
+            {blog.middleImages?.length > 0 && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-7.5 my-10">
+                {blog.middleImages.map((img, i) => (
+                  <div
+                    key={i}
+                    className="relative w-full aspect-4/3 sm:aspect-3/4 lg:aspect-4/3 xl:aspect-square overflow-hidden"
+                  >
+                    <Image
+                      fill
+                      src={img}
+                      alt={`blog-detail-img-${i + 1}`}
+                      className="object-cover object-top"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+
+
 
 
           </div>
