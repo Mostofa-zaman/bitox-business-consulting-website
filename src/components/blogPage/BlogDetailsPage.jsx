@@ -94,6 +94,43 @@ const BlogDetailsPage = ({ blog }) => {
             className="object-cover object-top"
           />
         </div>
+             {/* ── Main Content (inside Container) ── */}
+        <Container size={"lg"}>
+          <div className="">
+                 {/* ── Intro Paragraph ── */}
+            <p className="text-[18px] leading-6.5 text-tarnary mb-10">
+              {blog.intro}
+            </p>
+
+              {/* ── Sections ── */}
+            {blog.sections?.map((section, i) => (
+              <div key={i} className="mb-10">
+                <h2 className="text-[22px] sm:text-[26px] font-bold text-primary underline underline-offset-4 mb-4">
+                  {section.heading}
+                </h2>
+                <p className="text-[18px] leading-6.5 text-tarnary mb-5">
+                  {section.content}
+                </p>
+
+                {section.bullets?.map((bullet, j) => (
+                  <div key={j} className="mb-5 border-primary/20">
+                    {bullet.title && (
+                      <p className="font-bold text-primary mb-1">
+                        <span className="w-2 h-2 rounded-full bg-primary mr-2 inline-block align-middle" />
+                        {bullet.title}
+                      </p>
+                    )}
+                    <p className="text-base leading-[1.85] text-primary/70">
+                      {bullet.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            ))}
+
+
+          </div>
+           </Container>
       </section>
     </div>
   );
