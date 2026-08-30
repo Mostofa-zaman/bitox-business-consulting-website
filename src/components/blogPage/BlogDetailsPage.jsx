@@ -4,9 +4,15 @@ import React from "react";
 import Container from "../common/Container";
 import Link from "next/link";
 import Image from "next/image";
+import ButtonThree from "../common/ButtonThree";
+import { FaFacebook, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { Grid, Stack } from "../common/Responsive";
 
 const BlogDetailsPage = ({ blog }) => {
   if (!blog) return null;
+  
+  const inputClass =
+    "w-full bg-[#F5F5F5] rounded-lg px-5 py-4 text-sm bg-neutral-100 border border-transparent focus:border-neutral-300 focus:outline-none transition-colors placeholder:text-neutral-400";
   return (
     <div className="bg-bg-secondaryOne">
       {/* ── Breadcrumb ── */}
@@ -316,6 +322,34 @@ const BlogDetailsPage = ({ blog }) => {
                   className={inputClass}
                 />
               </Grid>
+
+                 <textarea
+                placeholder="Write your message"
+                rows={6}
+                className={`${inputClass} resize-none`}
+              />
+
+              <div className="self-start flex items-center gap-2 bg-secondary text-white text-base font-bold rounded-[90px] px-4 py-2 sm:px-7.5 sm:py-5 cursor-pointer hover:bg-[#e63946] hover:text-white transition-colors group">
+                <ButtonThree
+                  frontText="Submit comment"
+                  backText="Let's Talk."
+                  backgroundColor="transparent"
+                  textColor="#FFFFFF"
+                  fontSize={14}
+                  paddingTop={0}
+                  paddingBottom={0}
+                  paddingLeft={0}
+                  paddingRight={0}
+                />
+                <span className="inline-block transition-transform group-hover:translate-x-1">
+                  <svg width="9" height="12" viewBox="0 0 9 12" fill="none">
+                    <path
+                      d="M0.77735 0.0848229C0.445073 -0.136695 0 0.1015 0 0.500848V10.6323C0 11.0317 0.445073 11.2699 0.77735 11.0484L8.37596 5.98261C8.67283 5.7847 8.67283 5.34848 8.37596 5.15056L0.77735 0.0848229Z"
+                      fill="#FFFFFF"
+                    />
+                  </svg>
+                </span>
+              </div>
             </Stack>
 
             
