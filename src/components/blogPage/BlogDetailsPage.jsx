@@ -307,6 +307,17 @@ const BlogDetailsPage = ({ blog }) => {
               Leave A Comment
             </h2>
 
+               <Stack gap="md">
+              <Grid cols={{ base: 1, md: 2 }} gap="md">
+                <input type="text" placeholder="Name" className={inputClass} />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className={inputClass}
+                />
+              </Grid>
+            </Stack>
+
             
           </div>
            </Container>
