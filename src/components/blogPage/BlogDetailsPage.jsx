@@ -254,6 +254,51 @@ const BlogDetailsPage = ({ blog }) => {
               </div>
             ))}
 
+              {/* ── Tags ── */}
+            {blog.tags?.length > 0 && (
+              <div className="mt-12 pb-8 pt-8 border-t border-b border-black/10 flex flex-wrap items-center justify-between gap-4">
+                {/* Tags Section */}
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span className="text-[20px] font-bold text-primary">
+                    Tags:
+                  </span>
+                  {blog.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="px-4 py-1.5 rounded-full border border-black/10 text-sm font-medium text-primary hover:bg-primary hover:text-white bg-white transition-colors cursor-pointer"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Share Section */}
+                <div className="flex items-center gap-3">
+                  <span className="text-[20px] font-bold text-primary">
+                    Share:
+                  </span>
+                  <a
+                    href="#"
+                    className="w-9 h-9 rounded-full bg-white flex items-center justify-center text-primary border border-black/10 hover:bg-secondary hover:text-white hover:opacity-80 transition-opacity"
+                  >
+                    <FaFacebook size={16} />
+                  </a>
+                  <a
+                    href="#"
+                    className="w-9 h-9 rounded-full bg-white flex items-center justify-center text-primary border border-black/10 hover:bg-secondary hover:text-white hover:opacity-80 transition-opacity"
+                  >
+                    <FaXTwitter size={16} />
+                  </a>
+                  <a
+                    href="#"
+                    className="w-9 h-9 rounded-full bg-white flex items-center justify-center text-primary border border-black/10 hover:bg-secondary hover:text-white hover:opacity-80 transition-opacity"
+                  >
+                    <FaLinkedinIn size={16} />
+                  </a>
+                </div>
+              </div>
+            )}
+
 
 
 
