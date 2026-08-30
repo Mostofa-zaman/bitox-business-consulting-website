@@ -20,18 +20,29 @@ const BlogDetails = async ({ params }) => {
       : "Blog Post",
     intro:
       "We share insights, strategies, and stories from the world of digital business. Stay tuned for expert perspectives on branding, marketing, technology, and growth.",
+    sections: [
+      {
+        heading: "Our Approach",
+        content:
+          "At our agency, we believe in data-driven strategies combined with creative thinking. Every challenge is an opportunity to innovate and deliver measurable results for our clients.",
+        bullets: [],
+      },
+      {
+        heading: "Why It Matters",
+        content:
+          "In today's fast-changing digital landscape, staying ahead requires bold thinking, agile execution, and a commitment to continuous improvement.",
+        bullets: [],
+      },
+    ],
+    quote:
+      "Great work is not just about the end result — it's about the journey, the thinking, and the people who make it happen.",
+    middleImages: [
+      allBlogDetailsData[0].middleImages[0],
+      allBlogDetailsData[0].middleImages[1],
+    ],
   };
 
   return <BlogDetailsPage blog={safeBlog} />;
 };
 
 export default BlogDetails;
-
-
-
-
-
-
-
-
-
