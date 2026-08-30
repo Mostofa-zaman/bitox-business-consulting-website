@@ -1,6 +1,9 @@
+"use client"
+
 import React from "react";
 import Container from "../common/Container";
 import Link from "next/link";
+import Image from "next/image";
 
 const BlogDetailsPage = ({ blog }) => {
   if (!blog) return null;
@@ -81,6 +84,16 @@ const BlogDetailsPage = ({ blog }) => {
             </div>
           </div>
         </Container>
+        
+        {/* ── Hero Image (full-width, outside Container) ── */}
+        <div className="relative w-full h-90 sm:h-120 lg:h-150 xl:[800px] mb-15 overflow-hidden">
+          <Image
+            fill
+            src={blog.heroImage}
+            alt={blog.title}
+            className="object-cover object-top"
+          />
+        </div>
       </section>
     </div>
   );
