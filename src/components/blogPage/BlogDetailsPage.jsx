@@ -1,16 +1,14 @@
-"use client"
-
-import React from "react";
-import Container from "../common/Container";
-import Link from "next/link";
+"use client";
 import Image from "next/image";
-import ButtonThree from "../common/ButtonThree";
-import { FaFacebook, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import Link from "next/link";
+import Container from "../common/Container";
+import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Grid, Stack } from "../common/Responsive";
+import ButtonThree from "../common/ButtonThree";
 
 const BlogDetailsPage = ({ blog }) => {
   if (!blog) return null;
-  
   const inputClass =
     "w-full bg-[#F5F5F5] rounded-lg px-5 py-4 text-sm bg-neutral-100 border border-transparent focus:border-neutral-300 focus:outline-none transition-colors placeholder:text-neutral-400";
   return (
@@ -90,7 +88,7 @@ const BlogDetailsPage = ({ blog }) => {
             </div>
           </div>
         </Container>
-        
+
         {/* ── Hero Image (full-width, outside Container) ── */}
         <div className="relative w-full h-90 sm:h-120 lg:h-150 xl:[800px] mb-15 overflow-hidden">
           <Image
@@ -100,15 +98,16 @@ const BlogDetailsPage = ({ blog }) => {
             className="object-cover object-top"
           />
         </div>
-             {/* ── Main Content (inside Container) ── */}
+
+        {/* ── Main Content (inside Container) ── */}
         <Container size={"lg"}>
           <div className="">
-                 {/* ── Intro Paragraph ── */}
+            {/* ── Intro Paragraph ── */}
             <p className="text-[18px] leading-6.5 text-tarnary mb-10">
               {blog.intro}
             </p>
 
-              {/* ── Sections ── */}
+            {/* ── Sections ── */}
             {blog.sections?.map((section, i) => (
               <div key={i} className="mb-10">
                 <h2 className="text-[22px] sm:text-[26px] font-bold text-primary underline underline-offset-4 mb-4">
@@ -134,7 +133,7 @@ const BlogDetailsPage = ({ blog }) => {
               </div>
             ))}
 
-                {/* ── Quote Block ── */}
+            {/* ── Quote Block ── */}
             {blog.quote && (
               <blockquote className="relative my-12 px-8 py-8 bg-white rounded-[10px]">
                 {/* Dashed double border - left side */}
@@ -202,7 +201,6 @@ const BlogDetailsPage = ({ blog }) => {
               </blockquote>
             )}
 
-            
             {/* ── Middle Images (2-column grid) ── */}
             {blog.middleImages?.length > 0 && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-7.5 my-10">
@@ -222,7 +220,7 @@ const BlogDetailsPage = ({ blog }) => {
               </div>
             )}
 
-                 {/* ── Sections 2 ── */}
+            {/* ── Sections 2 ── */}
             {blog.sections2?.map((section, i) => (
               <div key={i} className="mb-10">
                 <h2 className="text-[22px] sm:text-[26px] font-bold text-primary underline underline-offset-5 mb-4">
@@ -260,7 +258,7 @@ const BlogDetailsPage = ({ blog }) => {
               </div>
             ))}
 
-              {/* ── Tags ── */}
+            {/* ── Tags ── */}
             {blog.tags?.length > 0 && (
               <div className="mt-12 pb-8 pt-8 border-t border-b border-black/10 flex flex-wrap items-center justify-between gap-4">
                 {/* Tags Section */}
@@ -304,16 +302,14 @@ const BlogDetailsPage = ({ blog }) => {
                 </div>
               </div>
             )}
-
           </div>
-           {/* Leave from */}
-
-            <div className="w-full mx-auto px-6 bg-white rounded-md mt-15 p-15">
+          {/* Leave from */}
+          <div className="w-full mx-auto px-6 bg-white rounded-md mt-15 p-15">
             <h2 className="text-3xl font-bold underline tracking-tight mb-7">
               Leave A Comment
             </h2>
 
-               <Stack gap="md">
+            <Stack gap="md">
               <Grid cols={{ base: 1, md: 2 }} gap="md">
                 <input type="text" placeholder="Name" className={inputClass} />
                 <input
@@ -323,7 +319,7 @@ const BlogDetailsPage = ({ blog }) => {
                 />
               </Grid>
 
-                 <textarea
+              <textarea
                 placeholder="Write your message"
                 rows={6}
                 className={`${inputClass} resize-none`}
@@ -351,11 +347,26 @@ const BlogDetailsPage = ({ blog }) => {
                 </span>
               </div>
             </Stack>
-
-            
           </div>
-           </Container>
+        </Container>
       </section>
+
+      {/* ── Related Posts ── */}
+      {blog.relatedPosts?.length > 0 && (
+        <section className="pb-17.5 lg:pb-30">
+          <Container size={"lg"}>
+            <div className="flex justify-center">
+              <span className="inline-flex items-center justify-center border border-black/10 rounded-sm py-1 px-3.75 text-xs font-bold uppercase mb-3">
+                Keep Reading
+              </span>
+            </div>
+            <h2 className="text-center mx-auto font-bold text-primary headingTwo mb-12">
+              Related Posts
+            </h2>
+          
+          </Container>
+        </section>
+      )}
     </div>
   );
 };
