@@ -43,6 +43,11 @@ const BlogDetailsPage = ({ blog }) => {
                 ),
               )}
             </div>
+                {/* ── Title ── */}
+            <h1 className="text-center font-bold text-primary headingTwo mb-7.5">
+              {blog.title}
+            </h1>
+
           </div>
         </Container>
       </section>
