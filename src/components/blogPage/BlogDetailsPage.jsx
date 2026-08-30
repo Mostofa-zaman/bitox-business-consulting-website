@@ -299,9 +299,15 @@ const BlogDetailsPage = ({ blog }) => {
               </div>
             )}
 
+          </div>
+           {/* Leave from */}
 
+            <div className="w-full mx-auto px-6 bg-white rounded-md mt-15 p-15">
+            <h2 className="text-3xl font-bold underline tracking-tight mb-7">
+              Leave A Comment
+            </h2>
 
-
+            
           </div>
            </Container>
       </section>
