@@ -1,6 +1,9 @@
 "use client";
 
+import contact_logo from "../../../public/images/contact/contact_logo.png";
+import Image from "next/image";
 import ButtonThree from "../common/ButtonThree";
+import { ClockIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import { useContactForm } from "../hooks/UseContactForm";
 
 const FieldError = ({ message }) =>
@@ -85,7 +88,6 @@ const ContactForm = () => {
                     onBlur={handleBlur}
                     className={inputClass("firstName")}
                   />
-
                   <FieldError
                     message={touched.firstName ? errors.firstName : undefined}
                   />
@@ -101,7 +103,6 @@ const ContactForm = () => {
                     onBlur={handleBlur}
                     className={inputClass("lastName")}
                   />
-
                   <FieldError
                     message={touched.lastName ? errors.lastName : undefined}
                   />
@@ -120,7 +121,6 @@ const ContactForm = () => {
                     onBlur={handleBlur}
                     className={inputClass("email")}
                   />
-
                   <FieldError
                     message={touched.email ? errors.email : undefined}
                   />
@@ -150,7 +150,6 @@ const ContactForm = () => {
                   onBlur={handleBlur}
                   className={inputClass("password")}
                 />
-
                 <FieldError
                   message={touched.password ? errors.password : undefined}
                 />
@@ -167,7 +166,6 @@ const ContactForm = () => {
                   onBlur={handleBlur}
                   className={["resize-none", inputClass("message")].join(" ")}
                 />
-
                 <FieldError
                   message={touched.message ? errors.message : undefined}
                 />
@@ -199,6 +197,84 @@ const ContactForm = () => {
                       />
                     </svg>
                   </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="flex flex-col lg:flex-row items-start gap-8">
+
+            <div className="shrink-0">
+              <Image
+                src={contact_logo}
+                alt="Bitox Logo"
+                className="w-45 md:w-65 lg:w-97.75"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6 flex-1 w-full">
+
+              {/* Address */}
+              <div className="bg-white rounded-xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <MapPinIcon className="w-5 h-5 text-primary" />
+                  </div>
+
+                  <h3 className="para-TwoXl font-bold text-primary">
+                    Address
+                  </h3>
+                </div>
+
+                <p className="para-lg text-tarnary leading-relaxed">
+                  Valentin, Street Road 24, New York, USA – 67452
+                </p>
+              </div>
+
+              {/* Phone */}
+              <div className="bg-white rounded-xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <PhoneIcon className="w-5 h-5 text-primary" />
+                  </div>
+
+                  <h3 className="para-TwoXl font-bold text-primary">
+                    Phone / Message
+                  </h3>
+                </div>
+
+                <div className="flex flex-col gap-1">
+                  <p className="para-lg text-tarnary">
+                    supportadmin@example.com
+                  </p>
+
+                  <p className="para-lg text-tarnary">
+                    (255) 864-6308
+                  </p>
+                </div>
+              </div>
+
+              {/* Working Hours */}
+              <div className="bg-white rounded-xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <ClockIcon className="w-5 h-5 text-primary" />
+                  </div>
+
+                  <h3 className="para-TwoXl font-bold text-primary">
+                    Working Hours
+                  </h3>
+                </div>
+
+                <div className="flex flex-col gap-1">
+                  <p className="para-lg text-tarnary">
+                    Monday – Friday: 09:00 – 18:30
+                  </p>
+
+                  <p className="para-lg text-tarnary">
+                    Saturday: until 15:30
+                  </p>
                 </div>
               </div>
 
