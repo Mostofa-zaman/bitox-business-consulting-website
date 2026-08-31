@@ -283,6 +283,17 @@ const ContactForm = () => {
 
         </div>
       </div>
+
+      {/* Map */}
+      <div className="w-full max-w-400 h-75 rounded-md overflow-hidden mx-auto mb-16 md:h-125 md:mb-20 md:px-6 lg:h-172.5 lg:mb-30 px-4 lg:px-0">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14608.036955468959!2d90.36556226218187!3d23.747049949764218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b33cffc3fb%3A0x4a826f475fd312af!2sDhanmondi%2C%20Dhaka%201205!5e0!3m2!1sen!2sbd!4v1777483156468!5m2!1sen!2sbd"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+        />
+      </div>
     </div>
   );
 };
