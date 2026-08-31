@@ -384,4 +384,4 @@ const BlogDetailsPage = ({ blog }) => {
   );
 };
 
-export default BlogDetailsPagecommon
+export default BlogDetailsPage
