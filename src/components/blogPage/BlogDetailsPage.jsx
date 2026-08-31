@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../common/Container";
+import BlogCard from "../common/BlogCard";
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Grid, Stack } from "../common/Responsive";
@@ -363,7 +364,19 @@ const BlogDetailsPage = ({ blog }) => {
             <h2 className="text-center mx-auto font-bold text-primary headingTwo mb-12">
               Related Posts
             </h2>
-          
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {blog.relatedPosts.map((post, i) => (
+                <BlogCard
+                  key={i}
+                  batchName={post.batchName}
+                  description={post.description}
+                  dateText={post.dateText}
+                  image={post.image}
+                  itmeText={post.itmeText}
+                  slug={post.slug}
+                />
+              ))}
+            </div>
           </Container>
         </section>
       )}
@@ -371,4 +384,4 @@ const BlogDetailsPage = ({ blog }) => {
   );
 };
 
-export default BlogDetailsPage;
+export default BlogDetailsPagecommon
