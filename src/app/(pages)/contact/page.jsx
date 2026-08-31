@@ -1,8 +1,17 @@
+import InnerPageHero from '@/components/common/InnerPageHero'
 import React from 'react'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+    
+     <InnerPageHero
+        title="Partner Ours Contact 
+        Today"
+        subtitle="A reputed consultant agency we've spent 13+ year's"
+        hasOffset={true}
+      />
+    </>
   )
 }
 
