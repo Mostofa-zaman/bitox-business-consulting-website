@@ -1,5 +1,16 @@
 import React from "react";
 import Container from "../common/Container";
+import Image from "next/image";
+import allImages from "../helper/imageProvider";
+import { Grid } from "../common/Responsive";
+
+
+const experts = [
+  { id: 1, name: "Julian Hayes" },
+  { id: 2, name: "Jamie Rivers" },
+  { id: 3, name: "Avery Blake" },
+];
+
 
 const TeamGrid = () => {
   return (
@@ -93,6 +104,22 @@ const TeamGrid = () => {
 
         </div>
         </div>
+          {/* ── Expert Cards Grid */}
+        <Grid cols={{ base: 1, md: 3 }} gap={30}>
+          {allImages.teamPageMemberArr.map((expert, index) => (
+            <div key={expert.id} className="bg-white">
+              <div className="relative w-full aspect-[3/4]">
+                <Image
+                  src={expert.img}
+                  alt={experts[index]?.name ?? "Expert"}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+          
+            </div>
+          ))}
+        </Grid>
       </Container>
     </section>
   );
