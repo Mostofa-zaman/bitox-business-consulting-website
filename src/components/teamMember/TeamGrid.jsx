@@ -81,6 +81,14 @@ const TeamGrid = () => {
                 strokeDasharray="2 2"
               />
             </svg>
+            <div className="pl-3">
+              <p className="text-[20px] md:text-[38px] lg:text-[70px] font-bold leading-none mb-2 text-primary">
+                99%
+              </p>
+              <p className="text-[18px] lg:text-[20px] text-primary lg:leading-7">
+                Worldwide client satisfaction through lasting partnerships
+              </p>
+            </div>
 
 
         </div>
