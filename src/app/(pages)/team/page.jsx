@@ -1,7 +1,7 @@
 import InnerPageHero from '@/components/common/InnerPageHero'
 import React from 'react'
 
-const page = () => {
+const Team = () => {
   return (
     <>
        <InnerPageHero
@@ -13,4 +13,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Team
