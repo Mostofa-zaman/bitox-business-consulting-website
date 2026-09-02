@@ -1,8 +1,15 @@
+import InnerPageHero from '@/components/common/InnerPageHero'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <>
+       <InnerPageHero
+        title="Meet Our Experienced Professionals"
+        titleWidth={" !w-[300px] sm:!w-auto lg:!max-w-[650px]"}
+      />
+    
+    </>
   )
 }
 
