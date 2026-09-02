@@ -1,9 +1,8 @@
-import React from "react";
-import Container from "../common/Container";
+// components/homeTwo/OurExperts.jsx
 import Image from "next/image";
-import allImages from "../helper/imageProvider";
+import Container from "../common/Container";
 import { Grid } from "../common/Responsive";
-
+import allImages from "../helper/imageProvider";
 
 const experts = [
   { id: 1, name: "Julian Hayes" },
@@ -11,8 +10,9 @@ const experts = [
   { id: 3, name: "Avery Blake" },
 ];
 
+const socialLinks = ["Facebook", "Twitter", "LinkedIn"];
 
-const TeamGrid = () => {
+export default function TeamGrid() {
   return (
     <section className="bg-bg-secondaryOne py-10 lg:py-[120px]">
       <Container size="lg">
@@ -27,7 +27,8 @@ const TeamGrid = () => {
               Global business experts on stage worldwide today live
             </h2>
           </div>
-           {/* Right: stat box */}
+
+          {/* Right: stat box */}
           <div className="max-w-[392px] p-4 shrink-0 relative">
             {/* Left double dashed border */}
             <svg
@@ -61,7 +62,7 @@ const TeamGrid = () => {
               />
             </svg>
 
-               {/* Bottom double dashed border */}
+            {/* Bottom double dashed border */}
             <svg
               style={{
                 position: "absolute",
@@ -92,6 +93,7 @@ const TeamGrid = () => {
                 strokeDasharray="2 2"
               />
             </svg>
+
             <div className="pl-3">
               <p className="text-[20px] md:text-[38px] lg:text-[70px] font-bold leading-none mb-2 text-primary">
                 99%
@@ -100,11 +102,10 @@ const TeamGrid = () => {
                 Worldwide client satisfaction through lasting partnerships
               </p>
             </div>
-
-
+          </div>
         </div>
-        </div>
-          {/* ── Expert Cards Grid */}
+
+        {/* ── Expert Cards Grid */}
         <Grid cols={{ base: 1, md: 3 }} gap={30}>
           {allImages.teamPageMemberArr.map((expert, index) => (
             <div key={expert.id} className="bg-white">
@@ -116,13 +117,26 @@ const TeamGrid = () => {
                   className="object-cover"
                 />
               </div>
-          
+              <div className="px-4 md:px-6 xl:px-[80px] py-[30px] border-t border-neutral-200">
+                <p className="text-[26px] font-bold text-center text-primary mb-4.5">
+                  {experts[index]?.name}
+                </p>
+                <div className="flex items-center justify-center gap-1.5 flex-wrap">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link}
+                      href="#"
+                      className="text-[13px] uppercase tracking-[0.06em] text-neutral-400 hover:text-neutral-700 transition-colors border border-black/10 rounded-[90px] py-1 px-2.5 whitespace-nowrap"
+                    >
+                      {link}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </Grid>
       </Container>
     </section>
   );
-};
-
-export default TeamGrid;
+}
