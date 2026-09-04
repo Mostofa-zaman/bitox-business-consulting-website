@@ -2,7 +2,16 @@ import React from 'react'
 
 const FaqHeading = () => {
   return (
-    <div>FaqHeading</div>
+  <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-start mb-8 sm:mb-10 md:mb-12 w-full overflow-hidden">
+      <div className="flex-1 min-w-0">
+        <p className="text-sm font-bold w-fit uppercase text-[#02090f] leading-5 rounded-sm mb-5 sm:mb-6 md:mb-7 border border-[rgba(0,0,0,0.1)] py-2.5 px-3.5">
+          Frequently asked questions
+        </p>
+        <h2 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[50px] font-bold text-[#02090F] leading-tight lg:leading-[58px] w-full tracking-[0%] underline max-w-[805px]">
+          Frequently Asked Questions: Clear, Concise Answers
+        </h2>
+      </div>
+      </div>
   )
 }
 
