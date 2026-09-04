@@ -1,5 +1,6 @@
 import InnerPageHero from '@/components/common/InnerPageHero'
 import TeamGrid from '@/components/teamMember/TeamGrid'
+import TeamPartners from '@/components/teamMember/TeamPartners'
 import TeamWorkspace from '@/components/teamMember/TeamWorkspace'
 import React from 'react'
 
@@ -12,6 +13,7 @@ const Team = () => {
       />
       <TeamGrid/>
       <TeamWorkspace/>
+      <TeamPartners/>
     
     </>
   )
