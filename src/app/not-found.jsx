@@ -34,6 +34,22 @@ export default function NotFound() {
           "
         />
       </div>
+       {/* Heading Banner */}
+      <div className="w-full mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+        <h3
+          className="
+      w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
+      bg-[#FF5101] text-white font-bold text-center uppercase
+      py-2 sm:py-2.5 md:py-3 lg:py-4
+      px-3 sm:px-4
+      text-[3.5vw] sm:text-[2.5vw] md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl
+      leading-snug
+    "
+        >
+          Sorry, we can't find the page you're looking for.
+        </h3>
+      </div>
+
     </div>
   );
 }
