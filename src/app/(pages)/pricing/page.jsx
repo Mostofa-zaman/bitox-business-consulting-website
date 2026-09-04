@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Pricing = () => {
   return (
-    <div>Pricing</div>
-  )
-}
+    <>
+      <InnerPageHero title="Bitox for Complete Solutions" />
+    </>
+  );
+};
 
-export default Pricing
+export default Pricing;
