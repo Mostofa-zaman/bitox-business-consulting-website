@@ -49,7 +49,25 @@ export default function NotFound() {
           Sorry, we can't find the page you're looking for.
         </h3>
       </div>
+       {/* Description + Button */}
+      <div className="w-full max-w-[90vw] sm:max-w-120 md:max-w-130 lg:max-w-150 text-center">
+        <p
+          className="
+            font-medium
+            text-[#02090F]
+            text-[3vw]
+            sm:text-sm
+            md:text-base
+            lg:text-lg
+            leading-snug
+            mb-4 sm:mb-5 md:mb-6
+          "
+        >
+          It looks like you’ve taken a wrong turn, but don’t worry we’re here to
+          help! Head back to the homepage please
+        </p>
 
+    </div>
     </div>
   );
 }
